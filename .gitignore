@@ -28,3 +28,53 @@ fp-info-cache
 # LTSpice sim generated files
 *.raw
 *.log
+
+# CAM files
+*.$$$
+*.cmp
+*.ly2
+*.l15
+*.sol
+*.plc
+*.stc
+*.sts
+*.crc
+*.crs
+
+*.dri
+*.drl
+*.gpi
+*.pls
+*.ger
+*.xln
+
+*.drd
+*.drd.*
+
+*.s#*
+*.b#*
+
+*.info
+*.log
+*.eps
+
+# file locks introduced since 7.x
+*.lck
+
+# Gerber files
+*.ger
+*.nc
+*.do
+*.GBL
+*.GBO
+*.GBP
+*.GBS
+*.GML
+*.GTL
+*.GTO
+*.GTP
+*.GTS
+
+# CAMOutput Folder
+**/CAMOutput
+
