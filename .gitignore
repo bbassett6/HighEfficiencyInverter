@@ -78,3 +78,5 @@ fp-info-cache
 # CAMOutput Folder
 **/CAMOutput
 
+**/HEI_Power_Stage/History
+
