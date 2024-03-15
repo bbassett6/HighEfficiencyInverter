@@ -118,6 +118,23 @@ GenerateClassCluster=0
 DocumentUniqueId=OTMJZRXC
 
 [Document5]
+DocumentPath=Parts\Altium\NCP51820AMNTWG.PcbLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=BHEVZHWV
+
+[Document6]
 DocumentPath=..\..\..\..\..\Downloads\EPC Altium Library\EPC_2023_Q3a.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -134,7 +151,41 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=HSVAMERY
 
-[Document6]
+[Document7]
+DocumentPath=Parts\Altium\NCP51820AMNTWG.SchLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=BPVIUEQB
+
+[Document8]
+DocumentPath=..\..\..\..\..\Downloads\EPC Altium Library\EPC_2023_Q3a\EPC_2023_Q3a_1.SCHLIB
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=ADSWHPXX
+
+[Document9]
 DocumentPath=HEI_Power_Stage.SCHLIB
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -151,7 +202,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=ETKLVQIE
 
-[Document7]
+[Document10]
 DocumentPath=Database_Libs1.DbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
