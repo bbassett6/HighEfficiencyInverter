@@ -118,6 +118,23 @@ GenerateClassCluster=0
 DocumentUniqueId=OTMJZRXC
 
 [Document5]
+DocumentPath=Parts\TMCS1123\TMCS1123A1AQDVGR.PcbLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=BBOJBGOL
+
+[Document6]
 DocumentPath=Parts\Altium\NCP51820AMNTWG.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -134,7 +151,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=BHEVZHWV
 
-[Document6]
+[Document7]
 DocumentPath=..\..\..\..\..\Downloads\EPC Altium Library\EPC_2023_Q3a.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -151,7 +168,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=HSVAMERY
 
-[Document7]
+[Document8]
 DocumentPath=Parts\Altium\NCP51820AMNTWG.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -168,7 +185,24 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=BPVIUEQB
 
-[Document8]
+[Document9]
+DocumentPath=Parts\TMCS1123\TMCS1123A1AQDVGR.SchLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=BPETAYQB
+
+[Document10]
 DocumentPath=..\..\..\..\..\Downloads\EPC Altium Library\EPC_2023_Q3a\EPC_2023_Q3a_1.SCHLIB
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -185,7 +219,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=ADSWHPXX
 
-[Document9]
+[Document11]
 DocumentPath=HEI_Power_Stage.SCHLIB
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -202,7 +236,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=ETKLVQIE
 
-[Document10]
+[Document12]
 DocumentPath=Database_Libs1.DbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
