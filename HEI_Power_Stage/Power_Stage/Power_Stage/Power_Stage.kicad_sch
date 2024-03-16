@@ -1,0 +1,387 @@
+(kicad_sch (version 20230121) (generator eeschema)
+
+  (uuid 4073579f-dff4-4919-be9b-9c43467e22c1)
+
+  (paper "A4")
+
+  (lib_symbols
+    (symbol "GTSR_symbol_lib_SD:EPC2304ENGRT" (in_bom yes) (on_board yes)
+      (property "Reference" "Q" (at 0 0 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Value" "EPC2304ENGRT" (at 0 0 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "GTSR_KiCAD_Footprints:EPC2304_ECC" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "https://www.digikey.com/en/products/detail/epc/EPC2304ENGRT/16785484" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "EPC2304ENGRT_0_1"
+        (rectangle (start -7.62 -1.905) (end 7.62 -14.605)
+          (stroke (width 0) (type default))
+          (fill (type background))
+        )
+        (circle (center -3.81 -12.065) (radius 0.127)
+          (stroke (width 0.254) (type default))
+          (fill (type none))
+        )
+        (circle (center -3.81 -9.525) (radius 0.127)
+          (stroke (width 0.254) (type default))
+          (fill (type none))
+        )
+        (arc (start -3.302 -8.255) (mid -3.81 -7.7492) (end -4.318 -8.255)
+          (stroke (width 0.127) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy -7.62 -12.065)
+            (xy -3.81 -12.065)
+          )
+          (stroke (width 0.127) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy -7.62 -9.525)
+            (xy -3.81 -9.525)
+          )
+          (stroke (width 0.127) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy -7.62 -6.985)
+            (xy -3.81 -6.985)
+          )
+          (stroke (width 0.127) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy -7.62 -4.445)
+            (xy -5.08 -4.445)
+          )
+          (stroke (width 0.127) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy -5.08 -8.255)
+            (xy -4.318 -8.255)
+          )
+          (stroke (width 0.127) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy -5.08 -4.445)
+            (xy -5.08 -8.255)
+          )
+          (stroke (width 0.127) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy -3.81 -13.335)
+            (xy 2.54 -13.335)
+          )
+          (stroke (width 0.127) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy -3.81 -6.985)
+            (xy -3.81 -13.335)
+          )
+          (stroke (width 0.127) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy -3.302 -8.255)
+            (xy -0.635 -8.255)
+          )
+          (stroke (width 0.127) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy -0.635 -10.795)
+            (xy -0.635 -5.715)
+          )
+          (stroke (width 0.127) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 0 -10.795)
+            (xy 0 -9.525)
+          )
+          (stroke (width 0.127) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 0 -10.16)
+            (xy 1.905 -10.16)
+          )
+          (stroke (width 0.127) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 0 -8.89)
+            (xy 0 -7.62)
+          )
+          (stroke (width 0.127) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 0 -6.985)
+            (xy 0 -5.715)
+          )
+          (stroke (width 0.127) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 0 -6.35)
+            (xy 1.905 -6.35)
+          )
+          (stroke (width 0.127) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 1.27 -8.255)
+            (xy 1.905 -8.255)
+          )
+          (stroke (width 0.127) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 1.905 -10.795)
+            (xy 1.905 -8.255)
+          )
+          (stroke (width 0.127) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 1.905 -10.795)
+            (xy 3.175 -10.795)
+          )
+          (stroke (width 0.127) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 1.905 -6.35)
+            (xy 1.905 -5.715)
+          )
+          (stroke (width 0.127) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 1.905 -5.715)
+            (xy 3.175 -5.715)
+          )
+          (stroke (width 0.127) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 2.54 -10.795)
+            (xy 2.54 -13.335)
+          )
+          (stroke (width 0.127) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 2.54 -5.715)
+            (xy 2.54 -3.175)
+          )
+          (stroke (width 0.127) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 3.175 -10.795)
+            (xy 3.175 -8.89)
+          )
+          (stroke (width 0.127) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 3.175 -7.62)
+            (xy 3.175 -5.715)
+          )
+          (stroke (width 0.127) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 3.81 -7.62)
+            (xy 2.54 -7.62)
+          )
+          (stroke (width 0.127) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 5.715 -6.985)
+            (xy 7.62 -6.985)
+          )
+          (stroke (width 0.127) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 5.715 -3.175)
+            (xy 2.54 -3.175)
+          )
+          (stroke (width 0.127) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 5.715 -3.175)
+            (xy 5.715 -9.525)
+          )
+          (stroke (width 0.127) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 7.62 -9.525)
+            (xy 5.715 -9.525)
+          )
+          (stroke (width 0.127) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 7.62 -4.445)
+            (xy 5.715 -4.445)
+          )
+          (stroke (width 0.127) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 1.27 -7.62)
+            (xy 0 -8.255)
+            (xy 1.27 -8.89)
+          )
+          (stroke (width 0) (type default))
+          (fill (type outline))
+        )
+        (polyline
+          (pts
+            (xy 3.81 -8.89)
+            (xy 2.54 -8.89)
+            (xy 3.175 -7.62)
+          )
+          (stroke (width 0) (type default))
+          (fill (type outline))
+        )
+        (circle (center 1.27 -8.255) (radius 3.81)
+          (stroke (width 0.127) (type default))
+          (fill (type none))
+        )
+        (circle (center 1.905 -10.16) (radius 0.127)
+          (stroke (width 0.254) (type default))
+          (fill (type none))
+        )
+        (circle (center 2.54 -10.795) (radius 0.127)
+          (stroke (width 0.254) (type default))
+          (fill (type none))
+        )
+        (circle (center 2.54 -5.715) (radius 0.127)
+          (stroke (width 0.254) (type default))
+          (fill (type none))
+        )
+        (circle (center 5.715 -6.985) (radius 0.127)
+          (stroke (width 0.254) (type default))
+          (fill (type none))
+        )
+        (circle (center 5.715 -4.445) (radius 0.127)
+          (stroke (width 0.254) (type default))
+          (fill (type none))
+        )
+        (pin unspecified line (at -15.24 -4.445 0) (length 7.62)
+          (name "1" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+        (pin unspecified line (at -15.24 -6.985 0) (length 7.62)
+          (name "2" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))
+        )
+        (pin unspecified line (at 15.24 -9.525 180) (length 7.62)
+          (name "3" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.27 1.27))))
+        )
+        (pin unspecified line (at -15.24 -9.525 0) (length 7.62)
+          (name "4" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.27 1.27))))
+        )
+        (pin unspecified line (at 15.24 -6.985 180) (length 7.62)
+          (name "5" (effects (font (size 1.27 1.27))))
+          (number "5" (effects (font (size 1.27 1.27))))
+        )
+        (pin unspecified line (at -15.24 -12.065 0) (length 7.62)
+          (name "6" (effects (font (size 1.27 1.27))))
+          (number "6" (effects (font (size 1.27 1.27))))
+        )
+        (pin unspecified line (at 15.24 -4.445 180) (length 7.62)
+          (name "7" (effects (font (size 1.27 1.27))))
+          (number "7" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
+  )
+
+
+  (symbol (lib_id "GTSR_symbol_lib_SD:EPC2304ENGRT") (at 150.495 96.52 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 076e2758-1032-470a-8428-42f449f95c26)
+    (property "Reference" "Q1" (at 150.495 95.25 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "EPC2304ENGRT" (at 150.495 97.79 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "GTSR_KiCAD_Footprints_SD:EPC2304_ECC" (at 150.495 96.52 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "https://www.digikey.com/en/products/detail/epc/EPC2304ENGRT/16785484" (at 150.495 96.52 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid b30fc7bb-2253-4eec-82be-82f31456e305))
+    (pin "2" (uuid ac721554-c757-4660-9dc0-c08a2d8eaaf9))
+    (pin "3" (uuid 1bf48c2f-629c-48f6-b4ce-76bb40bccfc9))
+    (pin "4" (uuid 5051f4ad-5300-46b5-927e-db28bf6dedc6))
+    (pin "5" (uuid 799fc3a9-0768-4d9f-9ffb-4e7dfdd6db58))
+    (pin "6" (uuid 2a4e9385-2a4c-4fbe-9726-d6b5b36668d9))
+    (pin "7" (uuid 7153c2e6-fce7-4327-a6aa-6d16decc33bc))
+    (instances
+      (project "Power_Stage"
+        (path "/4073579f-dff4-4919-be9b-9c43467e22c1"
+          (reference "Q1") (unit 1)
+        )
+      )
+    )
+  )
+
+  (sheet_instances
+    (path "/" (page "1"))
+  )
+)
