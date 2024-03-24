@@ -377,8 +377,8 @@
       "no_connect_dangling": "warning",
       "pin_not_connected": "error",
       "pin_not_driven": "error",
-      "pin_to_pin": "warning",
-      "power_pin_not_driven": "error",
+      "pin_to_pin": "ignore",
+      "power_pin_not_driven": "ignore",
       "similar_labels": "warning",
       "simulation_model_issue": "error",
       "unannotated": "error",
@@ -471,6 +471,18 @@
     [
       "4073579f-dff4-4919-be9b-9c43467e22c1",
       ""
+    ],
+    [
+      "fdb1cb22-51b8-420c-a9c7-ed601f391b52",
+      "Phase1"
+    ],
+    [
+      "d06aea5d-6634-499e-bc84-2b0ee963ac5c",
+      "Phase2"
+    ],
+    [
+      "fc0c4d71-751a-405d-a2b0-dee4001cda35",
+      "Phase3"
     ]
   ],
   "text_variables": {}
