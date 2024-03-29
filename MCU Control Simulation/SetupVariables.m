@@ -1,2 +1,11 @@
 numPoles = 6;
 hvBus = 72;
+switchingFreq = 400;
+currentGain = -1;
+pidP = 0.05;
+pidI = 0.0;
+flipRotorAngle = 1;
+rotorOffset = pi/2;
+qAmps = 15;
+dAmps = 0;
+maxModulation = 0.99;
