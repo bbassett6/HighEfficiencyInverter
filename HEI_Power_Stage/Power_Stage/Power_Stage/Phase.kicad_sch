@@ -5000,7 +5000,7 @@
 		)
 		(uuid "630d34c0-d0d4-480a-bde8-87149600a118")
 	)
-	(hierarchical_label "SGND"
+	(hierarchical_label "PGND"
 		(shape input)
 		(at 39.37 137.795 180)
 		(fields_autoplaced yes)
@@ -5012,7 +5012,7 @@
 		)
 		(uuid "96342aad-2fab-4b1f-8fa6-220423543169")
 	)
-	(hierarchical_label "SGND"
+	(hierarchical_label "PGND"
 		(shape input)
 		(at 52.705 146.685 180)
 		(fields_autoplaced yes)
