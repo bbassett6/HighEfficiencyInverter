@@ -5156,6 +5156,75 @@
 		)
 		(uuid "f8db68a2-8f26-4a73-876d-a71b0616c895")
 	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 218.3908 57.785 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3c8f2688-c841-4feb-b92f-466a5cf417c2")
+		(property "Netclass" "HV"
+			(at 219.0893 55.245 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 218.5723 78.105 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6c22b679-cdde-4724-a642-5a1cf48664df")
+		(property "Netclass" "HV"
+			(at 219.2708 75.565 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
+		(at 247.65 69.85 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ea878894-7ce1-41df-b36d-25ea90894e28")
+		(property "Netclass" "HV"
+			(at 248.3485 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+	)
 	(symbol
 		(lib_id "GTSR_symbol_lib_SD:NCP51820AMNTWG")
 		(at 93.98 46.355 0)

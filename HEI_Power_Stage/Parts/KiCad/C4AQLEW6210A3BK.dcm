@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP C4AQLEW6210A3BK
+D C4AQ, Film, Metallized Polypropylene, Automotive DC Link, 210 uF, 10%, 500 VDC, 105C, -55C, 70C, 140 MOhms, 4 V/us, 19 nH, 201.4 g, 57.5mm, 65mm, 45mm, Lead Spacing = 52.5mm, 18
+K
+F https://content.kemet.com/datasheets/KEM_F3114_C4AQ.pdf
+$ENDCMP
+#
+#End Doc Library
