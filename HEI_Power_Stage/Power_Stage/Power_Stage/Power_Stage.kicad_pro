@@ -37,9 +37,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.0,
-          "height": 0.6,
-          "width": 1.325
+          "drill": 2.0,
+          "height": 4.0,
+          "width": 4.0
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -48,7 +48,7 @@
         "silk_text_thickness": 0.15,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.5
+          "min_clearance": 0.4
         }
       },
       "diff_pair_dimensions": [
@@ -490,7 +490,20 @@
     },
     "net_colors": null,
     "netclass_assignments": {
-      "GNDPWR": "HV"
+      "/PHA": "HV",
+      "/PHB": "HV",
+      "/PHC": "HV",
+      "/Phase1/HS_{Gate}": "HV",
+      "/Phase1/LS_{Gate}": "HV",
+      "/Phase1/SW": "HV",
+      "/Phase2/HS_{Gate}": "HV",
+      "/Phase2/LS_{Gate}": "HV",
+      "/Phase2/SW": "HV",
+      "/Phase3/HS_{Gate}": "HV",
+      "/Phase3/LS_{Gate}": "HV",
+      "/Phase3/SW": "HV",
+      "GNDPWR": "HV",
+      "VDCin": "HV"
     },
     "netclass_patterns": []
   },

@@ -2652,6 +2652,12 @@
 		(uuid "7e215b32-67fb-4b19-bdc7-d1b4a786e0cd")
 	)
 	(junction
+		(at 137.16 123.19)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "82fa835f-d1f4-4c24-8a9f-c186d3c5b21a")
+	)
+	(junction
 		(at 46.355 63.5)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2935,7 +2941,7 @@
 	)
 	(wire
 		(pts
-			(xy 137.16 122.555) (xy 137.16 123.825)
+			(xy 137.16 122.555) (xy 137.16 123.19)
 		)
 		(stroke
 			(width 0)
@@ -3772,6 +3778,16 @@
 			(type default)
 		)
 		(uuid "a88140c0-257f-4fa8-9b1d-9d1de3db180b")
+	)
+	(wire
+		(pts
+			(xy 137.16 123.19) (xy 137.16 123.825)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a993c96d-d13a-4c8f-9bce-61eadb3c0af9")
 	)
 	(wire
 		(pts
@@ -7766,6 +7782,82 @@
 				)
 				(path "/ccaac16c-5e28-4780-805c-5b4fa6a039b1/47dd0a4e-a029-4946-93b3-1901319cea47"
 					(reference "C32")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "GTSR_symbol_lib:Test_Point")
+		(at 137.16 123.19 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b6356959-90f6-4271-aab4-0de3b8b67f89")
+		(property "Reference" "TP11"
+			(at 133.985 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Value" "Test_Point"
+			(at 135.1279 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 144.78 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 144.78 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 137.16 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "96b44347-f666-4284-8b84-4ae0730711d6")
+		)
+		(instances
+			(project "Power_Stage"
+				(path "/4073579f-dff4-4919-be9b-9c43467e22c1/fdb1cb22-51b8-420c-a9c7-ed601f391b52"
+					(reference "TP11")
+					(unit 1)
+				)
+				(path "/4073579f-dff4-4919-be9b-9c43467e22c1/d06aea5d-6634-499e-bc84-2b0ee963ac5c"
+					(reference "TP12")
+					(unit 1)
+				)
+				(path "/4073579f-dff4-4919-be9b-9c43467e22c1/fc0c4d71-751a-405d-a2b0-dee4001cda35"
+					(reference "TP13")
 					(unit 1)
 				)
 			)
