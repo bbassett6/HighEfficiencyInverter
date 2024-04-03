@@ -1,0 +1,396 @@
+(footprint "C4AQLLW5450A38K"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "C4AQLEW6210A3BK-2")
+	(tags "Capacitor")
+	(property "Reference" "C49"
+		(at 25.475 -10.15 180)
+		(layer "F.SilkS")
+		(uuid "035ce20a-edec-439c-bf41-a983f648fd5c")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Value" "210uF"
+		(at 25.475 -10.15 180)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "f3dca493-e033-4732-9fb3-8aa237092cc3")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Footprint" "C4AQLEW6210A3BK"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4d3e783c-bc32-48d0-b0b1-86f970eeea2b")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" "https://content.kemet.com/datasheets/KEM_F3114_C4AQ.pdf"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b70450e6-b78a-4d7a-b394-3ecc0b25d011")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" "C4AQ, Film, Metallized Polypropylene, Automotive DC Link, 210 uF, 10%, 500 VDC, 105C, -55C, 70C, 140 MOhms, 4 V/us, 19 nH, 201.4 g, 57.5mm, 65mm, 45mm, Lead Spacing = 52.5mm, 18"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6983d71d-bacb-44ae-923a-a63f35447270")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Height" "65.3"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c1f95476-bbba-402c-96ae-ac4544805643")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Name" "KEMET"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e83cdcbd-67d5-4a37-ac5b-4579ec8dad80")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer_Part_Number" "C4AQLEW6210A3BK"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "34de3900-b02c-4c1a-9bd8-28cf7dd9e2ef")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Part Number" "80-C4AQLEW6210A3BK"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "719bd257-771f-4f5d-a391-ba8bfca3c7e3")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/KEMET/C4AQLEW6210A3BK?qs=byeeYqUIh0M6WLgslAS9vA%3D%3D"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6f2fcab4-2f78-4ce0-a4a6-4c891a48bafc")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Arrow Part Number" "C4AQLEW6210A3BK"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2f3d10b0-d18a-4138-900a-8d3f4a73132b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Arrow Price/Stock" "https://www.arrow.com/en/products/c4aqlew6210a3bk/kemet-corporation"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "416103d6-1f0c-4717-adb4-55024a9ef7d8")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -4 0.1)
+		(end -4 0.1)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "97cdc362-f241-4a70-ba22-da348f9cd08c")
+	)
+	(fp_line
+		(start -4 0.2)
+		(end -4 0.2)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "1d7c0fbb-4679-4032-96cf-1358249530b1")
+	)
+	(fp_line
+		(start -4 0.2)
+		(end -4 0.2)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "32ff45c0-c924-43b1-9f0b-1ab491839521")
+	)
+	(fp_line
+		(start -2.5 -32.65)
+		(end 55 -32.65)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "bc401eb3-c4fb-492c-83a6-5f0465bb34e9")
+	)
+	(fp_line
+		(start -2.5 12.35)
+		(end -2.5 -32.65)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "df7b8599-39d5-471d-a922-f7fcabccd266")
+	)
+	(fp_line
+		(start 55 -32.65)
+		(end 55 12.35)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "68a180a9-1d24-40e4-b568-cbc59f521806")
+	)
+	(fp_line
+		(start 55 12.35)
+		(end -2.5 12.35)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "b6900c18-1761-4be5-8275-a532ec564d55")
+	)
+	(fp_arc
+		(start -4 0.1)
+		(mid -3.95 0.15)
+		(end -4 0.2)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2f1c882c-5e73-4c85-b434-a5675c549948")
+	)
+	(fp_arc
+		(start -4 0.1)
+		(mid -3.95 0.15)
+		(end -4 0.2)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "35279160-ad30-42ec-8f06-708099e8b9d8")
+	)
+	(fp_arc
+		(start -4 0.2)
+		(mid -4.05 0.15)
+		(end -4 0.1)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "d07a1eb7-f2f8-4a48-96b1-04b23adbcad6")
+	)
+	(fp_line
+		(start -5.05 -33.65)
+		(end 56 -33.65)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "fd977eea-9340-4910-becd-5a1f4a2ec938")
+	)
+	(fp_line
+		(start -5.05 13.35)
+		(end -5.05 -33.65)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "a73601d6-7602-4f34-a09f-d8f697bf5845")
+	)
+	(fp_line
+		(start 56 -33.65)
+		(end 56 13.35)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "2580aab5-8139-48fd-a71e-b7b8aafab182")
+	)
+	(fp_line
+		(start 56 13.35)
+		(end -5.05 13.35)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "b1e18f4e-a963-4910-83b6-48ede901f60c")
+	)
+	(fp_line
+		(start -2.5 -32.65)
+		(end -2.5 12.35)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "afe8389e-2ce2-4a3b-8c7b-3d80d0079cee")
+	)
+	(fp_line
+		(start -2.5 12.35)
+		(end 55 12.35)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "2c7a50d0-98db-4be6-a2ba-0151498cb2e6")
+	)
+	(fp_line
+		(start 55 -32.65)
+		(end -2.5 -32.65)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "ab156c8c-60fb-4775-a0d7-c535419c404b")
+	)
+	(fp_line
+		(start 55 12.35)
+		(end 55 -32.65)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "027df3b6-cac7-402b-b096-5f13b6ef7c91")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 25.475 -10.15 180)
+		(layer "F.Fab")
+		(uuid "cbdbe90a-700c-4fac-9c97-3b1b3c0b2d9e")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(pad "1" thru_hole circle
+		(at 0 0)
+		(size 2.175 2.175)
+		(drill 1.45)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "3a492194-4efb-47ad-b8e5-90c6b39c9add")
+	)
+	(pad "2" thru_hole circle
+		(at 37.5 0)
+		(size 2.175 2.175)
+		(drill 1.45)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "c6e2732e-7624-4260-998c-c1d8f8b607b3")
+	)
+	(pad "3" thru_hole circle
+		(at 37.5 -20.3)
+		(size 2.175 2.175)
+		(drill 1.45)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "0f083c13-7dfe-4b82-b1c9-a919776cbf41")
+	)
+	(pad "4" thru_hole circle
+		(at 0 -20.3)
+		(size 2.175 2.175)
+		(drill 1.45)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "cf19131d-da78-422b-86cf-a0012e52f2ca")
+	)
+	(model "C4AQLEW6210A3BK.stp"
+		(offset
+			(xyz -2.859999852 32.90000103 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 0 0)
+		)
+	)
+)
