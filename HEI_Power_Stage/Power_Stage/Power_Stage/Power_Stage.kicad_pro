@@ -414,12 +414,12 @@
       "different_unit_net": "error",
       "duplicate_reference": "error",
       "duplicate_sheet_names": "error",
-      "endpoint_off_grid": "warning",
+      "endpoint_off_grid": "ignore",
       "extra_units": "error",
       "global_label_dangling": "warning",
       "hier_label_mismatch": "error",
       "label_dangling": "error",
-      "lib_symbol_issues": "warning",
+      "lib_symbol_issues": "ignore",
       "missing_bidi_pin": "warning",
       "missing_input_pin": "warning",
       "missing_power_pin": "error",
@@ -433,7 +433,7 @@
       "pin_to_pin": "ignore",
       "power_pin_not_driven": "ignore",
       "similar_labels": "warning",
-      "simulation_model_issue": "error",
+      "simulation_model_issue": "ignore",
       "unannotated": "error",
       "unit_value_mismatch": "error",
       "unresolved_variable": "error",
@@ -635,6 +635,22 @@
     [
       "fc0c4d71-751a-405d-a2b0-dee4001cda35",
       "Phase3"
+    ],
+    [
+      "b3aa0955-8146-4e7d-bc37-12b2532dd7f7",
+      "LPF"
+    ],
+    [
+      "b3aa0955-8146-4e7d-bc37-12b2532dd7f7",
+      "LPF"
+    ],
+    [
+      "b3aa0955-8146-4e7d-bc37-12b2532dd7f7",
+      "LPF"
+    ],
+    [
+      "4b4528f4-b188-451e-92e0-694bcc5262fb",
+      "LPF4"
     ]
   ],
   "text_variables": {}
