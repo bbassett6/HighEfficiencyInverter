@@ -6149,7 +6149,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GNDPWR"
+		(property "Value" "HV-"
 			(at 137.16 137.16 0)
 			(effects
 				(font
@@ -6415,7 +6415,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GNDPWR"
+		(property "Value" "HV-"
 			(at 233.68 154.305 0)
 			(effects
 				(font
@@ -7563,7 +7563,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GNDPWR"
+		(property "Value" "HV-"
 			(at 132.715 181.61 0)
 			(effects
 				(font
@@ -9314,7 +9314,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GNDPWR"
+		(property "Value" "HV-"
 			(at 258.445 136.525 0)
 			(effects
 				(font
