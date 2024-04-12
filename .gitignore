@@ -87,5 +87,6 @@ fp-info-cache
 /HEI_Power_Stage/Power_Stage/Power_Stage/Power_Stage-backups/*
 /HEI_Power_Stage/Power_Stage/Power_Stage/Power_Stage-backups
 *.gbr
+*.zip
 # exception to the rule
 !/HEI_Power_Stage/Power_Stage/Power_Stage/Power_Stage-backups/.gitkeep 
