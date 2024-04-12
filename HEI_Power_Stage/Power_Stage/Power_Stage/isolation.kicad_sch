@@ -480,6 +480,87 @@
 				)
 			)
 		)
+		(symbol "GTSR_Libraries:Test_Point"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TP"
+				(at 2.032 3.302 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Test_Point"
+				(at 0 -10.16 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
+				(at 0 -7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 -7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Test_Point_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Test_Point_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "GTSR_symbol_lib_SD:TBA_2-1212"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -1668,6 +1749,255 @@
 				)
 			)
 		)
+		(symbol "Test_Point_1"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TP"
+				(at 2.032 3.302 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Test_Point"
+				(at 0 -10.16 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
+				(at 0 -7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 -7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Test_Point_1_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Test_Point_1_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Test_Point_2"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TP"
+				(at 2.032 3.302 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Test_Point"
+				(at 0 -10.16 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
+				(at 0 -7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 -7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Test_Point_2_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Test_Point_2_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Test_Point_3"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TP"
+				(at 2.032 3.302 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Test_Point"
+				(at 0 -10.16 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
+				(at 0 -7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 -7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Test_Point_3_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Test_Point_3_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+	(junction
+		(at 53.34 50.8)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "003e3f88-c45b-4941-9321-ce9afec8cd8b")
 	)
 	(junction
 		(at 78.74 87.63)
@@ -1680,6 +2010,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "49d6a34a-b5a9-452c-9a18-104029140202")
+	)
+	(junction
+		(at 53.34 38.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "802f00f7-c5e6-4adf-bcd4-653d2184f52f")
 	)
 	(junction
 		(at 50.8 38.1)
@@ -1716,6 +2052,16 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f6c7ef29-d5e0-4347-8382-658628d91d84")
+	)
+	(wire
+		(pts
+			(xy 50.8 50.8) (xy 53.34 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "00584d94-70a2-44e9-8888-29e10d22f257")
 	)
 	(wire
 		(pts
@@ -1786,6 +2132,16 @@
 			(type default)
 		)
 		(uuid "221086ec-3c9d-4b85-b6b2-fd0f2cc9786d")
+	)
+	(wire
+		(pts
+			(xy 53.34 50.8) (xy 54.61 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "249e984e-20cd-458f-88f9-9d46ea2a5915")
 	)
 	(wire
 		(pts
@@ -1869,13 +2225,13 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 50.8) (xy 54.61 50.8)
+			(xy 97.79 38.735) (xy 101.6 38.735)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "3d2f924f-fdf3-4b71-b0a0-1ba582c46a22")
+		(uuid "3b264786-4679-4578-9a79-255aaf5ddcff")
 	)
 	(wire
 		(pts
@@ -1959,6 +2315,16 @@
 	)
 	(wire
 		(pts
+			(xy 53.34 38.1) (xy 54.61 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "69b3ca27-a8dc-4489-9b08-852fe57404b7")
+	)
+	(wire
+		(pts
 			(xy 88.9 123.19) (xy 88.9 119.38)
 		)
 		(stroke
@@ -1986,6 +2352,16 @@
 			(type default)
 		)
 		(uuid "744e418c-aea3-4a04-92f3-c80c83820358")
+	)
+	(wire
+		(pts
+			(xy 50.8 38.1) (xy 53.34 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7741bfe0-3094-41c2-a387-23ef25a64375")
 	)
 	(wire
 		(pts
@@ -2169,16 +2545,6 @@
 	)
 	(wire
 		(pts
-			(xy 97.79 38.735) (xy 101.6 38.735)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b69a1413-bbeb-4959-9645-68a62c2f31b3")
-	)
-	(wire
-		(pts
 			(xy 57.15 156.21) (xy 57.15 134.62)
 		)
 		(stroke
@@ -2357,16 +2723,6 @@
 		)
 		(uuid "fab81c4f-3731-4269-8043-1b4a1fbca6cd")
 	)
-	(wire
-		(pts
-			(xy 50.8 38.1) (xy 54.61 38.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ffc49668-a29f-40b3-b2d1-6191456e2690")
-	)
 	(rectangle
 		(start 37.465 26.67)
 		(end 135.89 60.325)
@@ -2403,18 +2759,6 @@
 		)
 		(uuid 96304c25-d29c-4910-bc0e-4fb8c2706e5a)
 	)
-	(text "Add more testpoints"
-		(exclude_from_sim no)
-		(at 90.932 64.262 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(color 255 42 38 1)
-			)
-			(justify left bottom)
-		)
-		(uuid "30c9c558-6325-4bde-871c-cbe53a14827d")
-	)
 	(text "12 -ISO-> 12"
 		(exclude_from_sim no)
 		(at 69.85 34.925 0)
@@ -2425,6 +2769,16 @@
 			(justify left bottom)
 		)
 		(uuid "7869f5f8-5b24-4095-a4a7-587a8b1e51b2")
+	)
+	(text "Needs to cross HV gap"
+		(exclude_from_sim no)
+		(at 124.46 24.892 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "948942ec-6b79-48e4-927c-b66d58b655d4")
 	)
 	(text "Gate Driver Supply (Isolated)"
 		(exclude_from_sim no)
@@ -2464,6 +2818,16 @@
 			(justify left bottom)
 		)
 		(uuid "bc671e5e-2b1a-4a7c-ae95-a4cf73299a1c")
+	)
+	(text "Needs to cross HV gap"
+		(exclude_from_sim no)
+		(at 115.824 77.47 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "e6e100fd-1bad-4ac8-b1a6-4c23e0935290")
 	)
 	(hierarchical_label "DC~{CS}_LV"
 		(shape input)
@@ -2994,6 +3358,76 @@
 		(uuid "eac56883-cdca-49ff-bcad-090308a853c8")
 	)
 	(symbol
+		(lib_name "Test_Point_2")
+		(lib_id "GTSR_Libraries:Test_Point")
+		(at 53.34 50.8 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2f528d87-e46c-483d-a38f-260dbc59ea19")
+		(property "Reference" "TP3"
+			(at 55.88 52.8319 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+		(property "Value" "Test_Point"
+			(at 55.88 55.3719 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
+			(at 53.34 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 53.34 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 53.34 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "901b68f9-3f28-4c1a-89ac-174521aafb53")
+		)
+		(instances
+			(project "Power_Stage"
+				(path "/4073579f-dff4-4919-be9b-9c43467e22c1/ff4c5e28-2cc8-4097-9645-c473e09dd8c8"
+					(reference "TP3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 50.8 44.45 0)
 		(unit 1)
@@ -3170,6 +3604,75 @@
 			(project "Power_Stage"
 				(path "/4073579f-dff4-4919-be9b-9c43467e22c1/ff4c5e28-2cc8-4097-9645-c473e09dd8c8"
 					(reference "U18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "GTSR_Libraries:Test_Point")
+		(at 53.34 38.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6483142f-fc4d-4836-a1d7-fcbfeb9e904c")
+		(property "Reference" "TP1"
+			(at 55.88 33.5279 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Value" "Test_Point"
+			(at 55.88 36.0679 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
+			(at 53.34 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 53.34 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 53.34 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "901b68f9-3f28-4c1a-89ac-174521aafb53")
+		)
+		(instances
+			(project "Power_Stage"
+				(path "/4073579f-dff4-4919-be9b-9c43467e22c1/ff4c5e28-2cc8-4097-9645-c473e09dd8c8"
+					(reference "TP1")
 					(unit 1)
 				)
 			)
@@ -3494,6 +3997,146 @@
 		)
 	)
 	(symbol
+		(lib_name "Test_Point_3")
+		(lib_id "GTSR_Libraries:Test_Point")
+		(at 99.3743 50.1295 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a8eee1eb-f11b-4340-8a31-9dad34dfd9f6")
+		(property "Reference" "TP4"
+			(at 101.6 52.1614 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+		(property "Value" "Test_Point"
+			(at 101.6 54.7014 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
+			(at 99.3743 42.5095 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 99.3743 42.5095 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 99.3743 50.1295 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "901b68f9-3f28-4c1a-89ac-174521aafb53")
+		)
+		(instances
+			(project "Power_Stage"
+				(path "/4073579f-dff4-4919-be9b-9c43467e22c1/ff4c5e28-2cc8-4097-9645-c473e09dd8c8"
+					(reference "TP4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "Test_Point_1")
+		(lib_id "GTSR_Libraries:Test_Point")
+		(at 99.2088 38.7078 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d3b31b3b-7e49-4a3b-9e4f-83bcdefc9986")
+		(property "Reference" "TP2"
+			(at 101.6 34.1357 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Value" "Test_Point"
+			(at 101.6 36.6757 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5000-5004_Miniature"
+			(at 99.2088 46.3278 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 99.2088 46.3278 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 99.2088 38.7078 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "901b68f9-3f28-4c1a-89ac-174521aafb53")
+		)
+		(instances
+			(project "Power_Stage"
+				(path "/4073579f-dff4-4919-be9b-9c43467e22c1/ff4c5e28-2cc8-4097-9645-c473e09dd8c8"
+					(reference "TP2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "GTSR_symbol_lib_SD:TBA_2-1212")
 		(at 76.2 33.02 0)
 		(unit 1)
@@ -3519,7 +4162,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "GTSR_KiCAD_Footprints_SD:TBA 2_SINGLE_TRP"
+		(property "Footprint" "GTSR:TBA 2_SINGLE_TRP"
 			(at 76.2 33.02 0)
 			(effects
 				(font
