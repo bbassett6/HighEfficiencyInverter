@@ -489,7 +489,23 @@
       "version": 3
     },
     "net_colors": null,
-    "netclass_assignments": null,
+    "netclass_assignments": {
+      "/PHA": "HV",
+      "/PHB": "HV",
+      "/PHC": "HV",
+      "/Phase1/HS_{Gate}": "HV",
+      "/Phase1/LS_{Gate}": "HV",
+      "/Phase1/SW": "HV",
+      "/Phase2/HS_{Gate}": "HV",
+      "/Phase2/LS_{Gate}": "HV",
+      "/Phase2/SW": "HV",
+      "/Phase3/HS_{Gate}": "HV",
+      "/Phase3/LS_{Gate}": "HV",
+      "/Phase3/SW": "HV",
+      "GNDPWR": "HV",
+      "HV-": "HV",
+      "VDCin": "HV"
+    },
     "netclass_patterns": []
   },
   "pcbnew": {
