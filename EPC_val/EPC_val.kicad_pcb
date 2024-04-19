@@ -5010,8 +5010,6 @@
 			)
 		)
 		(path "/bad5543f-cb5d-4da8-adea-a819b7519dd9")
-		(sheetname "Root")
-		(sheetfile "EPC_val.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -2.1463 2.1463)
@@ -6378,21 +6376,10 @@
 			(uuid "b3cb48a0-0a69-4e83-aad5-addebbfb8c0c")
 		)
 		(fp_text user "*"
-			(at -2.8575 -1.750441 -45)
+			(at -2.5 -2.5 -45)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "09ae9602-b7ea-4523-9825-feaf9f563fd7")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(fp_text user "*"
-			(at -2.8575 -1.750441 135)
-			(layer "F.SilkS")
-			(uuid "2df8e340-2345-4ec9-96a2-e7dd7672ceb8")
 			(effects
 				(font
 					(size 1 1)
@@ -8963,7 +8950,7 @@
 		(at 128 93.6049 -90)
 		(tags "691137710002 ")
 		(property "Reference" "GND/L"
-			(at -5.7049 3.275 -90)
+			(at -0.3049 -5.2 -90)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "ac48980b-6748-4a2e-8cac-c1158e27b6be")
@@ -11077,6 +11064,16 @@
 			(uuid "20eab7fd-dc09-4ff6-90b3-17ec4c862c11")
 		)
 	)
+	(gr_line
+		(start 153 112)
+		(end 155 112)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "08496a21-7850-4d8e-9961-e41bcde537e8")
+	)
 	(gr_rect
 		(start 122 77)
 		(end 197.625 120)
@@ -11087,6 +11084,16 @@
 		(fill none)
 		(layer "F.SilkS")
 		(uuid "86ce6f9a-74bf-49b9-9d02-9b26c8e436e4")
+	)
+	(gr_line
+		(start 154 111)
+		(end 154 113)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "e4347184-2113-4836-8607-fd60444478cc")
 	)
 	(gr_rect
 		(start 122 77)
