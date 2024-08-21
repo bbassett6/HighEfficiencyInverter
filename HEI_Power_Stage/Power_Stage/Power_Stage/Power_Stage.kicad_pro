@@ -686,14 +686,6 @@
     [
       "fc0c4d71-751a-405d-a2b0-dee4001cda35",
       "Phase3"
-    ],
-    [
-      "ff4c5e28-2cc8-4097-9645-c473e09dd8c8",
-      "Isolation"
-    ],
-    [
-      "4b4528f4-b188-451e-92e0-694bcc5262fb",
-      "LPF4"
     ]
   ],
   "text_variables": {}
