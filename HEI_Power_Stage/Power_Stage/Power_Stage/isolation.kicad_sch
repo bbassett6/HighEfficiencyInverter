@@ -3667,7 +3667,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "901b68f9-3f28-4c1a-89ac-174521aafb53")
+			(uuid "901b68f9-3f28-4c1a-89ac-174521aafb54")
 		)
 		(instances
 			(project "Power_Stage"
@@ -4055,7 +4055,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "901b68f9-3f28-4c1a-89ac-174521aafb53")
+			(uuid "901b68f9-3f28-4c1a-89ac-174521aafb55")
 		)
 		(instances
 			(project "Power_Stage"
@@ -4125,7 +4125,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "901b68f9-3f28-4c1a-89ac-174521aafb53")
+			(uuid "901b68f9-3f28-4c1a-89ac-174521aafb56")
 		)
 		(instances
 			(project "Power_Stage"

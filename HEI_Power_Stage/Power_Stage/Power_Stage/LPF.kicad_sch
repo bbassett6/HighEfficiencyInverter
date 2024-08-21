@@ -512,7 +512,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "21ab7be1-4e64-4dee-8553-03ac9caafde2")
-		(property "Reference" "R48"
+		(property "Reference" "R57"
 			(at 134.62 85.09 90)
 			(effects
 				(font
@@ -564,18 +564,6 @@
 		)
 		(instances
 			(project "Power_Stage"
-				(path "/4073579f-dff4-4919-be9b-9c43467e22c1/fdb1cb22-51b8-420c-a9c7-ed601f391b52/b3aa0955-8146-4e7d-bc37-12b2532dd7f7"
-					(reference "R48")
-					(unit 1)
-				)
-				(path "/4073579f-dff4-4919-be9b-9c43467e22c1/d06aea5d-6634-499e-bc84-2b0ee963ac5c/b3aa0955-8146-4e7d-bc37-12b2532dd7f7"
-					(reference "R49")
-					(unit 1)
-				)
-				(path "/4073579f-dff4-4919-be9b-9c43467e22c1/fc0c4d71-751a-405d-a2b0-dee4001cda35/b3aa0955-8146-4e7d-bc37-12b2532dd7f7"
-					(reference "R50")
-					(unit 1)
-				)
 				(path "/4073579f-dff4-4919-be9b-9c43467e22c1/4b4528f4-b188-451e-92e0-694bcc5262fb"
 					(reference "R57")
 					(unit 1)
@@ -592,7 +580,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "41f6df3f-94dc-4c33-b211-feedf578bd17")
-		(property "Reference" "#PWR056"
+		(property "Reference" "#PWR068"
 			(at 137.16 96.52 0)
 			(effects
 				(font
@@ -641,18 +629,6 @@
 		)
 		(instances
 			(project "Power_Stage"
-				(path "/4073579f-dff4-4919-be9b-9c43467e22c1/fdb1cb22-51b8-420c-a9c7-ed601f391b52/b3aa0955-8146-4e7d-bc37-12b2532dd7f7"
-					(reference "#PWR056")
-					(unit 1)
-				)
-				(path "/4073579f-dff4-4919-be9b-9c43467e22c1/d06aea5d-6634-499e-bc84-2b0ee963ac5c/b3aa0955-8146-4e7d-bc37-12b2532dd7f7"
-					(reference "#PWR057")
-					(unit 1)
-				)
-				(path "/4073579f-dff4-4919-be9b-9c43467e22c1/fc0c4d71-751a-405d-a2b0-dee4001cda35/b3aa0955-8146-4e7d-bc37-12b2532dd7f7"
-					(reference "#PWR058")
-					(unit 1)
-				)
 				(path "/4073579f-dff4-4919-be9b-9c43467e22c1/4b4528f4-b188-451e-92e0-694bcc5262fb"
 					(reference "#PWR068")
 					(unit 1)
@@ -670,7 +646,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "dce71958-a936-486c-8daf-f1ee3f4ec6e3")
-		(property "Reference" "C54"
+		(property "Reference" "C63"
 			(at 134.62 88.9 0)
 			(effects
 				(font
@@ -724,18 +700,6 @@
 		)
 		(instances
 			(project "Power_Stage"
-				(path "/4073579f-dff4-4919-be9b-9c43467e22c1/fdb1cb22-51b8-420c-a9c7-ed601f391b52/b3aa0955-8146-4e7d-bc37-12b2532dd7f7"
-					(reference "C54")
-					(unit 1)
-				)
-				(path "/4073579f-dff4-4919-be9b-9c43467e22c1/d06aea5d-6634-499e-bc84-2b0ee963ac5c/b3aa0955-8146-4e7d-bc37-12b2532dd7f7"
-					(reference "C55")
-					(unit 1)
-				)
-				(path "/4073579f-dff4-4919-be9b-9c43467e22c1/fc0c4d71-751a-405d-a2b0-dee4001cda35/b3aa0955-8146-4e7d-bc37-12b2532dd7f7"
-					(reference "C56")
-					(unit 1)
-				)
 				(path "/4073579f-dff4-4919-be9b-9c43467e22c1/4b4528f4-b188-451e-92e0-694bcc5262fb"
 					(reference "C63")
 					(unit 1)

@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP AHV85111KNHTR
+D Self-Powered Single-Channel Isolated GaNFET Gate Driver with Regulated Bipolar Output Drive
+K
+F https://www.allegromicro.com/~/media/files/datasheets/AHV85111-Limited-Datasheet
+$ENDCMP
+#
+#End Doc Library

@@ -1,0 +1,35 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model AHV85111KNHTR
+#/18477899/1351323/2.50/12/2/Integrated Circuit
+DEF AHV85111KNHTR IC 0 30 Y Y 1 F N
+F0 "IC" 1050 300 50 H V L CNN
+F1 "AHV85111KNHTR" 1050 200 50 H V L CNN
+F2 "AHV85111KNHTR" 1050 100 50 H I L CNN
+F3 "https://www.allegromicro.com/~/media/files/datasheets/AHV85111-Limited-Datasheet" 1050 0 50 H I L CNN
+F4 "Self-Powered Single-Channel Isolated GaNFET Gate Driver with Regulated Bipolar Output Drive" 1050 -100 50 H I L CNN "Description"
+F5 "2.51" 1050 -200 50 H I L CNN "Height"
+F6 "Allegro Microsystems" 1050 -300 50 H I L CNN "Manufacturer_Name"
+F7 "AHV85111KNHTR" 1050 -400 50 H I L CNN "Manufacturer_Part_Number"
+F8 "250-AHV85111KNHTR" 1050 -500 50 H I L CNN "Mouser Part Number"
+F9 "https://www.mouser.co.uk/ProductDetail/Allegro-MicroSystems/AHV85111KNHTR?qs=ST9lo4GX8V0j4dsMkoDFBw%3D%3D" 1050 -600 50 H I L CNN "Mouser Price/Stock"
+F10 "" 1050 -700 50 H I L CNN "Arrow Part Number"
+F11 "" 1050 -800 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X SEL 1 0 0 200 R 50 50 0 0 P
+X EN 2 0 -100 200 R 50 50 0 0 P
+X IN 3 0 -200 200 R 50 50 0 0 P
+X VDRV 4 0 -300 200 R 50 50 0 0 P
+X REF 5 0 -400 200 R 50 50 0 0 P
+X GND 6 0 -500 200 R 50 50 0 0 P
+X FB 7 1200 -500 200 L 50 50 0 0 P
+X VSECP 8 1200 -400 200 L 50 50 0 0 P
+X VSECN 9 1200 -300 200 L 50 50 0 0 P
+X SOURCE 10 1200 -200 200 L 50 50 0 0 P
+X OUTPD 11 1200 -100 200 L 50 50 0 0 P
+X OUTPU 12 1200 0 200 L 50 50 0 0 P
+P 5 0 1 6 200 100 1000 100 1000 -600 200 -600 200 100 N
+ENDDRAW
+ENDDEF
+#
+#End Library
