@@ -1,0 +1,31 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model ADUM4195-1WBRIZ
+#/17860225/1351323/2.50/8/2/Integrated Circuit
+DEF ADUM4195-1WBRIZ IC 0 30 Y Y 1 F N
+F0 "IC" 950 300 50 H V L CNN
+F1 "ADUM4195-1WBRIZ" 950 200 50 H V L CNN
+F2 "SOIC127P1031X265-8N" 950 100 50 H I L CNN
+F3 "https://www.analog.com/ADUM4195-1/datasheet" 950 0 50 H I L CNN
+F4 "High-impedance input for isolated voltage measurement Fixed gain = 1 Low offset error and drift: &plusmn;5 mV (maximum) at 25&deg;C and &minus;22 &mu;V/&deg;C (typical) Low gain error and drift: &plusmn;0.5% (max) and &plusmn;42 ppm/&deg;C (maximum) Voltage-supply range VDD1: 4.5 V to 5.5 V VDD2: 4.5 V to 5.5 V Bandwidth: 210 kHz Isolation voltage: 5000 V RMS Safety and regulatory approvals (pending) UL recognition: 5000 V RMS for 1 minute per UL 1577 CSA Component Acceptance Notice #5A VDE certificate of c" 950 -100 50 H I L CNN "Description"
+F5 "2.65" 950 -200 50 H I L CNN "Height"
+F6 "Analog Devices" 950 -300 50 H I L CNN "Manufacturer_Name"
+F7 "ADUM4195-1WBRIZ" 950 -400 50 H I L CNN "Manufacturer_Part_Number"
+F8 "584-ADUM4195-1WBRIZ" 950 -500 50 H I L CNN "Mouser Part Number"
+F9 "https://www.mouser.co.uk/ProductDetail/Analog-Devices/ADUM4195-1WBRIZ?qs=amGC7iS6iy%2F1TtssMcAwEg%3D%3D" 950 -600 50 H I L CNN "Mouser Price/Stock"
+F10 "ADUM4195-1WBRIZ" 950 -700 50 H I L CNN "Arrow Part Number"
+F11 "https://www.arrow.com/en/products/adum4195-1wbriz/analog-devices?region=nac" 950 -800 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X VDD2 1 0 0 200 R 50 50 0 0 P
+X VIN 2 0 -100 200 R 50 50 0 0 P
+X SHTD 3 0 -200 200 R 50 50 0 0 P
+X GND2 4 0 -300 200 R 50 50 0 0 P
+X VDD1 8 1100 0 200 L 50 50 0 0 P
+X VOUT 7 1100 -100 200 L 50 50 0 0 P
+X NC 6 1100 -200 200 L 50 50 0 0 N
+X GND1 5 1100 -300 200 L 50 50 0 0 P
+P 5 0 1 6 200 100 900 100 900 -400 200 -400 200 100 N
+ENDDRAW
+ENDDEF
+#
+#End Library

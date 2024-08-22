@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP ADUM4195-1WBRIZ
+D High-impedance input for isolated voltage measurement Fixed gain = 1 Low offset error and drift: &plusmn;5 mV (maximum) at 25&deg;C and &minus;22 &mu;V/&deg;C (typical) Low gain error and drift: &plusmn;0.5% (max) and &plusmn;42 ppm/&deg;C (maximum) Voltage-supply range VDD1: 4.5 V to 5.5 V VDD2: 4.5 V to 5.5 V Bandwidth: 210 kHz Isolation voltage: 5000 V RMS Safety and regulatory approvals (pending) UL recognition: 5000 V RMS for 1 minute per UL 1577 CSA Component Acceptance Notice #5A VDE certificate of c
+K
+F https://www.analog.com/ADUM4195-1/datasheet
+$ENDCMP
+#
+#End Doc Library
