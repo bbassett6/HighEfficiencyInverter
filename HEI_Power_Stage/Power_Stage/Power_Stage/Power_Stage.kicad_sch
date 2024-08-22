@@ -8353,6 +8353,29 @@
 	(netclass_flag ""
 		(length 2.54)
 		(shape round)
+		(at 247.65 196.85 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1c1ebc74-0686-426d-a519-f46d34de26d3")
+		(property "Netclass" "HV"
+			(at 248.3485 194.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+	)
+	(netclass_flag ""
+		(length 2.54)
+		(shape round)
 		(at 304.8 90.17 0)
 		(fields_autoplaced yes)
 		(effects
