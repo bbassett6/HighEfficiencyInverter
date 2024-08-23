@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP ACS730KLCTR-30AB-T
+D 1 MHz Bandwidth, Galvanically Isolated Current Sensor IC in Small Footprint SOIC8 Package
+K
+F https://www.allegromicro.com/-/media/files/datasheets/acs730-datasheet.ashx
+$ENDCMP
+#
+#End Doc Library
