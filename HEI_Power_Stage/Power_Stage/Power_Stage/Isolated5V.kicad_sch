@@ -1,0 +1,128 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "488882ec-b380-4e3f-9071-4fc2185c9144")
+	(paper "A4")
+	(lib_symbols)
+	(hierarchical_label "GND"
+		(shape input)
+		(at 66.04 59.69 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "0811a8bf-f403-47af-911a-7a6e534828bd")
+	)
+	(hierarchical_label "SWB"
+		(shape output)
+		(at 138.43 64.77 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "144f27db-01f0-4a95-96e3-2454de823205")
+	)
+	(hierarchical_label "SWA"
+		(shape output)
+		(at 138.43 58.42 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "3034a01f-96ed-4f77-a31e-303b50adaadf")
+	)
+	(hierarchical_label "+5VHB"
+		(shape output)
+		(at 138.43 62.23 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "31fa53e9-0438-4fe5-add4-2d5895865496")
+	)
+	(hierarchical_label "+5VHA"
+		(shape output)
+		(at 138.43 55.88 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "431abfa8-63f8-461d-add0-6e2f7bb6e9e3")
+	)
+	(hierarchical_label "12V"
+		(shape input)
+		(at 66.04 55.88 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "afc48514-2535-4ea2-a502-4473966f87f3")
+	)
+	(hierarchical_label "HV-"
+		(shape output)
+		(at 138.43 77.47 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b948cb6f-ea10-45d2-83f9-955bbc46c3aa")
+	)
+	(hierarchical_label "+5VHC"
+		(shape output)
+		(at 138.43 68.58 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c8316bfe-6bd3-49ac-acbc-f959aebb5810")
+	)
+	(hierarchical_label "+5VL"
+		(shape output)
+		(at 138.43 74.93 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "cce6bc01-df85-4943-bc6e-396d06b2a451")
+	)
+	(hierarchical_label "SWC"
+		(shape output)
+		(at 138.43 71.12 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "f8dc5214-916c-4123-88ef-1683f085e8c4")
+	)
+)
