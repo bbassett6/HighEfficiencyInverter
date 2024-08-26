@@ -7829,71 +7829,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 78.74 152.4 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "2a199d53-b29c-4545-9fe8-cda55c38d5f0")
-		(property "Reference" "#PWR047"
-			(at 78.74 158.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 75.565 155.575 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 78.74 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 78.74 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 78.74 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "1b813379-1701-40aa-a59e-2a6d33a84d43")
-		)
-		(instances
-			(project "Power_Stage"
-				(path "/4073579f-dff4-4919-be9b-9c43467e22c1"
-					(reference "#PWR047")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+5V")
 		(at 55.88 76.2 0)
 		(unit 1)
@@ -10361,6 +10296,71 @@
 			(project "Power_Stage"
 				(path "/4073579f-dff4-4919-be9b-9c43467e22c1"
 					(reference "C50")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDPWR")
+		(at 78.74 152.4 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "852fd850-a7c5-4391-b5dc-50b7ecef9edb")
+		(property "Reference" "#PWR01"
+			(at 78.74 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "HV-"
+			(at 81.28 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 78.74 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 78.74 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 78.74 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2424755f-c5e3-42c9-8e73-a15db28ba615")
+		)
+		(instances
+			(project "Power_Stage"
+				(path "/4073579f-dff4-4919-be9b-9c43467e22c1"
+					(reference "#PWR01")
 					(unit 1)
 				)
 			)
@@ -13684,7 +13684,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "5.1-5.7v"
+		(property "Value" "PDZVTFTR5.1B"
 			(at 357.378 171.45 90)
 			(effects
 				(font
@@ -13702,7 +13702,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.rohm.com/datasheet?p=PDZVTF5.1B&dist=Digi-key&media=referral&source=digi-key.com&campaign=Digi-key"
 			(at 355.6 171.45 90)
 			(effects
 				(font
@@ -13711,13 +13711,21 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Zener diode, small symbol"
+		(property "Description" "  Zener Diode 5.4 V 1 W ±5.88% Surface Mount PMDTM"
 			(at 355.6 171.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
+			)
+		)
+		(property "Vbreakdown" "5.4V"
+			(at 358.14 173.736 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "1"
