@@ -4285,10 +4285,10 @@
 	)
 	(text "High Efficiency Inverter Logic Stage"
 		(exclude_from_sim no)
-		(at 232.41 252.095 0)
+		(at 180.594 176.784 0)
 		(effects
 			(font
-				(face "Tahoma")
+				(face "Rockwell")
 				(size 4 4)
 			)
 			(justify left bottom)
@@ -4318,9 +4318,9 @@
 		)
 		(uuid "5c918f9d-9a32-4b03-a613-3491f568d619")
 	)
-	(text "TODOs:\n- Select 5V_MCU supply\n- Add bypass caps to all ICs that recommend it\n- Update parts folder"
+	(text "TODOs:\n- Consider 12->iso->5 for main power, then 5->12 for hall option?\n- Select 5V_MCU supply, check all power supply current budgets\n- Add bypass caps to all ICs that recommend it\n- Update parts folder"
 		(exclude_from_sim no)
-		(at 109.728 159.512 0)
+		(at 101.6 164.846 0)
 		(effects
 			(font
 				(face "Rockwell")
@@ -4477,6 +4477,7 @@
 	)
 	(label "TIN1"
 		(at 86.106 59.69 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4498,6 +4499,7 @@
 	)
 	(label "TIN2"
 		(at 86.106 62.23 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4530,6 +4532,7 @@
 	)
 	(label "CAN_TX"
 		(at 49.53 52.07 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4540,6 +4543,7 @@
 	)
 	(label "HallIN1_3v3"
 		(at 86.106 52.07 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4550,6 +4554,7 @@
 	)
 	(label "PhB_I"
 		(at 86.106 37.973 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4560,6 +4565,7 @@
 	)
 	(label "CAN_RX"
 		(at 49.53 54.61 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4647,6 +4653,7 @@
 	)
 	(label "PhC_I"
 		(at 86.106 40.513 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4778,6 +4785,7 @@
 	)
 	(label "DCI"
 		(at 86.106 43.053 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4799,6 +4807,7 @@
 	)
 	(label "HallIN2_3v3"
 		(at 86.106 54.61 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4919,6 +4928,7 @@
 	)
 	(label "TIN3"
 		(at 86.106 64.77 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4962,6 +4972,7 @@
 	)
 	(label "PhA_I"
 		(at 86.106 35.433 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4994,6 +5005,7 @@
 	)
 	(label "HallIN3_3v3"
 		(at 86.106 57.15 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5037,6 +5049,7 @@
 	)
 	(label "DCV"
 		(at 86.106 45.593 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
