@@ -2744,6 +2744,24 @@
 		(uuid "3580f6ba-6be7-490c-b256-de172afeb905")
 	)
 	(junction
+		(at 36.195 131.445)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3a286871-a082-46f6-a0d1-609ccc5aaed1")
+	)
+	(junction
+		(at 36.195 121.92)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3b11b0b6-528d-448e-9144-e865738a5e0e")
+	)
+	(junction
+		(at 29.21 135.255)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3b9301eb-a02f-40ee-9a3c-300e4321f63e")
+	)
+	(junction
 		(at 95.885 157.48)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2786,12 +2804,6 @@
 		(uuid "6afadcd8-ebe8-4030-b64e-9c52d605f77a")
 	)
 	(junction
-		(at 36.195 131.445)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "745de408-b0ba-4746-a0e8-fcb92d935cc2")
-	)
-	(junction
 		(at 147.955 74.93)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2832,6 +2844,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8e03c48d-c41d-4173-9d6f-feb5ae16b930")
+	)
+	(junction
+		(at 125.73 86.36)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "94aa141f-b65e-4cba-9c73-38bc8b1ee6e5")
 	)
 	(junction
 		(at 168.91 65.405)
@@ -2900,6 +2918,12 @@
 		(uuid "e3f5106d-f628-4921-8ef5-3468e4803f59")
 	)
 	(junction
+		(at 33.655 121.92)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ea39265a-842a-465c-8eae-eab30969a37c")
+	)
+	(junction
 		(at 125.73 84.455)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2928,6 +2952,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f495265b-7bb4-4db0-be14-80a8354e6aa8")
+	)
+	(junction
+		(at 250.825 72.39)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fa002d10-b10b-415c-b857-b5ec3f7e4f68")
 	)
 	(junction
 		(at 262.89 84.455)
@@ -3280,6 +3310,16 @@
 			(type default)
 		)
 		(uuid "24ed6b6a-b6a3-4d71-b77b-30dd615d244d")
+	)
+	(wire
+		(pts
+			(xy 250.825 72.39) (xy 250.825 74.295)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "25c709a0-5251-4d9f-be7d-bdd8655972b3")
 	)
 	(wire
 		(pts
@@ -3813,6 +3853,16 @@
 	)
 	(wire
 		(pts
+			(xy 33.655 121.92) (xy 36.195 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6a9976fb-70a4-4d1d-900b-7dc3ed22497e")
+	)
+	(wire
+		(pts
 			(xy 196.85 74.93) (xy 198.755 74.93)
 		)
 		(stroke
@@ -3830,6 +3880,16 @@
 			(type default)
 		)
 		(uuid "6d2d45e2-8b74-4e6e-9477-56a5c8668ece")
+	)
+	(wire
+		(pts
+			(xy 36.195 121.92) (xy 36.195 131.445)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6e7ac9b3-309d-4e48-8684-0ceb9695c907")
 	)
 	(wire
 		(pts
@@ -4163,13 +4223,13 @@
 	)
 	(wire
 		(pts
-			(xy 34.925 131.445) (xy 36.195 131.445)
+			(xy 26.67 121.92) (xy 33.655 121.92)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a89db726-ddaa-458f-86a7-cc34a68da30d")
+		(uuid "a883b1c4-89b8-40a8-93a0-bae5d661ca2a")
 	)
 	(wire
 		(pts
@@ -4190,16 +4250,6 @@
 			(type default)
 		)
 		(uuid "aba3f42b-e359-4b27-8640-5b1729f43ecb")
-	)
-	(wire
-		(pts
-			(xy 24.13 139.065) (xy 36.195 139.065)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ad99178f-490d-4693-a2dd-40b5a2a0e0b6")
 	)
 	(wire
 		(pts
@@ -4373,6 +4423,16 @@
 	)
 	(wire
 		(pts
+			(xy 36.195 120.65) (xy 36.195 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d834b380-780d-4fc9-bb2c-4de2585361b1")
+	)
+	(wire
+		(pts
 			(xy 220.345 92.71) (xy 220.345 93.98)
 		)
 		(stroke
@@ -4493,16 +4553,6 @@
 	)
 	(wire
 		(pts
-			(xy 34.925 130.81) (xy 34.925 131.445)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f0c34f0d-af6a-4fe9-83b9-7737e8e7bd5f")
-	)
-	(wire
-		(pts
 			(xy 150.495 100.33) (xy 152.4 100.33)
 		)
 		(stroke
@@ -4520,6 +4570,16 @@
 			(type default)
 		)
 		(uuid "f43d0d10-1903-4067-8108-31d0a06767f6")
+	)
+	(wire
+		(pts
+			(xy 259.715 74.295) (xy 259.715 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f76af852-3881-433a-8c50-b6f9de1a5876")
 	)
 	(wire
 		(pts
@@ -4581,6 +4641,16 @@
 		)
 		(uuid "fd759f41-1200-44e7-8d5e-b6d8ec5f9970")
 	)
+	(wire
+		(pts
+			(xy 250.825 72.39) (xy 259.715 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ff514ab9-504f-49ed-a93a-eeb9fcc190c2")
+	)
 	(text "Power Stage Connectors\n"
 		(exclude_from_sim no)
 		(at 21.082 25.908 0)
@@ -4627,6 +4697,18 @@
 			(justify left bottom)
 		)
 		(uuid "393fb6d4-d86b-4aaa-99c9-e95f8f6edd50")
+	)
+	(text "HFI Logic Stage\nControl/Motor Interface"
+		(exclude_from_sim no)
+		(at 179.07 180.848 0)
+		(effects
+			(font
+				(face "Rockwell")
+				(size 4 4)
+			)
+			(justify left bottom)
+		)
+		(uuid "4a786c40-df8a-4260-b1de-07ccfc1da0af")
 	)
 	(text "12 or 5 V => 3.3V \nHall Inputs\n\nTODO: Check symbol and pinout"
 		(exclude_from_sim no)
@@ -5343,7 +5425,7 @@
 	)
 	(hierarchical_label "V_Hall"
 		(shape input)
-		(at 24.13 139.065 180)
+		(at 26.67 121.92 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5493,6 +5575,72 @@
 			(project "HEI_Logic"
 				(path "/9d05e1b7-f292-46e2-9203-5654fb6f820e/32c11a5f-5282-4830-a80c-4f40f9c7ec9a"
 					(reference "C8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 125.73 91.44 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "127c2e2f-5e3a-4ca5-837e-d6cc43b44248")
+		(property "Reference" "#PWR01"
+			(at 125.73 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 122.682 90.805 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 125.73 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 125.73 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 125.73 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "87d9157d-fc75-43a9-b3e3-df3d06ad5d7d")
+		)
+		(instances
+			(project "HEI_Logic"
+				(path "/9d05e1b7-f292-46e2-9203-5654fb6f820e/32c11a5f-5282-4830-a80c-4f40f9c7ec9a"
+					(reference "#PWR01")
 					(unit 1)
 				)
 			)
@@ -6133,6 +6281,72 @@
 			(project "HEI_Logic"
 				(path "/9d05e1b7-f292-46e2-9203-5654fb6f820e/32c11a5f-5282-4830-a80c-4f40f9c7ec9a"
 					(reference "#PWR070")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 29.21 140.335 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2b0408bd-5397-4539-88fd-b36418922f6d")
+		(property "Reference" "#PWR016"
+			(at 29.21 146.685 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 25.908 141.478 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 29.21 140.335 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 29.21 140.335 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 29.21 140.335 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c7d6ddd5-ef0a-4886-9fd0-933cbe5dd0c8")
+		)
+		(instances
+			(project "HEI_Logic"
+				(path "/9d05e1b7-f292-46e2-9203-5654fb6f820e/32c11a5f-5282-4830-a80c-4f40f9c7ec9a"
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -6975,7 +7189,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 250.825 74.295 0)
+		(at 250.825 72.39 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -6984,7 +7198,7 @@
 		(dnp no)
 		(uuid "5e01b959-abc9-4d15-8a2b-ddd229dc251d")
 		(property "Reference" "#PWR069"
-			(at 250.825 78.105 0)
+			(at 250.825 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6993,7 +7207,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 250.571 70.485 0)
+			(at 252.984 70.104 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7001,7 +7215,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 250.825 74.295 0)
+			(at 250.825 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7010,7 +7224,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 250.825 74.295 0)
+			(at 250.825 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7019,7 +7233,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 250.825 74.295 0)
+			(at 250.825 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7028,7 +7242,7 @@
 			)
 		)
 		(property "Populate" ""
-			(at 250.825 74.295 0)
+			(at 250.825 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7194,6 +7408,144 @@
 			(project "HEI_Logic"
 				(path "/9d05e1b7-f292-46e2-9203-5654fb6f820e/32c11a5f-5282-4830-a80c-4f40f9c7ec9a"
 					(reference "R24")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 29.21 137.795 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "63eb3554-ae77-4b9c-a01d-b461b33cbd64")
+		(property "Reference" "C3"
+			(at 24.638 137.033 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0.1uF"
+			(at 21.336 139.065 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 29.21 137.795 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 29.21 137.795 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 29.21 137.795 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a96a3d57-0353-48fa-b350-9e582adb0792")
+		)
+		(pin "2"
+			(uuid "bfaf63c7-7155-4e14-8967-1c96f5a988ed")
+		)
+		(instances
+			(project "HEI_Logic"
+				(path "/9d05e1b7-f292-46e2-9203-5654fb6f820e/32c11a5f-5282-4830-a80c-4f40f9c7ec9a"
+					(reference "C3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 33.655 124.46 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "663825ea-29e9-40ba-900b-bb7d39666a4a")
+		(property "Reference" "C4"
+			(at 28.956 123.698 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0.1uF"
+			(at 26.162 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 33.655 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 33.655 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 33.655 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c978fae6-7e1e-4d08-b8db-0fd6c6230b8d")
+		)
+		(pin "2"
+			(uuid "88c048a7-54ce-4223-b390-fc79dab30951")
+		)
+		(instances
+			(project "HEI_Logic"
+				(path "/9d05e1b7-f292-46e2-9203-5654fb6f820e/32c11a5f-5282-4830-a80c-4f40f9c7ec9a"
+					(reference "C4")
 					(unit 1)
 				)
 			)
@@ -7543,6 +7895,75 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C_Small")
+		(at 125.73 88.9 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6a56b21f-fedf-4f56-ac56-1855f5c819a0")
+		(property "Reference" "C1"
+			(at 121.412 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0.1uF"
+			(at 118.11 88.392 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 125.73 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 125.73 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 125.73 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c4035cc4-fd83-42ca-84a2-09d6f02dcb31")
+		)
+		(pin "2"
+			(uuid "010207ef-e211-4f09-b0cc-c7e94cb2a0ba")
+		)
+		(instances
+			(project "HEI_Logic"
+				(path "/9d05e1b7-f292-46e2-9203-5654fb6f820e/32c11a5f-5282-4830-a80c-4f40f9c7ec9a"
+					(reference "C1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_name "Test_Point_1")
 		(lib_id "GTSR_symbol_lib:Test_Point")
 		(at 64.135 41.275 90)
@@ -7765,6 +8186,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 33.655 127 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "76d9a7ed-217e-458e-b893-d15d837afd94")
+		(property "Reference" "#PWR031"
+			(at 33.655 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 29.972 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 33.655 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 33.655 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 33.655 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a1c06ee8-ab1e-49ad-aa1f-a82f9cf1c88c")
+		)
+		(instances
+			(project "HEI_Logic"
+				(path "/9d05e1b7-f292-46e2-9203-5654fb6f820e/32c11a5f-5282-4830-a80c-4f40f9c7ec9a"
+					(reference "#PWR031")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_Small_US")
 		(at 145.415 72.39 90)
 		(unit 1)
@@ -7835,6 +8322,72 @@
 			(project "HEI_Logic"
 				(path "/9d05e1b7-f292-46e2-9203-5654fb6f820e/32c11a5f-5282-4830-a80c-4f40f9c7ec9a"
 					(reference "R46")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 259.715 79.375 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7bd3d1fd-2cae-4cce-80b1-0b334648f089")
+		(property "Reference" "#PWR011"
+			(at 259.715 85.725 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 256.667 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 259.715 79.375 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 259.715 79.375 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 259.715 79.375 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c005ffaa-7cae-463b-9c6f-78d50cf8248f")
+		)
+		(instances
+			(project "HEI_Logic"
+				(path "/9d05e1b7-f292-46e2-9203-5654fb6f820e/32c11a5f-5282-4830-a80c-4f40f9c7ec9a"
+					(reference "#PWR011")
 					(unit 1)
 				)
 			)
@@ -9987,7 +10540,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 34.925 130.81 0)
+		(at 36.195 120.65 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -9996,7 +10549,7 @@
 		(dnp no)
 		(uuid "d067b600-168d-4755-9a58-5965b9e3c7be")
 		(property "Reference" "#PWR018"
-			(at 34.925 134.62 0)
+			(at 36.195 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10005,7 +10558,7 @@
 			)
 		)
 		(property "Value" "V_Hall"
-			(at 34.925 126.746 0)
+			(at 36.195 116.586 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10013,7 +10566,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 34.925 130.81 0)
+			(at 36.195 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10022,7 +10575,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 34.925 130.81 0)
+			(at 36.195 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10031,7 +10584,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 34.925 130.81 0)
+			(at 36.195 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10642,6 +11195,75 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C_Small")
+		(at 259.715 76.835 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e1e0bbc7-82f1-459f-8966-c123fd644fd3")
+		(property "Reference" "C2"
+			(at 255.397 74.295 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0.1uF"
+			(at 252.095 76.327 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 259.715 76.835 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 259.715 76.835 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 259.715 76.835 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9216c29d-88a1-4330-8647-1ece82328d4e")
+		)
+		(pin "2"
+			(uuid "6403f389-458e-4d9a-8582-87050b05a46f")
+		)
+		(instances
+			(project "HEI_Logic"
+				(path "/9d05e1b7-f292-46e2-9203-5654fb6f820e/32c11a5f-5282-4830-a80c-4f40f9c7ec9a"
+					(reference "C2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_name "Test_Point_1")
 		(lib_id "GTSR_symbol_lib:Test_Point")
 		(at 64.135 38.735 90)
@@ -10880,7 +11502,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 24.765 133.35 0)
+			(at 25.908 131.572 0)
 			(effects
 				(font
 					(size 1.27 1.27)

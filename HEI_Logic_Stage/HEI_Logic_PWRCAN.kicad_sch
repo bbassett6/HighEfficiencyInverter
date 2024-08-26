@@ -4099,9 +4099,9 @@
 		)
 		(uuid "51779082-9836-4d4c-a23b-eee342eb7fb7")
 	)
-	(text "High Efficiency Inverter Logic Stage"
+	(text "HFI Logic Stage\nPower & CAN"
 		(exclude_from_sim no)
-		(at 180.848 175.768 0)
+		(at 179.324 180.848 0)
 		(effects
 			(font
 				(face "Rockwell")

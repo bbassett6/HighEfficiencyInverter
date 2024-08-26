@@ -4318,7 +4318,7 @@
 		)
 		(uuid "5c918f9d-9a32-4b03-a613-3491f568d619")
 	)
-	(text "TODOs:\n- Consider 12->iso->5 for main power, then 5->12 for hall option?\n- Select 5V_MCU supply, check all power supply current budgets\n- Add bypass caps to all ICs that recommend it\n- Update parts folder"
+	(text "TODOs:\n- Consider 12->iso->5 for main power, then 5->12 for hall option?\n- Select 5V_MCU supply, check all power supply current budgets"
 		(exclude_from_sim no)
 		(at 101.6 164.846 0)
 		(effects
