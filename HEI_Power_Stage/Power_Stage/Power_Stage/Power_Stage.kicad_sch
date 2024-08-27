@@ -1842,164 +1842,6 @@
 				)
 			)
 		)
-		(symbol "Device:C_Polarized"
-			(pin_numbers hide)
-			(pin_names
-				(offset 0.254)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "C"
-				(at 0.635 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "C_Polarized"
-				(at 0.635 -2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" ""
-				(at 0.9652 -3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Polarized capacitor"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "cap capacitor"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "CP_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "C_Polarized_0_1"
-				(rectangle
-					(start -2.286 0.508)
-					(end 2.286 1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.778 2.286) (xy -0.762 2.286)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 2.794) (xy -1.27 1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 2.286 -0.508)
-					(end -2.286 -1.016)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-			)
-			(symbol "C_Polarized_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 2.794)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 2.794)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "Device:C_Small"
 			(pin_numbers hide)
 			(pin_names
@@ -3590,12 +3432,6 @@
 		(uuid "34c16ab4-c402-4b9d-9a4c-3ab6cec78f57")
 	)
 	(junction
-		(at 228.6 58.42)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "34fd68fc-ac6b-4ec8-9466-9f3e5eabd12c")
-	)
-	(junction
 		(at 347.98 166.37)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3666,6 +3502,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a257bc69-48aa-452a-b70d-adac9bcc2db3")
+	)
+	(junction
+		(at 226.06 58.42)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a45f0300-2843-4c9f-be63-06902b1cc213")
 	)
 	(junction
 		(at 217.17 58.42)
@@ -3740,6 +3582,12 @@
 		(uuid "c4d2a6da-9d7f-4873-9b5d-21b8d883f3d4")
 	)
 	(junction
+		(at 226.06 44.45)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c71f5294-f232-47d2-8387-4afea72f8898")
+	)
+	(junction
 		(at 237.49 58.42)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3756,12 +3604,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ceef8443-d9d3-44cf-abc9-7365d6084704")
-	)
-	(junction
-		(at 228.6 44.45)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d2d2fc4f-039b-4f6c-a013-43b306a8fdbd")
 	)
 	(junction
 		(at 306.07 124.46)
@@ -3866,16 +3708,6 @@
 			(type default)
 		)
 		(uuid "04d7a0d2-5a1b-45ca-a974-2d7be995a7b1")
-	)
-	(wire
-		(pts
-			(xy 228.6 58.42) (xy 237.49 58.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "04f4e3bf-2775-4b58-a9b5-7522725f0539")
 	)
 	(wire
 		(pts
@@ -4149,16 +3981,6 @@
 	)
 	(wire
 		(pts
-			(xy 228.6 44.45) (xy 237.49 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "234a803e-4846-4626-803a-cfb6ac88328b")
-	)
-	(wire
-		(pts
 			(xy 237.49 58.42) (xy 247.65 58.42)
 		)
 		(stroke
@@ -4376,6 +4198,16 @@
 			(type default)
 		)
 		(uuid "36346deb-00ae-42d8-a13a-c09ce893fc0a")
+	)
+	(wire
+		(pts
+			(xy 226.06 44.45) (xy 226.06 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3640e532-2c5c-4829-b540-a8c9bd44382a")
 	)
 	(wire
 		(pts
@@ -4616,6 +4448,16 @@
 			(type default)
 		)
 		(uuid "580b4247-3a94-444b-8e03-e6a672c01e27")
+	)
+	(wire
+		(pts
+			(xy 226.06 58.42) (xy 237.49 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "59902386-ef01-45f9-8a9c-ae490b5db39b")
 	)
 	(wire
 		(pts
@@ -5169,16 +5011,6 @@
 	)
 	(wire
 		(pts
-			(xy 228.6 46.355) (xy 228.6 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a84e15b1-1cf5-4970-a373-7e0a3e98ccfc")
-	)
-	(wire
-		(pts
 			(xy 342.9 170.18) (xy 342.9 166.37)
 		)
 		(stroke
@@ -5379,6 +5211,16 @@
 	)
 	(wire
 		(pts
+			(xy 226.06 44.45) (xy 237.49 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b83d5f30-278e-4f1d-b350-827632933725")
+	)
+	(wire
+		(pts
 			(xy 299.72 132.08) (xy 308.61 132.08)
 		)
 		(stroke
@@ -5509,7 +5351,7 @@
 	)
 	(wire
 		(pts
-			(xy 217.17 58.42) (xy 228.6 58.42)
+			(xy 217.17 58.42) (xy 226.06 58.42)
 		)
 		(stroke
 			(width 0)
@@ -5749,7 +5591,7 @@
 	)
 	(wire
 		(pts
-			(xy 217.17 44.45) (xy 228.6 44.45)
+			(xy 217.17 44.45) (xy 226.06 44.45)
 		)
 		(stroke
 			(width 0)
@@ -5796,16 +5638,6 @@
 			(type default)
 		)
 		(uuid "eafbd3b2-5315-4c32-a6ee-061f5992480f")
-	)
-	(wire
-		(pts
-			(xy 228.6 53.975) (xy 228.6 58.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "eb20ab0f-8dea-4985-a7a2-3d09c47d9d24")
 	)
 	(wire
 		(pts
@@ -10088,75 +9920,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Polarized")
-		(at 228.6 50.165 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "84662ca0-3fb3-4c47-bb46-83154244b4bf")
-		(property "Reference" "C50"
-			(at 229.87 47.625 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100uF"
-			(at 228.854 53.213 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D35.0mm_P10.00mm_SnapIn"
-			(at 229.5652 53.975 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 228.6 50.165 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Polarized capacitor"
-			(at 228.6 50.165 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "9ec1e281-92ba-49e0-a36d-c355ebea6043")
-		)
-		(pin "2"
-			(uuid "d0959813-a138-4752-9e5e-5e13a3dfb5b8")
-		)
-		(instances
-			(project "Power_Stage"
-				(path "/4073579f-dff4-4919-be9b-9c43467e22c1"
-					(reference "C50")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GNDPWR")
 		(at 78.74 152.4 0)
 		(unit 1)
@@ -13013,6 +12776,147 @@
 			(project "Power_Stage"
 				(path "/4073579f-dff4-4919-be9b-9c43467e22c1"
 					(reference "#PWR020")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "C4AQLLU5150A19K:C4AQLLU5150A19K")
+		(at 226.06 58.42 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ee43c9a6-d005-4beb-9f10-90340f1e0649")
+		(property "Reference" "C25"
+			(at 229.87 50.7999 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "15uF"
+			(at 227.076 54.102 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "C4AQLLU5150A19K _KiCad:C4AQLLU5150A19K"
+			(at 322.25 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.kemet.com/specsheet/C4AQLLU5150A19K"
+			(at 422.25 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "C4AQ, Film, Metallized Polypropylene, Automotive DC Link, 15 uF, 10%, 500 VDC, 105C, -55C, 70C, 2 GOhms, 10 V/us, 16 nH, 28.6 g, 32mm, 19mm, 31mm, Lead Spacing = 27.5mm, 80"
+			(at 226.06 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Height" "19.2"
+			(at 622.25 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "KEMET"
+			(at 722.25 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "C4AQLLU5150A19K"
+			(at 822.25 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "80-C4AQLLU5150A19K"
+			(at 922.25 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/KEMET/C4AQLLU5150A19K?qs=OlC7AqGiEDn77NeU4Ri2AA%3D%3D"
+			(at 1022.25 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Arrow Part Number" ""
+			(at 1122.25 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Arrow Price/Stock" ""
+			(at 1222.25 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "ff97bf2c-28a9-4629-9843-2a98605f627f")
+		)
+		(pin "1"
+			(uuid "d2531ffb-2fcc-422a-be33-6c794964501b")
+		)
+		(instances
+			(project "Power_Stage"
+				(path "/4073579f-dff4-4919-be9b-9c43467e22c1"
+					(reference "C25")
 					(unit 1)
 				)
 			)

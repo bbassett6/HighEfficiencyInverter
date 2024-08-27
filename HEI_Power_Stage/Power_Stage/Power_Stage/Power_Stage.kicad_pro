@@ -179,7 +179,10 @@
         }
       ],
       "track_widths": [
-        0.0
+        0.0,
+        0.3,
+        0.5,
+        1.0
       ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
@@ -211,6 +214,10 @@
         {
           "diameter": 0.0,
           "drill": 0.0
+        },
+        {
+          "diameter": 0.45,
+          "drill": 0.3
         }
       ],
       "zones_allow_external_fillets": false
@@ -501,6 +508,7 @@
       "/Phase1/SW": "HV",
       "/Phase1/VDDA": "HV",
       "/Phase1/VDDhs": "HV",
+      "/Phase1/VDDls": "HV",
       "/Phase2/HS_{DRV}": "HV",
       "/Phase2/HS_{Gate}": "HV",
       "/Phase2/LS_{DRV}": "HV",
@@ -508,6 +516,7 @@
       "/Phase2/SW": "HV",
       "/Phase2/VDDA": "HV",
       "/Phase2/VDDhs": "HV",
+      "/Phase2/VDDls": "HV",
       "/Phase3/HS_{DRV}": "HV",
       "/Phase3/HS_{Gate}": "HV",
       "/Phase3/LS_{DRV}": "HV",
@@ -515,10 +524,17 @@
       "/Phase3/SW": "HV",
       "/Phase3/VDDA": "HV",
       "/Phase3/VDDhs": "HV",
+      "/Phase3/VDDls": "HV",
       "GNDPWR": "HV",
       "HV+": "HV",
       "HV+in": "HV",
       "HV-": "HV",
+      "Net-(D14-K)": "HV",
+      "Net-(D15-K)": "HV",
+      "Net-(D16-K)": "HV",
+      "Net-(D19-K)": "HV",
+      "Net-(D20-K)": "HV",
+      "Net-(D21-K)": "HV",
       "Net-(IC4-VIN)": "HV",
       "VDCin": "HV"
     },
