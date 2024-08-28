@@ -1219,6 +1219,140 @@
 				)
 			)
 		)
+		(symbol "Connector:Screw_Terminal_01x01"
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Screw_Terminal_01x01"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Generic screw terminal, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "screw terminal"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "TerminalBlock*:*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Screw_Terminal_01x01_1_1"
+				(rectangle
+					(start -1.27 1.27)
+					(end 1.27 -1.27)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.5334 0.3302) (xy 0.3302 -0.508)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.3556 0.508) (xy 0.508 -0.3302)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 0)
+					(radius 0.635)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Connector_Generic:Conn_02x07_Odd_Even"
 			(pin_names
 				(offset 1.016) hide)
@@ -2531,233 +2665,6 @@
 				)
 			)
 		)
-		(symbol "Screw_Terminal_01x01_1"
-			(pin_names
-				(offset 1.016) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "J3"
-				(at 3.175 0.635 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "Screw_Terminal_01x01"
-				(at 3.175 -1.905 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Footprint" "GTSR_KiCAD_Footprints_SD:CONN6_1057_WRE"
-				(at -0.635 5.715 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/7461057/2682491"
-				(at -0.635 5.715 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Generic screw terminal, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "screw terminal"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "TerminalBlock*:*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "Screw_Terminal_01x01_1_1_1"
-				(rectangle
-					(start -1.27 1.27)
-					(end 1.27 -1.27)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.5334 0.3302) (xy 0.3302 -0.508)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.3556 0.508) (xy 0.508 -0.3302)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 0 0)
-					(radius 0.635)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 3.81)
-					(name "Pin_1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 3.81) hide
-					(name "Pin_1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 3.81) hide
-					(name "Pin_1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 3.81) hide
-					(name "Pin_1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 3.81) hide
-					(name "Pin_1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 3.81) hide
-					(name "Pin_1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "power:+12V"
 			(power)
 			(pin_names
@@ -3679,16 +3586,6 @@
 	)
 	(wire
 		(pts
-			(xy 212.725 83.185) (xy 214.63 83.185)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "05af5e71-05fa-47bf-a7e7-103939aa7f2a")
-	)
-	(wire
-		(pts
 			(xy 78.74 152.4) (xy 78.74 151.13)
 		)
 		(stroke
@@ -4009,7 +3906,7 @@
 	)
 	(wire
 		(pts
-			(xy 212.725 78.74) (xy 214.63 78.74)
+			(xy 212.1253 78.74) (xy 215.9 78.74)
 		)
 		(stroke
 			(width 0)
@@ -4509,7 +4406,7 @@
 	)
 	(wire
 		(pts
-			(xy 212.725 74.295) (xy 214.63 74.295)
+			(xy 212.09 73.66) (xy 215.9 73.66)
 		)
 		(stroke
 			(width 0)
@@ -4836,6 +4733,16 @@
 			(type default)
 		)
 		(uuid "8220b4b0-d1ba-40ac-bdb8-b0a7fd5a8d5c")
+	)
+	(wire
+		(pts
+			(xy 212.09 83.82) (xy 215.9 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8390e7e9-fff1-4578-a796-951233de7bba")
 	)
 	(wire
 		(pts
@@ -6131,7 +6038,7 @@
 		(uuid "4190112a-5cf7-4fcf-a5a8-e738587cf840")
 	)
 	(label "PHA"
-		(at 212.725 74.295 180)
+		(at 212.09 73.66 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6153,7 +6060,7 @@
 		(uuid "4d7974eb-a81a-4c31-bc9c-0ef81e6be79e")
 	)
 	(label "PHC"
-		(at 212.725 83.185 180)
+		(at 212.09 83.82 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6395,7 +6302,7 @@
 		(uuid "cd17e528-9efe-4b98-b6e1-9c82f6b060fa")
 	)
 	(label "PHB"
-		(at 212.725 78.74 180)
+		(at 212.1253 78.74 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6510,7 +6417,7 @@
 	(netclass_flag ""
 		(length 2.54)
 		(shape round)
-		(at 213.9597 78.74 0)
+		(at 213.36 78.74 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6520,13 +6427,14 @@
 		)
 		(uuid "6d9932c8-c9de-4c84-af58-dbae02ce7d69")
 		(property "Netclass" "HV"
-			(at 214.6582 76.2 0)
+			(at 214.0585 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 					(italic yes)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
 	)
@@ -6556,7 +6464,7 @@
 	(netclass_flag ""
 		(length 2.54)
 		(shape round)
-		(at 213.9597 74.295 0)
+		(at 213.36 73.66 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6566,20 +6474,21 @@
 		)
 		(uuid "e2742fc7-9ea7-41c3-9e33-e29aa67d4978")
 		(property "Netclass" "HV"
-			(at 214.6582 71.755 0)
+			(at 214.0585 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 					(italic yes)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
 	)
 	(netclass_flag ""
 		(length 2.54)
 		(shape round)
-		(at 213.9597 83.185 0)
+		(at 213.36 83.82 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6589,13 +6498,14 @@
 		)
 		(uuid "f10c2f05-7a56-40c5-9489-e3dd8ac06aa8")
 		(property "Netclass" "HV"
-			(at 214.6582 80.645 0)
+			(at 214.0585 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 					(italic yes)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
 	)
@@ -6983,90 +6893,6 @@
 		)
 	)
 	(symbol
-		(lib_name "Screw_Terminal_01x01_1")
-		(lib_id "Connector:Screw_Terminal_01x01")
-		(at 219.71 74.295 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0e6633f8-b9c6-4d7a-926e-a67cd10db427")
-		(property "Reference" "J3"
-			(at 222.885 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Screw_Terminal_01x01"
-			(at 222.885 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "GTSR:CONN6_1057_WRE"
-			(at 219.075 68.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/7461057/2682491"
-			(at 219.075 68.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 219.71 74.295 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "2f0ad24d-5e26-4dc8-8467-538433ba1183")
-		)
-		(pin "2"
-			(uuid "44183da2-2c35-44f1-a924-e7c51847a6c9")
-		)
-		(pin "4"
-			(uuid "9dbb5c5a-1d4b-4ecf-b56b-2809f0c155f6")
-		)
-		(pin "3"
-			(uuid "d0c9b7f2-e22e-4033-b61e-7a842abeb08f")
-		)
-		(pin "5"
-			(uuid "bbfe9563-a251-430b-b83e-3c4ae69bc127")
-		)
-		(pin "6"
-			(uuid "be85f428-09f7-4890-919d-a9fafec1c239")
-		)
-		(instances
-			(project "Power_Stage"
-				(path "/4073579f-dff4-4919-be9b-9c43467e22c1"
-					(reference "J3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 117.475 160.655 0)
 		(unit 1)
@@ -7197,90 +7023,6 @@
 			(project "Power_Stage"
 				(path "/4073579f-dff4-4919-be9b-9c43467e22c1"
 					(reference "#PWR010")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_name "Screw_Terminal_01x01_1")
-		(lib_id "Connector:Screw_Terminal_01x01")
-		(at 219.71 83.185 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "13573039-ce15-4651-b42a-df304ee34f9b")
-		(property "Reference" "J5"
-			(at 222.885 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Screw_Terminal_01x01"
-			(at 222.885 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "GTSR:CONN6_1057_WRE"
-			(at 219.075 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/7461057/2682491"
-			(at 219.075 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 219.71 83.185 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "50e226ed-195e-4b04-a1bd-8f63a3b3090d")
-		)
-		(pin "2"
-			(uuid "b9737776-3f94-49e0-b9b3-f43f0d6edbbd")
-		)
-		(pin "3"
-			(uuid "32ee0114-ca4f-41ec-a275-d2a6cd2ea7a1")
-		)
-		(pin "4"
-			(uuid "ad51a6db-6189-46f8-b615-2e722fa38890")
-		)
-		(pin "5"
-			(uuid "72756dae-982b-437e-9eb1-3e9b9c5e65df")
-		)
-		(pin "6"
-			(uuid "6b24df11-150c-4350-8a35-7879ad0c2845")
-		)
-		(instances
-			(project "Power_Stage"
-				(path "/4073579f-dff4-4919-be9b-9c43467e22c1"
-					(reference "J5")
 					(unit 1)
 				)
 			)
@@ -7484,6 +7226,74 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:Screw_Terminal_01x01")
+		(at 220.98 78.74 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2344232d-bb8c-48dd-9e4d-4dc809497f38")
+		(property "Reference" "J1"
+			(at 223.52 77.4699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Screw_Terminal_01x01"
+			(at 223.52 80.0099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_4.3mm_M4_Pad"
+			(at 220.98 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 220.98 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic screw terminal, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 220.98 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "92d21b93-284f-4a2b-8df6-926fba188318")
+		)
+		(instances
+			(project "Power_Stage"
+				(path "/4073579f-dff4-4919-be9b-9c43467e22c1"
+					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+5V")
 		(at 55.88 76.2 0)
 		(unit 1)
@@ -7544,88 +7354,6 @@
 			(project "Power_Stage"
 				(path "/4073579f-dff4-4919-be9b-9c43467e22c1"
 					(reference "#PWR08")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_name "Screw_Terminal_01x01_1")
-		(lib_id "Connector:Screw_Terminal_01x01")
-		(at 181.61 76.2 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "2b12c7ac-e5fe-4aef-a729-5b414de4ca09")
-		(property "Reference" "J1"
-			(at 178.562 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Screw_Terminal_01x01"
-			(at 178.435 74.295 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "GTSR:CONN6_1057_WRE"
-			(at 182.245 81.915 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/7461057/2682491"
-			(at 182.245 81.915 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 181.61 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c0219fb7-2ec0-4941-b16b-d73f240b7b0c")
-		)
-		(pin "2"
-			(uuid "eb3e3810-f7fe-4eb0-8667-a7d9774bdc66")
-		)
-		(pin "4"
-			(uuid "7c3c7ace-b1a0-4a37-9f5d-7bd1c5ee9a8e")
-		)
-		(pin "3"
-			(uuid "d611eeb3-c7c0-4c0a-aa72-83da0a680d0b")
-		)
-		(pin "5"
-			(uuid "777171b4-35e9-4b6e-8428-4711aad4d52a")
-		)
-		(pin "6"
-			(uuid "f1b0197e-02be-4a7f-8881-dc8ac32b69d0")
-		)
-		(instances
-			(project "Power_Stage"
-				(path "/4073579f-dff4-4919-be9b-9c43467e22c1"
-					(reference "J1")
 					(unit 1)
 				)
 			)
@@ -7972,88 +7700,6 @@
 		)
 	)
 	(symbol
-		(lib_name "Screw_Terminal_01x01_1")
-		(lib_id "Connector:Screw_Terminal_01x01")
-		(at 181.61 81.28 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "3dc6d5a7-d9c8-4e71-ac06-521240da2077")
-		(property "Reference" "J6"
-			(at 178.562 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Screw_Terminal_01x01"
-			(at 178.435 79.375 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "GTSR:CONN6_1057_WRE"
-			(at 182.245 86.995 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/7461057/2682491"
-			(at 182.245 86.995 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 181.61 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "477f2a4d-0b7e-4f4a-a31e-52b3ace4d98a")
-		)
-		(pin "2"
-			(uuid "2edbe871-73ad-4458-b27c-242440dfbced")
-		)
-		(pin "4"
-			(uuid "34baed3f-ba3a-4a99-867b-3e61a7008985")
-		)
-		(pin "3"
-			(uuid "381449c8-ce59-428f-9178-8bef3134e3ae")
-		)
-		(pin "5"
-			(uuid "9af7aaeb-2f6e-48ff-bfc9-a8e6e52b6b5d")
-		)
-		(pin "6"
-			(uuid "b86507f8-37dd-4a8c-966e-0bf357c0b5de")
-		)
-		(instances
-			(project "Power_Stage"
-				(path "/4073579f-dff4-4919-be9b-9c43467e22c1"
-					(reference "J6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C_Small")
 		(at 295.91 171.45 0)
 		(mirror x)
@@ -8322,6 +7968,74 @@
 			(project "Power_Stage"
 				(path "/4073579f-dff4-4919-be9b-9c43467e22c1"
 					(reference "#PWR012")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Screw_Terminal_01x01")
+		(at 220.98 83.82 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4522156c-c288-46ea-9646-c916d2ce7a6f")
+		(property "Reference" "J3"
+			(at 223.52 82.5499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Screw_Terminal_01x01"
+			(at 223.52 85.0899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_4.3mm_M4_Pad"
+			(at 220.98 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 220.98 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic screw terminal, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 220.98 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a7324f52-debc-449f-9410-1acea950c1e2")
+		)
+		(instances
+			(project "Power_Stage"
+				(path "/4073579f-dff4-4919-be9b-9c43467e22c1"
+					(reference "J3")
 					(unit 1)
 				)
 			)
@@ -9336,18 +9050,17 @@
 		)
 	)
 	(symbol
-		(lib_name "Screw_Terminal_01x01_1")
 		(lib_id "Connector:Screw_Terminal_01x01")
-		(at 219.71 78.74 0)
+		(at 220.98 73.66 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "74821a0a-d168-4ea4-88a4-91377d136a2c")
-		(property "Reference" "J4"
-			(at 222.885 78.105 0)
+		(uuid "72d3a657-a78e-4ffa-b292-560bd1d86af3")
+		(property "Reference" "J2"
+			(at 223.52 72.3899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9356,7 +9069,7 @@
 			)
 		)
 		(property "Value" "Screw_Terminal_01x01"
-			(at 222.885 80.645 0)
+			(at 223.52 74.9299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9365,8 +9078,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "GTSR:CONN6_1057_WRE"
-			(at 219.075 73.025 0)
+		(property "Footprint" "MountingHole:MountingHole_4.3mm_M4_Pad"
+			(at 220.98 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9374,8 +9087,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/7461057/2682491"
-			(at 219.075 73.025 0)
+		(property "Datasheet" "~"
+			(at 220.98 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9383,8 +9096,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 219.71 78.74 0)
+		(property "Description" "Generic screw terminal, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 220.98 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9393,27 +9106,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "cb5f28fc-5e78-411f-87ef-ccc6917618db")
-		)
-		(pin "2"
-			(uuid "329e7e29-d473-4529-9437-fd44dcfadf03")
-		)
-		(pin "3"
-			(uuid "d6a5589f-2545-446d-ad61-056220995d22")
-		)
-		(pin "4"
-			(uuid "5beb8897-5211-4679-b382-bb33f303d718")
-		)
-		(pin "5"
-			(uuid "7869d4f1-b32a-453a-94a9-043d1732fc56")
-		)
-		(pin "6"
-			(uuid "fedfa377-1211-48ff-b96c-e49f5bf20d8f")
+			(uuid "286c1baf-f640-45ec-88c4-e4b9a4f57a16")
 		)
 		(instances
 			(project "Power_Stage"
 				(path "/4073579f-dff4-4919-be9b-9c43467e22c1"
-					(reference "J4")
+					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -11694,6 +11392,135 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:Screw_Terminal_01x01")
+		(at 181.61 76.2 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c69cd21c-be99-495b-8fd3-eaba394bca51")
+		(property "Reference" "J4"
+			(at 178.816 75.946 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Screw_Terminal_01x01"
+			(at 182.372 66.548 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_4.3mm_M4_Pad"
+			(at 181.61 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 181.61 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic screw terminal, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 181.61 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ebdb5e82-8557-4b0c-be69-f26cddfec033")
+		)
+		(instances
+			(project "Power_Stage"
+				(path "/4073579f-dff4-4919-be9b-9c43467e22c1"
+					(reference "J4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Screw_Terminal_01x01")
+		(at 181.61 81.28 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c798616d-6920-4842-a963-acca27133b39")
+		(property "Reference" "J5"
+			(at 178.816 80.772 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Screw_Terminal_01x01"
+			(at 181.61 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_4.3mm_M4_Pad"
+			(at 181.61 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 181.61 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic screw terminal, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 181.61 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cacc1289-874a-4ad7-bc7f-6b9b47f32fa7")
+		)
+		(instances
+			(project "Power_Stage"
+				(path "/4073579f-dff4-4919-be9b-9c43467e22c1"
+					(reference "J5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 341.63 134.62 0)
 		(unit 1)
@@ -13076,7 +12903,7 @@
 			)
 		)
 		(property "Value" "HV+in"
-			(at 187.325 70.485 0)
+			(at 189.23 70.104 0)
 			(effects
 				(font
 					(size 1.27 1.27)
