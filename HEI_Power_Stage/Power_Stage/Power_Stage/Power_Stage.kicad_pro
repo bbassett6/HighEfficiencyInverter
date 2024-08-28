@@ -37,9 +37,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 4.3,
-          "height": 8.6,
-          "width": 8.6
+          "drill": 1.0,
+          "height": 1.7,
+          "width": 1.7
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -496,48 +496,7 @@
       "version": 3
     },
     "net_colors": null,
-    "netclass_assignments": {
-      "+5V_HV": "HV",
-      "/PHA": "HV",
-      "/PHB": "HV",
-      "/PHC": "HV",
-      "/Phase1/HS_{DRV}": "HV",
-      "/Phase1/HS_{Gate}": "HV",
-      "/Phase1/LS_{DRV}": "HV",
-      "/Phase1/LS_{Gate}": "HV",
-      "/Phase1/SW": "HV",
-      "/Phase1/VDDA": "HV",
-      "/Phase1/VDDhs": "HV",
-      "/Phase1/VDDls": "HV",
-      "/Phase2/HS_{DRV}": "HV",
-      "/Phase2/HS_{Gate}": "HV",
-      "/Phase2/LS_{DRV}": "HV",
-      "/Phase2/LS_{Gate}": "HV",
-      "/Phase2/SW": "HV",
-      "/Phase2/VDDA": "HV",
-      "/Phase2/VDDhs": "HV",
-      "/Phase2/VDDls": "HV",
-      "/Phase3/HS_{DRV}": "HV",
-      "/Phase3/HS_{Gate}": "HV",
-      "/Phase3/LS_{DRV}": "HV",
-      "/Phase3/LS_{Gate}": "HV",
-      "/Phase3/SW": "HV",
-      "/Phase3/VDDA": "HV",
-      "/Phase3/VDDhs": "HV",
-      "/Phase3/VDDls": "HV",
-      "GNDPWR": "HV",
-      "HV+": "HV",
-      "HV+in": "HV",
-      "HV-": "HV",
-      "Net-(D14-K)": "HV",
-      "Net-(D15-K)": "HV",
-      "Net-(D16-K)": "HV",
-      "Net-(D19-K)": "HV",
-      "Net-(D20-K)": "HV",
-      "Net-(D21-K)": "HV",
-      "Net-(IC4-VIN)": "HV",
-      "VDCin": "HV"
-    },
+    "netclass_assignments": null,
     "netclass_patterns": []
   },
   "pcbnew": {
@@ -545,7 +504,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "../../../../../../../../Applications/KiCad/",
-      "plot": "",
+      "plot": "../",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
@@ -670,6 +629,30 @@
           "group_by": false,
           "label": "Description",
           "name": "Description",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Device",
+          "name": "Sim.Device",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Vbreakdown",
+          "name": "Vbreakdown",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Voltage",
+          "name": "Voltage",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Pins",
+          "name": "Sim.Pins",
           "show": false
         }
       ],
