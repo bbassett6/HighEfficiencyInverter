@@ -37,9 +37,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 1.0,
-          "height": 1.7,
-          "width": 1.7
+          "drill": 2.1,
+          "height": 2.1,
+          "width": 2.1
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -115,21 +115,21 @@
       },
       "rules": {
         "max_error": 0.005,
-        "min_clearance": 0.16,
+        "min_clearance": 0.2,
         "min_connection": 0.0,
         "min_copper_edge_clearance": 0.0,
-        "min_hole_clearance": 0.3,
-        "min_hole_to_hole": 0.2,
+        "min_hole_clearance": 0.25,
+        "min_hole_to_hole": 0.25,
         "min_microvia_diameter": 0.2,
         "min_microvia_drill": 0.1,
         "min_resolved_spokes": 2,
         "min_silk_clearance": 0.0,
-        "min_text_height": 1.0,
-        "min_text_thickness": 0.15,
+        "min_text_height": 0.8,
+        "min_text_thickness": 0.08,
         "min_through_hole_diameter": 0.3,
-        "min_track_width": 0.16,
-        "min_via_annular_width": 0.075,
-        "min_via_diameter": 0.45,
+        "min_track_width": 0.2,
+        "min_via_annular_width": 0.1,
+        "min_via_diameter": 0.5,
         "solder_mask_clearance": 0.0,
         "solder_mask_min_width": 0.0,
         "solder_mask_to_copper_clearance": 0.0,
@@ -182,6 +182,7 @@
         0.0,
         0.3,
         0.5,
+        0.65,
         1.0
       ],
       "tuning_pattern_settings": {
@@ -470,7 +471,7 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.25,
-        "via_diameter": 0.45,
+        "via_diameter": 0.5,
         "via_drill": 0.3,
         "wire_width": 6
       },
@@ -496,15 +497,65 @@
       "version": 3
     },
     "net_colors": null,
-    "netclass_assignments": null,
+    "netclass_assignments": {
+      "+5V_HV": "HV",
+      "/PHA": "HV",
+      "/PHB": "HV",
+      "/PHC": "HV",
+      "/Phase1/HS_{Gate}": "HV",
+      "/Phase1/HS_{SNK}": "HV",
+      "/Phase1/HS_{SRC}": "HV",
+      "/Phase1/LS_{Gate}": "HV",
+      "/Phase1/LS_{SNK}": "HV",
+      "/Phase1/LS_{SRC}": "HV",
+      "/Phase1/SW": "HV",
+      "/Phase1/hfb": "HV",
+      "/Phase1/hvsecn": "HV",
+      "/Phase1/hvsecp": "HV",
+      "/Phase1/lfb": "HV",
+      "/Phase1/lvsecn": "HV",
+      "/Phase1/lvsecp": "HV",
+      "/Phase2/HS_{Gate}": "HV",
+      "/Phase2/HS_{SNK}": "HV",
+      "/Phase2/HS_{SRC}": "HV",
+      "/Phase2/LS_{Gate}": "HV",
+      "/Phase2/LS_{SNK}": "HV",
+      "/Phase2/LS_{SRC}": "HV",
+      "/Phase2/SW": "HV",
+      "/Phase2/hfb": "HV",
+      "/Phase2/hvsecn": "HV",
+      "/Phase2/hvsecp": "HV",
+      "/Phase2/lfb": "HV",
+      "/Phase2/lvsecn": "HV",
+      "/Phase2/lvsecp": "HV",
+      "/Phase3/HS_{Gate}": "HV",
+      "/Phase3/HS_{SNK}": "HV",
+      "/Phase3/HS_{SRC}": "HV",
+      "/Phase3/LS_{Gate}": "HV",
+      "/Phase3/LS_{SNK}": "HV",
+      "/Phase3/LS_{SRC}": "HV",
+      "/Phase3/SW": "HV",
+      "/Phase3/hfb": "HV",
+      "/Phase3/hvsecn": "HV",
+      "/Phase3/hvsecp": "HV",
+      "/Phase3/lfb": "HV",
+      "/Phase3/lvsecn": "HV",
+      "/Phase3/lvsecp": "HV",
+      "GNDPWR": "HV",
+      "HV+": "HV",
+      "HV+in": "HV",
+      "HV-": "HV",
+      "Net-(IC4-VIN)": "HV",
+      "VDCin": "HV"
+    },
     "netclass_patterns": []
   },
   "pcbnew": {
     "last_paths": {
       "gencad": "",
       "idf": "",
-      "netlist": "../../../../../../../../Applications/KiCad/",
-      "plot": "../",
+      "netlist": "",
+      "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
@@ -630,30 +681,6 @@
           "label": "Description",
           "name": "Description",
           "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Sim.Device",
-          "name": "Sim.Device",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Vbreakdown",
-          "name": "Vbreakdown",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Voltage",
-          "name": "Voltage",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Sim.Pins",
-          "name": "Sim.Pins",
-          "show": false
         }
       ],
       "filter_string": "",
@@ -689,7 +716,7 @@
     "meta": {
       "version": 1
     },
-    "net_format_name": "KiCad",
+    "net_format_name": "",
     "page_layout_descr_file": "",
     "plot_directory": "",
     "spice_current_sheet_as_root": false,
@@ -717,10 +744,6 @@
     [
       "fc0c4d71-751a-405d-a2b0-dee4001cda35",
       "Phase3"
-    ],
-    [
-      "6cf5326c-a5ee-457a-8806-eb4ec6b63d43",
-      "Isolated5V"
     ]
   ],
   "text_variables": {}
