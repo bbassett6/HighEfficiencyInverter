@@ -4775,19 +4775,7 @@
 		)
 		(uuid ca40502b-96e8-4dbc-925d-0672199c55ef)
 	)
-	(rectangle
-		(start 20.32 116.84)
-		(end 115.57 160.02)
-		(stroke
-			(width 0)
-			(type dash)
-		)
-		(fill
-			(type none)
-		)
-		(uuid ec9497e9-440f-4a48-914f-41f08252a670)
-	)
-	(text "32.4k sets V_{sec} to 5.4V"
+	(text "32.4k sets V_{sec} to 5.0V\n"
 		(exclude_from_sim no)
 		(at 131.572 74.676 0)
 		(effects
@@ -4797,16 +4785,6 @@
 			(justify right)
 		)
 		(uuid "10870946-f834-4957-8015-06566e90e22f")
-	)
-	(text "zener on output of regulator to limit voltage into VDDx\n or on output of driver to limit directly into gate"
-		(exclude_from_sim no)
-		(at 147.574 130.556 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "2392f4ed-26ca-4184-b485-756dd3c5a546")
 	)
 	(text "Phase Half Bridge"
 		(exclude_from_sim no)
@@ -4831,19 +4809,6 @@
 			(justify left bottom)
 		)
 		(uuid "7377e946-d1a3-456f-8d9e-637fe2b8fdd7")
-	)
-	(text "High Side Power\n"
-		(exclude_from_sim no)
-		(at 20.32 115.57 0)
-		(effects
-			(font
-				(size 3 3)
-				(thickness 0.254)
-				(bold yes)
-			)
-			(justify left bottom)
-		)
-		(uuid "73c22eb3-0cdd-4517-87bd-5b7ecf09af81")
 	)
 	(text "Current sense"
 		(exclude_from_sim no)
