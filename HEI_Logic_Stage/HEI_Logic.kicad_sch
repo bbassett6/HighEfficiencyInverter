@@ -983,163 +983,6 @@
 				)
 			)
 		)
-		(symbol "Diode:ESD9B3.3ST5G"
-			(pin_numbers hide)
-			(pin_names
-				(offset 1.016) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "D"
-				(at 0 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "ESD9B3.3ST5G"
-				(at 0 -2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "Diode_SMD:D_SOD-923"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://www.onsemi.com/pub/Collateral/ESD9B-D.PDF"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "ESD protection diode, 3.3Vrwm, SOD-923"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "diode TVS ESD"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "D*SOD?923*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "ESD9B3.3ST5G_0_1"
-				(polyline
-					(pts
-						(xy 1.27 0) (xy -1.27 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.54 -1.27) (xy 0 0) (xy -2.54 1.27) (xy -2.54 -1.27)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.508 1.27) (xy 0 1.27) (xy 0 -1.27) (xy -0.508 -1.27)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 1.27) (xy 2.54 -1.27) (xy 0 0) (xy 2.54 1.27)
-					)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "ESD9B3.3ST5G_1_1"
-				(pin passive line
-					(at -3.81 0 0)
-					(length 2.54)
-					(name "A1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 0 180)
-					(length 2.54)
-					(name "A2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "GTSR_symbol_lib:3V_VRef_LM4132AQ1MFT3.0"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -2797,18 +2640,6 @@
 		(uuid "0895e73e-9025-4128-b75f-a916f0dfcf2e")
 	)
 	(junction
-		(at 37.465 88.9)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "21999e7f-c086-4238-b8f5-0689fb861334")
-	)
-	(junction
-		(at 28.575 88.9)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "2362011e-df73-40fa-8f77-ddb5f3ebd3c9")
-	)
-	(junction
 		(at 199.39 21.59)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2825,12 +2656,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "35e91f7c-c910-4434-a0b0-3113bd6364e8")
-	)
-	(junction
-		(at 72.39 88.9)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "3680f361-8f3b-4bbe-874c-ef67c38a5594")
 	)
 	(junction
 		(at 217.17 28.575)
@@ -2921,12 +2746,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e85d39ff-fd4b-423e-8d2d-39ce8309e5bc")
-	)
-	(junction
-		(at 46.355 88.9)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "fbf1e681-f391-4490-a9f3-613a27c77529")
 	)
 	(junction
 		(at 139.065 50.8)
@@ -3172,16 +2991,6 @@
 	)
 	(wire
 		(pts
-			(xy 37.465 88.9) (xy 37.465 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3a183036-5c0a-4e22-b537-eb2549748ff7")
-	)
-	(wire
-		(pts
 			(xy 135.89 53.34) (xy 139.065 53.34)
 		)
 		(stroke
@@ -3239,16 +3048,6 @@
 			(type default)
 		)
 		(uuid "407a6340-6f87-4a7c-94a7-aff34817da39")
-	)
-	(wire
-		(pts
-			(xy 28.575 88.9) (xy 37.465 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "423ccb2e-a41a-4ba0-ada5-305546987029")
 	)
 	(wire
 		(pts
@@ -3422,16 +3221,6 @@
 	)
 	(wire
 		(pts
-			(xy 46.355 88.9) (xy 54.61 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5e9b57c1-a710-4396-a450-04b89ec73334")
-	)
-	(wire
-		(pts
 			(xy 59.055 125.095) (xy 56.515 125.095)
 		)
 		(stroke
@@ -3502,16 +3291,6 @@
 	)
 	(wire
 		(pts
-			(xy 46.355 88.9) (xy 37.465 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6ae2ebbc-b2f5-491b-8fd9-05f9a23aa06e")
-	)
-	(wire
-		(pts
 			(xy 122.555 65.405) (xy 122.555 63.5)
 		)
 		(stroke
@@ -3529,16 +3308,6 @@
 			(type default)
 		)
 		(uuid "6bb2799b-8e6f-47f8-857d-972d185d2561")
-	)
-	(wire
-		(pts
-			(xy 72.39 88.9) (xy 72.39 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6c198883-5281-4c0d-8048-592b7299535d")
 	)
 	(wire
 		(pts
@@ -3569,16 +3338,6 @@
 			(type default)
 		)
 		(uuid "6ddf62a6-b11c-46c4-be1f-08bde3114e97")
-	)
-	(wire
-		(pts
-			(xy 63.5 88.9) (xy 72.39 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "708fd102-2d85-416e-a44f-ab87b08b87b6")
 	)
 	(wire
 		(pts
@@ -3819,16 +3578,6 @@
 			(type default)
 		)
 		(uuid "9e7db900-55a6-457a-b11f-ef18cf3a5822")
-	)
-	(wire
-		(pts
-			(xy 81.28 88.9) (xy 72.39 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a055db2d-bcfb-464d-b6d5-ab0b4812ee2a")
 	)
 	(wire
 		(pts
@@ -4212,16 +3961,6 @@
 	)
 	(wire
 		(pts
-			(xy 20.32 88.9) (xy 28.575 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ef509067-934f-4fcc-83c3-577053090ae7")
-	)
-	(wire
-		(pts
 			(xy 130.175 99.06) (xy 139.065 99.06)
 		)
 		(stroke
@@ -4330,18 +4069,6 @@
 		)
 		(uuid "9f1603e2-ac7c-47a6-99c9-913dafd757bc")
 	)
-	(text "Sensing 3v3 clamp diodes (low capacitance)"
-		(exclude_from_sim no)
-		(at 34.544 78.486 0)
-		(effects
-			(font
-				(face "Rockwell")
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "a598d894-ad0a-4357-9ebb-ee112ceb1453")
-	)
 	(text "double check VRef footprint"
 		(exclude_from_sim no)
 		(at 255.27 29.845 0)
@@ -4386,17 +4113,6 @@
 			(justify left bottom)
 		)
 		(uuid "01d9cefc-bd56-4094-8491-5fd2c715ae6d")
-	)
-	(label "PhA_I"
-		(at 20.32 81.28 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "058f8315-1374-48e1-a9e8-fb2a97946464")
 	)
 	(label "LED2"
 		(at 184.785 78.74 0)
@@ -4452,17 +4168,6 @@
 			(justify right bottom)
 		)
 		(uuid "208efc4c-bd91-44fc-8e86-c4280ad074aa")
-	)
-	(label "DCI"
-		(at 46.355 81.28 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "32d1ad55-4c7b-4aa0-9435-592873ca047f")
 	)
 	(label "HallIN2_3v3"
 		(at 184.785 71.12 0)
@@ -4607,17 +4312,6 @@
 		)
 		(uuid "55e6c629-3c77-412e-9707-84b6583c7cf0")
 	)
-	(label "TIN1"
-		(at 63.5 81.28 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "560337ad-1032-4b52-89f7-59b6eb428bbd")
-	)
 	(label "HallIN3_3v3"
 		(at 184.785 93.98 0)
 		(fields_autoplaced yes)
@@ -4706,17 +4400,6 @@
 		)
 		(uuid "7b0f978d-8761-4f7a-b3ca-4f109c02e941")
 	)
-	(label "TIN3"
-		(at 81.28 81.28 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "7c898ac8-2e15-4275-b96e-b75d404f7b52")
-	)
 	(label "HRTIM_D2_r"
 		(at 188.595 106.68 0)
 		(fields_autoplaced yes)
@@ -4738,17 +4421,6 @@
 			(justify right bottom)
 		)
 		(uuid "7e12a785-d3f2-4384-81e8-5b4cc71561c7")
-	)
-	(label "PhB_I"
-		(at 28.575 81.28 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "7e29a2d2-7822-45c8-b9d0-163141e7cade")
 	)
 	(label "UART_RX"
 		(at 184.785 86.36 0)
@@ -4838,17 +4510,6 @@
 		)
 		(uuid "a5ef817a-2ba7-4bd2-a8b9-49a7b566edde")
 	)
-	(label "TIN2"
-		(at 72.39 81.28 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "aff0b8a9-318f-4ffb-99c5-79251268ad63")
-	)
 	(label "Vref"
 		(at 200.025 40.64 0)
 		(fields_autoplaced yes)
@@ -4860,17 +4521,6 @@
 		)
 		(uuid "b4e73ebd-0823-4ba6-afbe-06fa1d9f3a95")
 	)
-	(label "DCV"
-		(at 54.61 81.28 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "bcb51352-3454-4210-b1e9-e7d16b9508f7")
-	)
 	(label "LED1"
 		(at 184.785 76.2 0)
 		(fields_autoplaced yes)
@@ -4881,6 +4531,16 @@
 			(justify left bottom)
 		)
 		(uuid "c1617608-4df0-4946-8f43-099a05abaef2")
+	)
+	(label "Vref"
+		(at 59.69 45.72 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "c260bcc0-dcd4-42b2-a3c0-17a8b53afe92")
 	)
 	(label "UART_RX"
 		(at 29.845 127.635 180)
@@ -4980,17 +4640,6 @@
 			(justify left bottom)
 		)
 		(uuid "d90e64c5-3de8-4f4f-b9ac-2a062139bd95")
-	)
-	(label "PhC_I"
-		(at 37.465 81.28 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "e1b64b9c-b6fe-4c11-9230-2d8111f589d2")
 	)
 	(label "TIN3"
 		(at 184.785 73.66 0)
@@ -5340,71 +4989,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 37.465 90.17 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "18055f95-9e9b-45e0-8842-4bcbba4c31f6")
-		(property "Reference" "#PWR02"
-			(at 37.465 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 33.655 92.075 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 37.465 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 37.465 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 37.465 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "4c601906-7296-44e4-a5bf-40d907d7c4ca")
-		)
-		(instances
-			(project "HEI_Logic"
-				(path "/9d05e1b7-f292-46e2-9203-5654fb6f820e"
-					(reference "#PWR02")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:LED")
 		(at 229.235 116.205 90)
 		(unit 1)
@@ -5495,7 +5079,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 48.895 24.13 270)
+		(at 19.685 70.485 270)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -5504,7 +5088,7 @@
 		(dnp no)
 		(uuid "1d1e5600-2da6-4991-b260-2e5d48b5f922")
 		(property "Reference" "H2"
-			(at 51.435 24.765 90)
+			(at 22.225 71.12 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5513,7 +5097,7 @@
 			)
 		)
 		(property "Value" "No. 8"
-			(at 51.435 22.225 90)
+			(at 22.225 68.58 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5522,7 +5106,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_2.1mm"
-			(at 48.895 24.13 0)
+			(at 19.685 70.485 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5531,7 +5115,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 48.895 24.13 0)
+			(at 19.685 70.485 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5540,7 +5124,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 48.895 24.13 0)
+			(at 19.685 70.485 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5549,7 +5133,7 @@
 			)
 		)
 		(property "Populate" ""
-			(at 48.895 24.13 0)
+			(at 19.685 70.485 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5669,86 +5253,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Diode:ESD9B3.3ST5G")
-		(at 81.28 85.09 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "22881f87-3099-44f7-9665-82979ec81152")
-		(property "Reference" "D13"
-			(at 83.2866 83.8778 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "3v3"
-			(at 83.2866 86.3021 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Diode_SMD:D_SOD-923"
-			(at 81.28 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/ESD9B-D.PDF"
-			(at 81.28 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "ESD protection diode, 3.3Vrwm, SOD-923"
-			(at 81.28 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Populate" ""
-			(at 81.28 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "0f7cd2a1-d40a-4f5d-940d-18048e0eee58")
-		)
-		(pin "1"
-			(uuid "9a469ea1-983d-4fa5-83de-32ff57e28568")
-		)
-		(instances
-			(project "HEI_Logic"
-				(path "/9d05e1b7-f292-46e2-9203-5654fb6f820e"
-					(reference "D13")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 60.325 24.13 270)
+		(at 31.115 70.485 270)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -5757,7 +5263,7 @@
 		(dnp no)
 		(uuid "23326eb1-21fd-4475-bd18-bbafec9ce3f1")
 		(property "Reference" "H2"
-			(at 62.865 24.765 90)
+			(at 33.655 71.12 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5766,7 +5272,7 @@
 			)
 		)
 		(property "Value" "No. 8"
-			(at 62.865 22.225 90)
+			(at 33.655 68.58 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5775,7 +5281,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_2.1mm"
-			(at 60.325 24.13 0)
+			(at 31.115 70.485 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5784,7 +5290,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 60.325 24.13 0)
+			(at 31.115 70.485 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5793,7 +5299,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 60.325 24.13 0)
+			(at 31.115 70.485 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5802,7 +5308,7 @@
 			)
 		)
 		(property "Populate" ""
-			(at 60.325 24.13 0)
+			(at 31.115 70.485 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6413,7 +5919,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 48.895 19.05 270)
+		(at 19.685 65.405 270)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -6422,7 +5928,7 @@
 		(dnp no)
 		(uuid "3f0e971f-675e-4485-9c03-7d58c4d7e843")
 		(property "Reference" "H2"
-			(at 51.435 19.685 90)
+			(at 22.225 66.04 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6431,7 +5937,7 @@
 			)
 		)
 		(property "Value" "No. 8"
-			(at 51.435 17.145 90)
+			(at 22.225 63.5 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6440,7 +5946,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_2.1mm"
-			(at 48.895 19.05 0)
+			(at 19.685 65.405 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6449,7 +5955,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 48.895 19.05 0)
+			(at 19.685 65.405 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6458,7 +5964,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 48.895 19.05 0)
+			(at 19.685 65.405 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6467,7 +5973,7 @@
 			)
 		)
 		(property "Populate" ""
-			(at 48.895 19.05 0)
+			(at 19.685 65.405 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7029,84 +6535,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Diode:ESD9B3.3ST5G")
-		(at 54.61 85.09 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5c19d40a-1449-43bc-83e4-075c20617cdd")
-		(property "Reference" "D18"
-			(at 56.6166 83.8778 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "3v3"
-			(at 56.6166 86.3021 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Diode_SMD:D_SOD-923"
-			(at 54.61 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/ESD9B-D.PDF"
-			(at 54.61 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "ESD protection diode, 3.3Vrwm, SOD-923"
-			(at 54.61 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Populate" ""
-			(at 54.61 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "705d976c-9aee-4e93-ae57-72f3fb28b6bf")
-		)
-		(pin "1"
-			(uuid "902d195d-c2b5-4453-b494-f47f2a5cbdf8")
-		)
-		(instances
-			(project "HEI_Logic"
-				(path "/9d05e1b7-f292-46e2-9203-5654fb6f820e"
-					(reference "D18")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R_Small_US")
 		(at 117.475 93.98 90)
 		(unit 1)
@@ -7279,7 +6707,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 60.325 19.05 270)
+		(at 31.115 65.405 270)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -7288,7 +6716,7 @@
 		(dnp no)
 		(uuid "605626a0-5c8e-44c0-9faa-7e88ec765e31")
 		(property "Reference" "H2"
-			(at 62.865 19.685 90)
+			(at 33.655 66.04 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7297,7 +6725,7 @@
 			)
 		)
 		(property "Value" "No. 8"
-			(at 62.865 17.145 90)
+			(at 33.655 63.5 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7306,7 +6734,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_2.1mm"
-			(at 60.325 19.05 0)
+			(at 31.115 65.405 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7315,7 +6743,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 60.325 19.05 0)
+			(at 31.115 65.405 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7324,7 +6752,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 60.325 19.05 0)
+			(at 31.115 65.405 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7333,7 +6761,7 @@
 			)
 		)
 		(property "Populate" ""
-			(at 60.325 19.05 0)
+			(at 31.115 65.405 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7453,71 +6881,6 @@
 			(project "HEI_Logic"
 				(path "/9d05e1b7-f292-46e2-9203-5654fb6f820e"
 					(reference "R1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 72.39 90.17 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "656b403b-2e28-44ed-80b9-5d3e77540de4")
-		(property "Reference" "#PWR03"
-			(at 72.39 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 68.58 92.075 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 72.39 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 72.39 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 72.39 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "4b379da2-76de-4663-93b6-2783b4a70062")
-		)
-		(instances
-			(project "HEI_Logic"
-				(path "/9d05e1b7-f292-46e2-9203-5654fb6f820e"
-					(reference "#PWR03")
 					(unit 1)
 				)
 			)
@@ -8568,84 +7931,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Diode:ESD9B3.3ST5G")
-		(at 37.465 85.09 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9669a2e0-174a-4b05-9be6-d1adb9d67af8")
-		(property "Reference" "D15"
-			(at 39.4716 83.8778 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "3v3"
-			(at 39.4716 86.3021 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Diode_SMD:D_SOD-923"
-			(at 37.465 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/ESD9B-D.PDF"
-			(at 37.465 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "ESD protection diode, 3.3Vrwm, SOD-923"
-			(at 37.465 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Populate" ""
-			(at 37.465 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "d63418a0-42ac-4555-a929-d48507657cd3")
-		)
-		(pin "1"
-			(uuid "e86f6525-19a0-4254-9687-70e194b786ed")
-		)
-		(instances
-			(project "HEI_Logic"
-				(path "/9d05e1b7-f292-46e2-9203-5654fb6f820e"
-					(reference "D15")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+3V3")
 		(at 27.94 132.715 0)
 		(unit 1)
@@ -8717,162 +8002,6 @@
 			(project "HEI_Logic"
 				(path "/9d05e1b7-f292-46e2-9203-5654fb6f820e"
 					(reference "#PWR05")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:ESD9B3.3ST5G")
-		(at 72.39 85.09 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a3f9a73b-bb11-4bee-9771-631a51b3ebaf")
-		(property "Reference" "D12"
-			(at 74.3966 83.8778 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "3v3"
-			(at 74.3966 86.3021 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Diode_SMD:D_SOD-923"
-			(at 72.39 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/ESD9B-D.PDF"
-			(at 72.39 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "ESD protection diode, 3.3Vrwm, SOD-923"
-			(at 72.39 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Populate" ""
-			(at 72.39 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "cc422a69-c0b2-4fb2-9c6e-9ceb5c510e8c")
-		)
-		(pin "1"
-			(uuid "3557566c-8df8-48fc-9fbf-1aff4396204e")
-		)
-		(instances
-			(project "HEI_Logic"
-				(path "/9d05e1b7-f292-46e2-9203-5654fb6f820e"
-					(reference "D12")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:ESD9B3.3ST5G")
-		(at 63.5 85.09 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a5149c30-0016-443e-8ef4-d4437f06c3af")
-		(property "Reference" "D8"
-			(at 65.5066 83.8778 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "3v3"
-			(at 65.5066 86.3021 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Diode_SMD:D_SOD-923"
-			(at 63.5 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/ESD9B-D.PDF"
-			(at 63.5 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "ESD protection diode, 3.3Vrwm, SOD-923"
-			(at 63.5 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Populate" ""
-			(at 63.5 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "d1ab8e84-77c0-4b62-90b3-0934d7c63afa")
-		)
-		(pin "1"
-			(uuid "af68c737-b0c9-4a06-9c5a-8e7e777a19e6")
-		)
-		(instances
-			(project "HEI_Logic"
-				(path "/9d05e1b7-f292-46e2-9203-5654fb6f820e"
-					(reference "D8")
 					(unit 1)
 				)
 			)
@@ -9568,7 +8697,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "0.1uF"
+		(property "Value" "4.7u"
 			(at 224.155 57.15 0)
 			(effects
 				(font
@@ -9869,162 +8998,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Diode:ESD9B3.3ST5G")
-		(at 28.575 85.09 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "da7307af-f3d6-47e2-a36b-a7346d5ec151")
-		(property "Reference" "D14"
-			(at 30.5816 83.8778 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "3v3"
-			(at 30.5816 86.3021 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Diode_SMD:D_SOD-923"
-			(at 28.575 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/ESD9B-D.PDF"
-			(at 28.575 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "ESD protection diode, 3.3Vrwm, SOD-923"
-			(at 28.575 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Populate" ""
-			(at 28.575 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "96ec6657-6b10-4446-9eaf-86f46a22ecf8")
-		)
-		(pin "1"
-			(uuid "91ba2e9d-bb54-4158-ac42-eba4d5c1e28a")
-		)
-		(instances
-			(project "HEI_Logic"
-				(path "/9d05e1b7-f292-46e2-9203-5654fb6f820e"
-					(reference "D14")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:ESD9B3.3ST5G")
-		(at 20.32 85.09 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "db8177e7-ee06-42f4-b67b-3f0a2eed9381")
-		(property "Reference" "D17"
-			(at 22.3266 83.8778 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "3v3"
-			(at 22.3266 86.3021 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Diode_SMD:D_SOD-923"
-			(at 20.32 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/ESD9B-D.PDF"
-			(at 20.32 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "ESD protection diode, 3.3Vrwm, SOD-923"
-			(at 20.32 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Populate" ""
-			(at 20.32 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "bda8e12d-d269-4712-936a-f82c3c4a6a71")
-		)
-		(pin "1"
-			(uuid "d575807d-00ac-4e34-b3f7-814fd2c52f8a")
-		)
-		(instances
-			(project "HEI_Logic"
-				(path "/9d05e1b7-f292-46e2-9203-5654fb6f820e"
-					(reference "D17")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:LED")
 		(at 240.665 116.205 90)
 		(unit 1)
@@ -10186,84 +9159,6 @@
 			(project "HEI_Logic"
 				(path "/9d05e1b7-f292-46e2-9203-5654fb6f820e"
 					(reference "#PWR010")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:ESD9B3.3ST5G")
-		(at 46.355 85.09 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e56ff052-1dad-4b9a-87d9-9c8bf0f6a0fe")
-		(property "Reference" "D16"
-			(at 48.3616 83.8778 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "3v3"
-			(at 48.3616 86.3021 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Diode_SMD:D_SOD-923"
-			(at 46.355 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/ESD9B-D.PDF"
-			(at 46.355 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "ESD protection diode, 3.3Vrwm, SOD-923"
-			(at 46.355 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Populate" ""
-			(at 46.355 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "ded2b6fb-32aa-47b2-bb9e-2b545aeb35dd")
-		)
-		(pin "1"
-			(uuid "f1850c9e-3957-4bbe-a412-2ce673391722")
-		)
-		(instances
-			(project "HEI_Logic"
-				(path "/9d05e1b7-f292-46e2-9203-5654fb6f820e"
-					(reference "D16")
 					(unit 1)
 				)
 			)
@@ -10655,56 +9550,6 @@
 				(justify left top)
 			)
 		)
-		(pin "+12V_MCU" output
-			(at 49.53 35.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "62598a6f-499c-416c-b761-ee4ef3466f7c")
-		)
-		(pin "+3V3" output
-			(at 49.53 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "2f780a45-f88a-45ca-9965-064764b0008b")
-		)
-		(pin "+5V" output
-			(at 49.53 40.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "ee64b27f-d411-42e2-a45d-fe76c571389c")
-		)
-		(pin "V_Hall" output
-			(at 49.53 43.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "d9d09583-1230-4e91-bea0-f6274200335f")
-		)
-		(pin "GND" output
-			(at 33.02 58.166 270)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "b57a0a12-2583-47df-bd67-71e43913a9fd")
-		)
 		(pin "CAN_RX" bidirectional
 			(at 49.53 54.61 0)
 			(effects
@@ -10762,56 +9607,6 @@
 				)
 				(justify left top)
 			)
-		)
-		(pin "+12V_MCU" input
-			(at 59.69 35.56 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "026041b1-5002-42bc-8797-4327dbe1b1de")
-		)
-		(pin "+5V" input
-			(at 59.69 40.64 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "d475236f-bb28-45e5-9b42-af46ecdbdcbd")
-		)
-		(pin "+3V3" input
-			(at 59.69 38.1 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "dd7be41f-e450-4630-a718-4c35fa92f1b7")
-		)
-		(pin "V_Hall" input
-			(at 59.69 43.18 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "5576a084-b857-45c6-991b-c6151bc53808")
-		)
-		(pin "GND" input
-			(at 73.025 68.58 270)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "2cb0a92f-4ae6-44a6-83c4-4ed085394e79")
 		)
 		(pin "PhB_I" output
 			(at 86.106 37.973 0)
@@ -10922,6 +9717,16 @@
 				(justify right)
 			)
 			(uuid "61a9f2e2-3721-44e8-b326-419fbfaedf22")
+		)
+		(pin "Vref" input
+			(at 59.69 45.72 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "b1883be5-f774-45c8-832d-faef6be44b88")
 		)
 		(instances
 			(project "HEI_Logic"

@@ -2539,12 +2539,6 @@
 		(uuid "7821d0a0-be4c-4161-899f-95fbaa609033")
 	)
 	(junction
-		(at 112.395 149.225)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "7eb149b3-91f6-4091-b940-ca425adc6170")
-	)
-	(junction
 		(at 109.22 82.55)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2623,12 +2617,6 @@
 		(uuid "e5b57f55-b7cd-4054-b159-d347ac43095b")
 	)
 	(junction
-		(at 144.78 128.905)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e792f362-e032-43f2-8eb8-403f8ddae2b0")
-	)
-	(junction
 		(at 179.07 88.265)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2675,16 +2663,6 @@
 			(type default)
 		)
 		(uuid "04bd85b7-4670-4505-b1ea-516fdf9690b0")
-	)
-	(wire
-		(pts
-			(xy 114.3 149.225) (xy 112.395 149.225)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0af33a33-5278-4160-be05-429ac84e8200")
 	)
 	(wire
 		(pts
@@ -2865,16 +2843,6 @@
 			(type default)
 		)
 		(uuid "2bf06c5a-652d-4247-9ba5-e1a3eae4e44c")
-	)
-	(wire
-		(pts
-			(xy 144.78 128.905) (xy 146.685 128.905)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2c17227d-c1a5-43ac-9a3f-100ced8f3021")
 	)
 	(wire
 		(pts
@@ -3878,16 +3846,6 @@
 	)
 	(wire
 		(pts
-			(xy 112.395 93.98) (xy 109.22 93.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "de308ecf-4287-4d29-95f6-f2237bf55720")
-	)
-	(wire
-		(pts
 			(xy 101.6 123.19) (xy 101.6 125.73)
 		)
 		(stroke
@@ -4399,18 +4357,6 @@
 		)
 		(uuid "fc60d78f-04cd-414c-aac2-ef0de70f2a24")
 	)
-	(hierarchical_label "+5V"
-		(shape output)
-		(at 114.3 149.225 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "451d00dd-ad33-4775-ab47-999de56f0794")
-	)
 	(hierarchical_label "CAN_TX"
 		(shape output)
 		(at 189.865 90.805 180)
@@ -4434,54 +4380,6 @@
 			(justify right)
 		)
 		(uuid "a0aa08da-ca23-4d20-b521-286bd5787801")
-	)
-	(hierarchical_label "+12V_MCU"
-		(shape output)
-		(at 116.84 117.475 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "a4f40c35-4a6a-4912-b933-265a2a2aba7a")
-	)
-	(hierarchical_label "V_Hall"
-		(shape output)
-		(at 146.685 128.905 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "a5612771-9492-4e7f-9259-2c40e00fd5d4")
-	)
-	(hierarchical_label "GND"
-		(shape output)
-		(at 112.395 93.98 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "a729cead-3c18-4411-83ee-ba7f6483b390")
-	)
-	(hierarchical_label "+3V3"
-		(shape output)
-		(at 112.395 82.55 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "f5c4f2cc-4f88-40c0-9359-0852ca239223")
 	)
 	(symbol
 		(lib_name "Test_Point_1")
