@@ -2760,6 +2760,10 @@
 		(uuid "febc21dd-64cd-46de-9de9-13aaf4482beb")
 	)
 	(no_connect
+		(at 139.065 99.06)
+		(uuid "172bd418-943f-4f34-a0fe-2506fffb731f")
+	)
+	(no_connect
 		(at 139.065 106.68)
 		(uuid "357d3600-bb06-4261-998c-197b702581e5")
 	)
@@ -2794,10 +2798,6 @@
 	(no_connect
 		(at 39.37 132.08)
 		(uuid "b1268aba-e3eb-43ee-8ed0-a9c0f52e6f5a")
-	)
-	(no_connect
-		(at 184.785 91.44)
-		(uuid "cb452773-aa23-4aad-a542-79ceb44be05b")
 	)
 	(wire
 		(pts
@@ -2858,6 +2858,16 @@
 			(type default)
 		)
 		(uuid "0aea7ccc-d56b-42d2-bcfa-986563920a42")
+	)
+	(wire
+		(pts
+			(xy 184.785 91.44) (xy 200.025 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0e668346-b65b-4d05-93bc-e41df5f041f8")
 	)
 	(wire
 		(pts
@@ -3961,16 +3971,6 @@
 	)
 	(wire
 		(pts
-			(xy 130.175 99.06) (xy 139.065 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f237dce5-4ac3-4519-b2f2-85235aed940e")
-	)
-	(wire
-		(pts
 			(xy 37.465 135.255) (xy 38.735 135.255)
 		)
 		(stroke
@@ -4080,6 +4080,18 @@
 		)
 		(uuid "ca711f15-fc0a-4948-8c0f-841fe461e63e")
 	)
+	(text "FERRITES!\n"
+		(exclude_from_sim no)
+		(at 24.638 81.788 0)
+		(effects
+			(font
+				(face "Rockwell")
+				(size 4 4)
+			)
+			(justify left bottom)
+		)
+		(uuid "e7b87ec4-6bf1-45cb-a885-cc975a3cfa55")
+	)
 	(text "MCU Zone"
 		(exclude_from_sim no)
 		(at 211.328 77.978 0)
@@ -4146,6 +4158,17 @@
 			(justify left bottom)
 		)
 		(uuid "0f19aa0b-ed96-4b76-9a5c-28a84c9efe25")
+	)
+	(label "HRTIM_A1"
+		(at 86.106 74.295 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "13d366c9-2b47-4f1f-b450-76755de338cf")
 	)
 	(label "PhB_I"
 		(at 137.16 71.12 180)
@@ -4257,6 +4280,28 @@
 		)
 		(uuid "4f142165-1822-4bcb-b190-c08f222fdb9b")
 	)
+	(label "CAN_TX"
+		(at 200.025 91.44 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4f3c0d71-c15f-4a78-902d-d39ed1ae4370")
+	)
+	(label "HRTIM_B2"
+		(at 86.106 81.915 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5181302f-d8ee-4c3c-a3a3-0d65d2d3fb3e")
+	)
 	(label "PhB_I"
 		(at 86.106 37.973 0)
 		(fields_autoplaced yes)
@@ -4267,6 +4312,17 @@
 			(justify left bottom)
 		)
 		(uuid "5286b5de-7356-41d0-868d-d0fb63333cf9")
+	)
+	(label "HRTIM_B1"
+		(at 86.106 79.375 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "52a68d5a-c7cb-49ea-a160-a3dc98d6406b")
 	)
 	(label "CAN_RX"
 		(at 49.53 54.61 0)
@@ -4367,16 +4423,16 @@
 		)
 		(uuid "6cecf644-5b9a-424d-a879-95389cd6d692")
 	)
-	(label "CAN_TX"
-		(at 130.175 99.06 180)
+	(label "HRTIM_A2"
+		(at 86.106 76.835 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
-		(uuid "71a68607-fe2e-40cc-9595-d95cdb570211")
+		(uuid "76f8cc1a-214b-45c4-9b48-0ba905519fba")
 	)
 	(label "HRTIM_B1"
 		(at 113.03 93.98 180)
@@ -4521,6 +4577,17 @@
 		)
 		(uuid "b4e73ebd-0823-4ba6-afbe-06fa1d9f3a95")
 	)
+	(label "HRTIM_D2"
+		(at 86.106 71.755 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "bfc7affe-c2f4-491a-83ac-6fd974b0ef30")
+	)
 	(label "LED1"
 		(at 184.785 76.2 0)
 		(fields_autoplaced yes)
@@ -4534,6 +4601,7 @@
 	)
 	(label "Vref"
 		(at 59.69 45.72 180)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4618,6 +4686,17 @@
 			(justify left bottom)
 		)
 		(uuid "ce2c7fec-0200-498c-a63a-a20a37aef57a")
+	)
+	(label "HRTIM_D1"
+		(at 86.106 69.215 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "cee5122a-14b9-4c75-aabb-3b8c9b20c2ba")
 	)
 	(label "HRTIM_D1_r"
 		(at 188.595 104.14 0)
@@ -7232,7 +7311,7 @@
 				)
 			)
 		)
-		(property "Footprint" "GTSR_KiCAD_Footprints:LQFP48-7x7mm"
+		(property "Footprint" "HEI_Logic:LQFP48-7x7mm"
 			(at 162.56 27.94 0)
 			(effects
 				(font
@@ -9580,7 +9659,7 @@
 	)
 	(sheet
 		(at 59.69 30.607)
-		(size 26.416 37.973)
+		(size 26.416 54.229)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -9600,7 +9679,7 @@
 			)
 		)
 		(property "Sheetfile" "HEI_Logic_INTERFACE.kicad_sch"
-			(at 59.69 69.1646 0)
+			(at 59.69 85.4206 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9727,6 +9806,66 @@
 				(justify left)
 			)
 			(uuid "b1883be5-f774-45c8-832d-faef6be44b88")
+		)
+		(pin "HS_A" input
+			(at 86.106 69.215 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "c0a318c6-8281-4b44-be52-4af3c73a81a6")
+		)
+		(pin "HS_C" input
+			(at 86.106 79.375 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "7491f5ca-6b7f-41f8-a239-76347f919316")
+		)
+		(pin "HS_B" input
+			(at 86.106 74.295 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "c9c6f12f-1273-44d8-b3e3-44b17f13d240")
+		)
+		(pin "LS_B" input
+			(at 86.106 76.835 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "60256339-08be-466e-85b5-be2aaeee1f27")
+		)
+		(pin "LS_C" input
+			(at 86.106 81.915 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "407b76cd-8861-41cf-a7a6-209b92e9c4bf")
+		)
+		(pin "LS_A" input
+			(at 86.106 71.755 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "13056411-4a48-40a4-a99c-2834a7ff8e77")
 		)
 		(instances
 			(project "HEI_Logic"
