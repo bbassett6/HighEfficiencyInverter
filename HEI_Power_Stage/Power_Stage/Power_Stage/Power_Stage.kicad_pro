@@ -37,9 +37,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 3.2,
-          "height": 3.2,
-          "width": 3.2
+          "drill": 1.0,
+          "height": 1.7,
+          "width": 1.7
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -79,7 +79,6 @@
         "footprint_type_mismatch": "ignore",
         "hole_clearance": "error",
         "hole_near_hole": "error",
-        "holes_co_located": "warning",
         "invalid_outline": "error",
         "isolated_copper": "warning",
         "item_on_disabled_layer": "error",
@@ -498,7 +497,35 @@
       "version": 3
     },
     "net_colors": null,
-    "netclass_assignments": null,
+    "netclass_assignments": {
+      "+5V_HV": "HV",
+      "/PHA": "HV",
+      "/PHB": "HV",
+      "/PHC": "HV",
+      "/Phase1/HS_{Drain}": "HV",
+      "/Phase1/HS_{Gate}": "HV",
+      "/Phase1/LS_{Gate}": "HV",
+      "/Phase1/PGND": "HV",
+      "/Phase1/Phase": "HV",
+      "/Phase1/SW": "HV",
+      "/Phase2/HS_{Drain}": "HV",
+      "/Phase2/HS_{Gate}": "HV",
+      "/Phase2/LS_{Gate}": "HV",
+      "/Phase2/PGND": "HV",
+      "/Phase2/Phase": "HV",
+      "/Phase2/SW": "HV",
+      "/Phase3/HS_{Drain}": "HV",
+      "/Phase3/HS_{Gate}": "HV",
+      "/Phase3/LS_{Gate}": "HV",
+      "/Phase3/PGND": "HV",
+      "/Phase3/Phase": "HV",
+      "/Phase3/SW": "HV",
+      "GNDPWR": "HV",
+      "HV+": "HV",
+      "HV+in": "HV",
+      "HV-": "HV",
+      "VDCin": "HV"
+    },
     "netclass_patterns": []
   },
   "pcbnew": {

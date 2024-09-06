@@ -29732,7 +29732,7 @@
 		(descr "B58035U5106M001-2")
 		(tags "Capacitor")
 		(property "Reference" "C4"
-			(at 0 0 180)
+			(at 0 11.1 180)
 			(layer "F.SilkS")
 			(uuid "ba40f368-52f6-4d2d-8277-8e0a27e31cd7")
 			(effects
@@ -41216,6 +41216,19 @@
 		(at 143.4 44.9 0)
 		(layer "F.SilkS")
 		(uuid "cb30e90f-9da2-40c7-b29b-393e26f92a4a")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.3)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "Brendan Bassett"
+		(at 112.8 51 270)
+		(layer "F.SilkS")
+		(uuid "cdc5c150-6d61-4b48-bc43-d92fdbf56d78")
 		(effects
 			(font
 				(size 1.5 1.5)
