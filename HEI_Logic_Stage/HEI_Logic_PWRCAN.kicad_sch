@@ -1126,193 +1126,6 @@
 				)
 			)
 		)
-		(symbol "GTSR_symbol_lib:B1203XT-1WR3"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "U"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "B1203XT-1WR3"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "GTSR_KiCAD_Footprints:B_XT-1WR3_MNS-M"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://www.digikey.com/en/products/detail/mornsun-america-llc/B1203XT-1WR3/16348385"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "B1203XT-1WR3_0_1"
-				(rectangle
-					(start -12.7 -1.905)
-					(end 12.7 -17.145)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(polyline
-					(pts
-						(xy -12.7 -17.145) (xy 12.7 -17.145)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -12.7 -1.905) (xy -12.7 -17.145)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -1.905) (xy 0 -17.145)
-					)
-					(stroke
-						(width 0)
-						(type dash)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin power_out line
-					(at -20.32 -12.065 0)
-					(length 7.62)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -20.32 -7.62 0)
-					(length 7.62)
-					(name "VIN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 20.32 -12.065 180)
-					(length 7.62)
-					(name "0V"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 20.32 -7.62 180)
-					(length 7.62)
-					(name "+VO"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at 20.32 -3.81 180)
-					(length 7.62) hide
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "GTSR_symbol_lib:CAN_Trans_ADM3058EBRIZ"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -1549,6 +1362,205 @@
 						(effects
 							(font
 								(size 1.4986 1.4986)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "HEI_Logic:PDS1-S12-S3-M"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at -10.2127 7.6595 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Value" "PDS1-S12-S3-M"
+				(at -10.2144 -10.2144 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" "PDS1-S12-S3-M:CONV_PDS1-S12-S3-M"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "MF" "CUI"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "DESCRIPTION" "PDS1 Series 1 W 12 VDC 84 mA Surface Mount DC-DC Isolated Converter"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "PACKAGE" "SMD-8 CUI"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "PRICE" "4.02 USD"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "MP" "PDS1-S12-S12-M"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "AVAILABILITY" "Bad"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(symbol "PDS1-S12-S3-M_0_0"
+				(rectangle
+					(start -10.16 -7.62)
+					(end 10.16 7.62)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin power_in line
+					(at -15.24 -2.54 0)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -15.24 2.54 0)
+					(length 5.08)
+					(name "VIN"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 15.24 -2.54 180)
+					(length 5.08)
+					(name "0V"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 15.24 2.54 180)
+					(length 5.08)
+					(name "+VO"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.016 1.016)
 							)
 						)
 					)
@@ -2605,6 +2617,12 @@
 		(uuid "2a973335-7cf4-4361-96b8-afc791f813cf")
 	)
 	(junction
+		(at 105.41 93.98)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2b53438c-cb1c-4f35-9bf9-c1b6c9644f11")
+	)
+	(junction
 		(at 60.96 52.07)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2627,12 +2645,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4aeddbd3-408c-4ba5-9ca3-1b82562417bf")
-	)
-	(junction
-		(at 105.41 93.98)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4c9f9f1d-40f5-4149-b404-87692497af0f")
 	)
 	(junction
 		(at 110.49 50.165)
@@ -2800,16 +2812,6 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 90.805) (xy 105.41 93.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "04bd85b7-4670-4505-b1ea-516fdf9690b0")
-	)
-	(wire
-		(pts
 			(xy 43.815 62.865) (xy 43.815 62.23)
 		)
 		(stroke
@@ -2967,6 +2969,16 @@
 			(type default)
 		)
 		(uuid "2435b4f2-d0d6-4d9f-9dda-bacf3fa6670c")
+	)
+	(wire
+		(pts
+			(xy 60.96 91.44) (xy 60.96 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2962b9e7-48a6-44a3-b41f-18317c6083a3")
 	)
 	(wire
 		(pts
@@ -3210,16 +3222,6 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 90.805) (xy 62.865 90.805)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "50ef5630-235f-4502-9aac-4633f5500fcf")
-	)
-	(wire
-		(pts
 			(xy 104.14 160.02) (xy 104.14 153.67)
 		)
 		(stroke
@@ -3257,6 +3259,16 @@
 			(type default)
 		)
 		(uuid "56fad333-210e-42d7-95d2-78e485020033")
+	)
+	(wire
+		(pts
+			(xy 105.41 91.44) (xy 105.41 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5846353a-c660-4949-a55a-4e79cee82a8a")
 	)
 	(wire
 		(pts
@@ -3327,16 +3339,6 @@
 			(type default)
 		)
 		(uuid "6401fdac-cd3b-4e76-b69d-9a161c759a87")
-	)
-	(wire
-		(pts
-			(xy 60.96 90.805) (xy 60.96 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "68737b4f-0095-4a16-8af8-97031dd521e4")
 	)
 	(wire
 		(pts
@@ -3470,6 +3472,16 @@
 	)
 	(wire
 		(pts
+			(xy 99.06 91.44) (xy 105.41 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "860f9b79-5563-46d0-9f96-67a6b0deb91f")
+	)
+	(wire
+		(pts
 			(xy 241.3 86.36) (xy 241.3 88.265)
 		)
 		(stroke
@@ -3540,7 +3552,7 @@
 	)
 	(wire
 		(pts
-			(xy 103.505 86.36) (xy 105.41 86.36)
+			(xy 99.06 86.36) (xy 105.41 86.36)
 		)
 		(stroke
 			(width 0)
@@ -3660,6 +3672,16 @@
 	)
 	(wire
 		(pts
+			(xy 68.58 91.44) (xy 60.96 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a9916729-f2b4-4991-ae48-5c038b5d5836")
+	)
+	(wire
+		(pts
 			(xy 109.22 96.52) (xy 109.22 93.98)
 		)
 		(stroke
@@ -3757,16 +3779,6 @@
 			(type default)
 		)
 		(uuid "be10b5a4-4773-4478-9a5d-490f1b95e024")
-	)
-	(wire
-		(pts
-			(xy 103.505 90.805) (xy 105.41 90.805)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c2e96973-c021-45f8-b49b-538413c32b7c")
 	)
 	(wire
 		(pts
@@ -3930,7 +3942,7 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 86.36) (xy 62.865 86.36)
+			(xy 60.96 86.36) (xy 68.58 86.36)
 		)
 		(stroke
 			(width 0)
@@ -5717,91 +5729,6 @@
 		)
 	)
 	(symbol
-		(lib_id "GTSR_symbol_lib:B1203XT-1WR3")
-		(at 83.185 78.74 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5116d5c1-8b76-48f3-8205-596f41c146e2")
-		(property "Reference" "U11"
-			(at 83.185 76.835 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "B1203XT-1WR3"
-			(at 83.185 79.375 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "GTSR_KiCAD_Footprints:B_XT-1WR3_MNS-M"
-			(at 83.185 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.digikey.com/en/products/detail/mornsun-america-llc/B1203XT-1WR3/16348385"
-			(at 83.185 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 83.185 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Populate" ""
-			(at 83.185 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "696339ce-aae0-49aa-af3b-b0472f0b920b")
-		)
-		(pin "2"
-			(uuid "7f324f24-d42d-4a37-8cca-fa1a39a0972e")
-		)
-		(pin "4"
-			(uuid "f0c604ee-fb36-4dbc-bef8-483fef3f69ad")
-		)
-		(pin "5"
-			(uuid "49dee9a6-2fbd-430c-a50a-e1bfa4813579")
-		)
-		(pin "8"
-			(uuid "e8b65218-57f2-40ab-b366-5afd9f4bfae6")
-		)
-		(instances
-			(project "HEI_Logic"
-				(path "/9d05e1b7-f292-46e2-9203-5654fb6f820e/0de18315-f7ce-42ca-adfe-a88a58247ef3"
-					(reference "U11")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GNDREF")
 		(at 243.205 99.06 0)
 		(unit 1)
@@ -6239,7 +6166,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "82d176f0-c10c-4aff-8843-6e7df420db57")
 		(property "Reference" "U12"
@@ -6841,6 +6768,149 @@
 			(project "HEI_Logic"
 				(path "/9d05e1b7-f292-46e2-9203-5654fb6f820e/0de18315-f7ce-42ca-adfe-a88a58247ef3"
 					(reference "C15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "HEI_Logic:PDS1-S12-S3-M")
+		(at 83.82 88.9 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a8697038-6d1f-4dd5-a752-5c1891c05c66")
+		(property "Reference" "U9"
+			(at 83.82 77.1355 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PDS1-S12-S3-M"
+			(at 83.82 79.5598 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "HEI_Logic:CONV_PDS1-S12-S3-M"
+			(at 83.82 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 83.82 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 83.82 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MF" "CUI"
+			(at 83.82 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "DESCRIPTION" "PDS1 Series 1 W 12 VDC 84 mA Surface Mount DC-DC Isolated Converter"
+			(at 83.82 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "PACKAGE" "SMD-8 CUI"
+			(at 83.82 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "PRICE" "4.02 USD"
+			(at 83.82 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MP" "PDS1-S12-S12-M"
+			(at 83.82 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "AVAILABILITY" "Bad"
+			(at 83.82 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Populate" ""
+			(at 83.82 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "bd5a887d-6e41-4ee9-b620-b39ada5e5005")
+		)
+		(pin "4"
+			(uuid "1fab886e-5b22-49fc-97c5-f5448c2b290e")
+		)
+		(pin "2"
+			(uuid "4557f5d2-d58f-4aab-8052-624fd85b4a3b")
+		)
+		(pin "5"
+			(uuid "577b8193-6986-4f0d-8905-1c0ace17b2c4")
+		)
+		(instances
+			(project ""
+				(path "/9d05e1b7-f292-46e2-9203-5654fb6f820e/0de18315-f7ce-42ca-adfe-a88a58247ef3"
+					(reference "U9")
 					(unit 1)
 				)
 			)

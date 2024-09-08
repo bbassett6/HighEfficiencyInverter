@@ -4069,17 +4069,6 @@
 		)
 		(uuid "9f1603e2-ac7c-47a6-99c9-913dafd757bc")
 	)
-	(text "double check VRef footprint"
-		(exclude_from_sim no)
-		(at 255.27 29.845 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "ca711f15-fc0a-4948-8c0f-841fe461e63e")
-	)
 	(text "FERRITES!\n"
 		(exclude_from_sim no)
 		(at 24.638 81.788 0)
@@ -4159,7 +4148,7 @@
 		)
 		(uuid "0f19aa0b-ed96-4b76-9a5c-28a84c9efe25")
 	)
-	(label "HRTIM_A1"
+	(label "HRTIM_A2"
 		(at 86.106 74.295 0)
 		(fields_autoplaced yes)
 		(effects
@@ -4291,7 +4280,7 @@
 		)
 		(uuid "4f3c0d71-c15f-4a78-902d-d39ed1ae4370")
 	)
-	(label "HRTIM_B2"
+	(label "HRTIM_D1"
 		(at 86.106 81.915 0)
 		(fields_autoplaced yes)
 		(effects
@@ -4313,7 +4302,7 @@
 		)
 		(uuid "5286b5de-7356-41d0-868d-d0fb63333cf9")
 	)
-	(label "HRTIM_B1"
+	(label "HRTIM_D2"
 		(at 86.106 79.375 0)
 		(fields_autoplaced yes)
 		(effects
@@ -4423,7 +4412,7 @@
 		)
 		(uuid "6cecf644-5b9a-424d-a879-95389cd6d692")
 	)
-	(label "HRTIM_A2"
+	(label "HRTIM_A1"
 		(at 86.106 76.835 0)
 		(fields_autoplaced yes)
 		(effects
@@ -4577,7 +4566,7 @@
 		)
 		(uuid "b4e73ebd-0823-4ba6-afbe-06fa1d9f3a95")
 	)
-	(label "HRTIM_D2"
+	(label "HRTIM_B1"
 		(at 86.106 71.755 0)
 		(fields_autoplaced yes)
 		(effects
@@ -4687,7 +4676,7 @@
 		)
 		(uuid "ce2c7fec-0200-498c-a63a-a20a37aef57a")
 	)
-	(label "HRTIM_D1"
+	(label "HRTIM_B2"
 		(at 86.106 69.215 0)
 		(fields_autoplaced yes)
 		(effects
@@ -5686,8 +5675,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+3V3"
-			(at 273.685 46.99 0)
+		(property "Value" "+5V"
+			(at 273.685 46.6669 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6270,7 +6259,7 @@
 				)
 			)
 		)
-		(property "Value" "LM4132-Q1 SOT-2"
+		(property "Value" "LM4132BMF-3.3"
 			(at 249.555 34.29 0)
 			(effects
 				(font
@@ -6287,7 +6276,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.digikey.com/en/products/detail/texas-instruments/LM4132AQ1MFT3-0/5278911"
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/texas-instruments/LM4132BMF-3-3-NOPB/1206359"
 			(at 249.555 57.15 0)
 			(effects
 				(font
@@ -8106,8 +8095,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+3V3"
-			(at 225.425 47.625 0)
+		(property "Value" "+5V"
+			(at 225.425 47.3019 0)
 			(effects
 				(font
 					(size 1.27 1.27)
