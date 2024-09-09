@@ -1412,16 +1412,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "MF" "CUI"
+			(property "Description" "PDS1 Series 1 W 12 VDC 84 mA Surface Mount DC-DC Isolated Converter"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1431,7 +1422,7 @@
 					(hide yes)
 				)
 			)
-			(property "DESCRIPTION" "PDS1 Series 1 W 12 VDC 84 mA Surface Mount DC-DC Isolated Converter"
+			(property "MF" "CUI"
 				(at 0 0 0)
 				(effects
 					(font
@@ -4490,7 +4481,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "08fa735c-692e-46d5-8f70-84b640fa4cb3")
 		(property "Reference" "J8"
 			(at 239.395 71.755 0)

@@ -2768,16 +2768,12 @@
 		(uuid "357d3600-bb06-4261-998c-197b702581e5")
 	)
 	(no_connect
-		(at 184.785 96.52)
-		(uuid "7eb21101-e241-4537-9eff-3d99428625e8")
+		(at 184.785 81.28)
+		(uuid "418f7b89-6b6a-4b93-b3d1-ba950deaf9ea")
 	)
 	(no_connect
-		(at 184.785 101.6)
-		(uuid "839ed26c-f840-4319-aea2-b99d5858092b")
-	)
-	(no_connect
-		(at 184.785 99.06)
-		(uuid "896df0db-bf96-4f98-8112-5c7b506e6027")
+		(at 184.785 78.74)
+		(uuid "72060f2f-8646-4e09-b8ae-6c2af15951a2")
 	)
 	(no_connect
 		(at 38.735 130.175)
@@ -2798,6 +2794,10 @@
 	(no_connect
 		(at 39.37 132.08)
 		(uuid "b1268aba-e3eb-43ee-8ed0-a9c0f52e6f5a")
+	)
+	(no_connect
+		(at 184.785 76.2)
+		(uuid "d89286fa-d0b9-4ec3-9024-80a1895ac9fa")
 	)
 	(wire
 		(pts
@@ -4115,17 +4115,6 @@
 		)
 		(uuid "01d9cefc-bd56-4094-8491-5fd2c715ae6d")
 	)
-	(label "LED2"
-		(at 184.785 78.74 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "07010348-5f28-4638-8889-7694616ae6ab")
-	)
 	(label "HRTIM_D1"
 		(at 213.36 104.14 0)
 		(fields_autoplaced yes)
@@ -4158,6 +4147,17 @@
 			(justify left bottom)
 		)
 		(uuid "13d366c9-2b47-4f1f-b450-76755de338cf")
+	)
+	(label "LED1"
+		(at 184.785 101.6 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1af363ee-75cb-44e3-b664-19743f807d26")
 	)
 	(label "PhB_I"
 		(at 137.16 71.12 180)
@@ -4246,6 +4246,17 @@
 			(justify right bottom)
 		)
 		(uuid "3c78ffb6-815a-4aec-acde-bbaf1a52ff9c")
+	)
+	(label "LED2"
+		(at 184.785 99.06 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3ce65f44-5d3f-4960-964b-f42e4464eab1")
 	)
 	(label "CAN_TX"
 		(at 49.53 52.07 0)
@@ -4544,6 +4555,17 @@
 		)
 		(uuid "9aa2f9f7-b5a8-4fa1-81d8-35a9b4c777f5")
 	)
+	(label "LED3"
+		(at 184.785 96.52 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a3294a64-2985-487f-bf6c-c6a1a797f705")
+	)
 	(label "TIN1"
 		(at 137.16 83.82 180)
 		(fields_autoplaced yes)
@@ -4576,17 +4598,6 @@
 			(justify left bottom)
 		)
 		(uuid "bfc7affe-c2f4-491a-83ac-6fd974b0ef30")
-	)
-	(label "LED1"
-		(at 184.785 76.2 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "c1617608-4df0-4946-8f43-099a05abaef2")
 	)
 	(label "Vref"
 		(at 59.69 45.72 180)
@@ -4741,17 +4752,6 @@
 			(justify left bottom)
 		)
 		(uuid "e9c90c08-d90d-4982-9d31-98282bcfa87c")
-	)
-	(label "LED3"
-		(at 184.785 81.28 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "eb7cbed7-1c25-4a44-943f-2c8d6dc36f4e")
 	)
 	(label "SWDIO"
 		(at 130.175 101.6 180)
