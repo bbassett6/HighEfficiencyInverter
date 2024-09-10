@@ -5,7 +5,7 @@
       "Application": "Pcbnew",
       "Version": "8.0.1"
     },
-    "CreationDate": "2024-08-29T12:36:29-04:00"
+    "CreationDate": "2024-09-10T16:24:22-04:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
@@ -14,11 +14,11 @@
       "Revision": "rev?"
     },
     "Size": {
-      "X": 135.0,
-      "Y": 65.1
+      "X": 140.1,
+      "Y": 70.1
     },
     "LayerNumber": 6,
-    "BoardThickness": 1.6,
+    "BoardThickness": 1.84,
     "Finish": "None"
   },
   "DesignRules": [
@@ -36,7 +36,7 @@
       "PadToPad": 0.2,
       "PadToTrack": 0.2,
       "TrackToTrack": 0.2,
-      "MinLineWidth": 1.0,
+      "MinLineWidth": 0.5,
       "TrackToRegion": 0.25,
       "RegionToRegion": 0.25
     }
@@ -136,19 +136,19 @@
     },
     {
       "Type": "Copper",
-      "Thickness": 0.035,
+      "Thickness": 0.07,
       "Name": "Sig2.Cu"
     },
     {
       "Type": "Dielectric",
-      "Thickness": 0.5,
+      "Thickness": 0.55,
       "Material": "FR4",
       "Name": "Sig2.Cu/PwrGnd3.Cu",
       "Notes": "Type: dielectric layer 2 (from Sig2.Cu to PwrGnd3.Cu)"
     },
     {
       "Type": "Copper",
-      "Thickness": 0.035,
+      "Thickness": 0.07,
       "Name": "PwrGnd3.Cu"
     },
     {
@@ -160,19 +160,19 @@
     },
     {
       "Type": "Copper",
-      "Thickness": 0.035,
+      "Thickness": 0.07,
       "Name": "PwrGnd4.Cu"
     },
     {
       "Type": "Dielectric",
-      "Thickness": 0.5,
+      "Thickness": 0.55,
       "Material": "FR4",
       "Name": "PwrGnd4.Cu/PwrGnd5.Cu",
       "Notes": "Type: dielectric layer 4 (from PwrGnd4.Cu to PwrGnd5.Cu)"
     },
     {
       "Type": "Copper",
-      "Thickness": 0.035,
+      "Thickness": 0.07,
       "Name": "PwrGnd5.Cu"
     },
     {
