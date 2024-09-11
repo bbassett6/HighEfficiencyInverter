@@ -491,7 +491,7 @@
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "HEI_Logic.step",
       "svg": "",
       "vrml": ""
     },
