@@ -8619,7 +8619,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "40k"
+		(property "Value" "30k"
 			(at 229.743 120.777 90)
 			(effects
 				(font
@@ -9642,7 +9642,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "40k"
+		(property "Value" "40.2k"
 			(at 149.733 132.207 90)
 			(effects
 				(font
@@ -10477,7 +10477,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "10.2k"
 			(at 89.027 143.383 90)
 			(effects
 				(font
@@ -10623,7 +10623,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "40k"
+		(property "Value" "40.2k"
 			(at 149.733 123.317 90)
 			(effects
 				(font
@@ -11525,7 +11525,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "35k"
+		(property "Value" "24.9k"
 			(at 223.52 140.462 0)
 			(effects
 				(font
@@ -11825,7 +11825,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "25k"
+		(property "Value" "24.9k"
 			(at 154.94 183.642 0)
 			(effects
 				(font
@@ -12047,7 +12047,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "10.2k"
 			(at 160.782 188.468 90)
 			(effects
 				(font
@@ -12413,7 +12413,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "10.2k"
 			(at 149.987 142.748 90)
 			(effects
 				(font
@@ -12566,7 +12566,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "10.2k"
 			(at 219.202 145.288 90)
 			(effects
 				(font
@@ -12712,7 +12712,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "40k"
+		(property "Value" "40.2k"
 			(at 150.368 169.037 90)
 			(effects
 				(font
@@ -13150,7 +13150,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "10.2k"
 			(at 89.027 187.833 90)
 			(effects
 				(font
@@ -13226,7 +13226,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "40k"
+		(property "Value" "40.2k"
 			(at 150.368 177.927 90)
 			(effects
 				(font
@@ -13930,7 +13930,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "40k"
+		(property "Value" "40.2k"
 			(at 78.613 132.842 90)
 			(effects
 				(font
@@ -14213,7 +14213,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "10.2k"
 			(at 78.867 143.383 90)
 			(effects
 				(font
@@ -14431,7 +14431,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "25k"
+		(property "Value" "24.9k"
 			(at 154.305 137.922 0)
 			(effects
 				(font
@@ -14807,7 +14807,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "25k"
+		(property "Value" "24.9k"
 			(at 83.185 183.007 0)
 			(effects
 				(font
@@ -14883,7 +14883,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "10.2k"
 			(at 160.147 142.748 90)
 			(effects
 				(font
@@ -15025,7 +15025,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "10.2k"
 			(at 229.362 145.288 90)
 			(effects
 				(font
@@ -15101,7 +15101,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "40k"
+		(property "Value" "30k"
 			(at 218.948 134.747 90)
 			(effects
 				(font
@@ -15833,7 +15833,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "40k"
+		(property "Value" "40.2k"
 			(at 78.613 177.292 90)
 			(effects
 				(font
@@ -15985,7 +15985,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "10.2k"
 			(at 150.622 188.468 90)
 			(effects
 				(font
@@ -17129,7 +17129,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "25k"
+		(property "Value" "24.9k"
 			(at 82.55 137.922 0)
 			(effects
 				(font
@@ -17621,7 +17621,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "10.2k"
 			(at 78.867 187.833 90)
 			(effects
 				(font
@@ -18133,7 +18133,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "40k"
+		(property "Value" "40.2k"
 			(at 78.613 168.402 90)
 			(effects
 				(font
@@ -18795,7 +18795,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "40k"
+		(property "Value" "30k"
 			(at 218.948 125.857 90)
 			(effects
 				(font
@@ -19013,7 +19013,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "40k"
+		(property "Value" "40.2k"
 			(at 78.613 123.952 90)
 			(effects
 				(font
