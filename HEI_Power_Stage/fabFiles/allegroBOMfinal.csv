@@ -1,0 +1,26 @@
+Reference,Value,Qty,DKPN,Mouser PN,Manufacturer,MPN,Datasheet,Footprint
+"C1,C2,C3",3.3uF,3,445-7108-1-ND,,tdk,CKG57NX7T2E335M500JH,https://www.digikey.com/en/products/detail/tdk-corporation/CKG57NX7T2E335M500JH/2674910,GTSR:CAP_6050_TDK
+"C4,C5",B58035U5106M001,2,495-B58035U5106M001-ND,,epcos tdk,B58035U5106M001,https://product.tdk.com/system/files/dam/doc/product/capacitor/ceramic/ceralink/data_sheet/20/10/ds/b58035_fa.pdf,B58035U5106M001_KiCad:B58035U5106M001
+"C6,C25",15uF,2,399-C4AQLLU5150A19K-ND,,kemet,C4AQLLU5150A19K,https://www.kemet.com/specsheet/C4AQLLU5150A19K,C4AQLLU5150A19K _KiCad:C4AQLLU5150A19K
+"C11,C14,C16,C18,C19,C20,C26,C72,C73,C74,C75,C76,C77,C86,C87,C88,C89,C90,C91,C100,C101,C102,C103,C104,C105",100nF,25,1276-1000-1-ND,,samsung,CL10B104KB8NNNC,-- mixed values --,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder
+"C12,C13,C15,C17,C21,C23,C29",1nF,7,490-4777-1-ND,,murata,GCM188R71H102KA37D,-- mixed values --,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder
+"C24,C50,C53,C78,C79,C80,C81,C92,C93,C94,C95,C106,C107",100pF,13,1276-1908-1-NDÊ,,samsung,CL10B101KB8NFNC,~,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder
+"C27,C30,C68,C69,C70,C71,C82,C83,C84,C85,C96,C97,C98,C99",1uF,14,490-10673-1-ND,,murata,GCM188R71E105KA64D,~,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder
+C28,2.2uF,1,490-4931-1-ND,,murata,GCM188R71H222KA37D,~,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder
+"D1,D2,D3",G,3,732-4971-1-ND,,wurth,150060GS75000,https://www.digikey.com/en/products/detail/liteon/LTST-C193TGKT-5A/2356246,LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder
+"D13,D17,D18,D22,D23,D24",PDZVTFTR5.1B,6,DDZ5V6ASF-7DICT-ND,,diodes inc,DDZ5V6ASF-7,https://www.rohm.com/datasheet?p=PDZVTF5.1B&dist=Digi-key&media=referral&source=digi-key.com&campaign=Digi-key,Diode_SMD:D_SOD-323F
+"FB1,FB2",~,2,490-1026-1-ND,,Murata,BLM18BD182SN1D,~,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder
+"IC1,IC2,IC3,IC9",ACS730KLCTR-65ABT,4,,250-ACS730KLCTR65ABT,allegro,ACS730KLCTR-65AB-T,https://www.allegromicro.com/-/media/files/datasheets/acs730-datasheet.ashx,ACS730KLCTR65ABT_KiCad:SOIC127P600X175-8N
+"IC5,IC6,IC7,IC8,IC10,IC11",AHV85111KNHTR,6,620-AHV85111KNHTRCT-NDÊ,,allegro,AHV85111KNHTR,https://www.allegromicro.com/~/media/files/datasheets/AHV85111-Limited-Datasheet,AHV85111_KiCad:AHV85111KNHTR
+IC12,AMC3311QDWERQ1,1,,595-AMC3311QDWERQ1,TI,AMC3311QDWERQ1,https://www.ti.com/lit/ds/symlink/amc3311-q1.pdf?ts=1702017864365&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FAMC3311-Q1%252Fpart-details%252FAMC3311QDWERQ1%253FkeyMatch%253DAMC3311QDWERQ1%2526tisearch%253Dsearch-everything%2526usecase%253DOPN,AMC3311_KiCad:SOIC127P1030X265-16N
+"J8,J9",Conn_02x07_Odd_Even,2,S7110-ND,,sullins,PPPC072LFBN-RC,~,Connector_PinSocket_2.54mm:PinSocket_2x07_P2.54mm_Vertical
+"Q1,Q2,Q3,Q4,Q5,Q6",EPC2304ENGRT,6,917-EPC2304ENGRTCT-ND,,epc,EPC2304ENGRT,https://www.digikey.com/en/products/detail/epc/EPC2304ENGRT/16785484,GTSR:EPC2304_ECC
+"R1,R2",440,2,311-470GRCT-ND,,yageo,RC0603JR-07470RL,https://www.digikey.com/en/products/detail/panasonic-electronic-components/ERA-3AEB471V/1465846,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder
+R3,1Meg,1,YAG2022CT-ND,,yageo,RT1206BRD071ML,https://www.digikey.com/en/products/detail/yageo/RT1206BRD07715KL/1079952,Resistor_SMD:R_1206_3216Metric
+R4,10k,1,YAG2329CT-ND,,yageo,RT1206BRD0710KL,https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RNCS1206BKE10K0/1800330,Resistor_SMD:R_1206_3216Metric
+"R5,R6,R17,R31,R33,R34",0 (0805),6,311-0.0ARCT-ND,,yageo,RC0805JR-070RL,,
+"R35,R36,R38,R41,R52,R53,R55,R57,R66,R67,R69,R71,R37,R39,R46,R47,R54,R56,R60,R61,R68,R70,R74,R75",0,24,311-0.0GRCT-ND,,yageo,RC0603JR-070RL,~,-- mixed values --
+"R12,R14,R26,R28,R40,R42",0.47,6,P.047AQCT-ND,,panansonic ec,ERJ-6BWFR047V,https://www.digikey.com/en/products/detail/panasonic-electronic-components/ERJ-3RQFR47V/308058,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder
+"R43,R45,R50,R51,R58,R59,R64,R65,R72,R73,R79,R80",100k,12,311-100KHRCT-ND,,yageo,RC0603FR-07100KL,~,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder
+"R48,R49,R62,R63,R76,R78",32.4k,6,311-32.4KHRCT-ND,,yageo,RC0603FR-0732K4L,~,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder
+R77,1.2k,1,311-1.20KHRCT-ND,,yageo,RC0603FR-071K2L,https://www.digikey.com/en/products/detail/panasonic-electronic-components/ERA-3AEB471V/1465846,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder
