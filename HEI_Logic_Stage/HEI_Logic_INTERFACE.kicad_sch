@@ -8598,7 +8598,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "30k"
+		(property "Value" "40.2k"
 			(at 228.473 110.617 90)
 			(effects
 				(font
@@ -11504,7 +11504,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "24.9k"
+		(property "Value" "40.2k"
 			(at 222.25 130.302 0)
 			(effects
 				(font
@@ -12534,7 +12534,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "6a2331b5-8855-4900-8214-d90c99ae4494")
 		(property "Reference" "R65"
 			(at 219.71 135.255 90)
@@ -12545,7 +12545,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "10.2k"
+		(property "Value" "-"
 			(at 217.932 135.128 90)
 			(effects
 				(font
@@ -15004,7 +15004,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "10.2k"
+		(property "Value" "0"
 			(at 228.092 135.128 90)
 			(effects
 				(font
