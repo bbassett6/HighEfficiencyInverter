@@ -7,7 +7,7 @@ namespace IHM16M1
     class Instance : Inverter::Interface
     {
     public:
-        void init()
+        bool init()
         {
             // Set GPIO modes for gate drive, current/voltage sense
             for (PinDef pin : PinDefs)
@@ -21,7 +21,23 @@ namespace IHM16M1
             HAL_GPIO_WritePin(PinDefs[PinNames::En_W].port, PinDefs[PinNames::En_W].init.Pin, GPIO_PIN_SET);
 
             // Initialize ADCs
-            
+            ADC_ChannelConfTypeDef sConfig = {0};
+            for (AdcDef adcDef : AdcDefs)
+            {
+                sConfig.Channel 		= adcDef.channel;
+                sConfig.Rank 			= ADC_REGULAR_RANK_1;
+                sConfig.SamplingTime 	= ADC_SAMPLETIME_2CYCLES_5;
+                sConfig.SingleDiff 		= ADC_SINGLE_ENDED;
+                sConfig.OffsetNumber 	= ADC_OFFSET_NONE;
+                sConfig.Offset 			= 0;
+
+                if (HAL_ADC_ConfigChannel(adcDef.hAdc, &sConfig) != HAL_OK)
+                {
+                    return false;
+                }
+            }
+
+            return true;
         }
         
         void setSwitchState(Inverter::SpaceVector vector)

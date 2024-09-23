@@ -27,7 +27,7 @@ namespace Inverter
 
     class Interface
     {
-        virtual void init();
+        virtual bool init();
         virtual void setSwitchState(Inverter::SpaceVector vector);
         virtual bool getPhaseCurrents(Triple<float>* currents);            // Returns success
         virtual bool getPhaseVoltages(Triple<float>* voltages);            // Returns success

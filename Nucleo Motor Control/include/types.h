@@ -17,4 +17,10 @@ struct PinDef
     GPIO_InitTypeDef init;
 };
 
+struct AdcDef
+{
+    ADC_HandleTypeDef* hAdc;
+    uint32_t channel;
+};
+
 #endif // __TYPES
