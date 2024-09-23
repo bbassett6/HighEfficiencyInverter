@@ -1,11 +1,26 @@
 #ifndef __TYPES
 #define __TYPES
 
-struct Float3
+#include "stm32g4xx_hal.h"
+
+template <typename T>
+struct Triple
 {
-    float A;
-    float B;
-    float C;
+    T U;
+    T V;
+    T W;
+};
+
+struct PinDef
+{
+    GPIO_TypeDef* port;
+    GPIO_InitTypeDef init;
+};
+
+struct AdcDef
+{
+    ADC_HandleTypeDef* hAdc;
+    uint32_t channel;
 };
 
 struct ADC

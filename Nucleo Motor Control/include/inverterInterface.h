@@ -14,22 +14,23 @@ namespace Inverter
 {
     enum SpaceVector
     {
-        V0,
-        V1,
-        V2,
-        V3,
-        V4,
-        V5,
-        V6,
-        V7,
+        V0 = 0,
+        V1 = 1,
+        V2 = 2,
+        V3 = 3,
+        V4 = 4,
+        V5 = 5,
+        V6 = 6,
+        V7 = 7,
         NumSpaceVectors
     };
 
     class Interface
     {
+        virtual bool init();
         virtual void setSwitchState(Inverter::SpaceVector vector);
-        virtual bool getPhaseCurrents(Float3* currents);            // Returns success
-        virtual bool getPhaseVoltages(Float3* voltages);            // Returns success
+        virtual bool getPhaseCurrents(Triple<float>* currents);            // Returns success
+        virtual bool getPhaseVoltages(Triple<float>* voltages);            // Returns success
         virtual bool getBusVoltage(float* voltage);                 // Returns success
     };
 }
