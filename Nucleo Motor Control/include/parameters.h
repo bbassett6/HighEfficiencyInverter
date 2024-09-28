@@ -16,4 +16,7 @@ const int deadtimeMicros        = 1;
 const float minSwitchingCycle   = 0.01;
 const float maxSwitchingCycle   = 0.99;
 
+// Position Detection Parameters
+const bool flipAngle            = false;
+
 #endif // __PARAMETERS

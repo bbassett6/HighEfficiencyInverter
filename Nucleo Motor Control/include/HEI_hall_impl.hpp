@@ -4,6 +4,7 @@
 #include "types.hpp"
 #include "constants.hpp"
 #include "positionInterface.hpp"
+#include "parameters.h"
 
 namespace HEIHallSense
 {

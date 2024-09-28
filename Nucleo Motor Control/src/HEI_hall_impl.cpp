@@ -9,6 +9,7 @@ namespace HEIHallSense
             
         }
 
+        // TODO: use flipAngle from `constants.hpp` in case we want to reverse the detected angle
         bool getPosition(float* position, ADC* ADC)
         {
             GPIO_PinState hallAValue = HAL_GPIO_ReadPin(PinDefs[Hall_A].port, PinDefs[Hall_A].init.Pin);
@@ -28,6 +29,8 @@ namespace HEIHallSense
             } else if (hallAValue == 0 && hallBValue == 1 && hallCValue == 1) {
                 *position = (5.0f * PI) / 3; // 300 degrees
             }
+
+            return true; // TODO: if we can detect failure of a hall sensor, this should return false
         }
 
         bool getSpeed(float* speed, ADC* ADC) 
