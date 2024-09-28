@@ -1,6 +1,6 @@
-#include "inverterInterface.hpp"
-#include "IHM16M1_impl.hpp"
-#include "types.hpp"
+#include "impl/IHM16M1_impl.hpp"
+
+#if PLATFORM_P_NUCLEO_IHM03
 
 namespace IHM16M1
 {
@@ -80,3 +80,5 @@ namespace IHM16M1
         }
     };
 }
+
+#endif // PLATFORM_P_NUCLEO_IHM03

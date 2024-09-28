@@ -2,8 +2,12 @@
 #define __IHM16M1_IMPL
 
 #include "stm32g4xx_hal.h"
+#include "parameters.h"
 #include "peripherals.h"
 #include "types.hpp"
+#include "interface/inverter_interface.hpp"
+
+#if PLATFORM_P_NUCLEO_IHM03
 
 namespace IHM16M1
 {
@@ -47,4 +51,5 @@ namespace IHM16M1
     };
 }
 
+#endif // PLATFORM_P_NUCLEO_IHM03
 #endif // __IHM16M1_IMPL

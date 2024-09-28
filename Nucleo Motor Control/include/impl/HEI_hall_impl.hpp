@@ -1,10 +1,12 @@
 #ifndef __HEI_HALL_SENSE
 #define __HEI_HALL_SENSE
 
+#include "interface/position_interface.hpp"
 #include "types.hpp"
 #include "constants.hpp"
-#include "positionInterface.hpp"
 #include "parameters.h"
+
+#if PLATFORM_HEI
 
 namespace HEIHallSense
 {
@@ -25,4 +27,5 @@ namespace HEIHallSense
     };
 }
 
-#endif
+#endif  // PLATFORM_HEI
+#endif  // __HEI_HALL_SENSE

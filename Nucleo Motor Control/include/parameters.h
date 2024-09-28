@@ -3,6 +3,10 @@
 
 #include <stdbool.h>
 
+// Platform Parameters
+#define PLATFORM_HEI            0
+#define PLATFORM_P_NUCLEO_IHM03 1
+
 // Motor Parameters
 const float phaseResistance     = 0.0575;
 const float phaseInductance     = 20e-6;

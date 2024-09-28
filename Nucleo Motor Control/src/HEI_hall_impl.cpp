@@ -1,4 +1,6 @@
-#include "HEI_hall_impl.hpp"
+#include "impl/HEI_hall_impl.hpp"
+
+#if PLATFORM_HEI
 
 namespace HEIHallSense
 {
@@ -39,3 +41,5 @@ namespace HEIHallSense
         }
     };
 }
+
+#endif
