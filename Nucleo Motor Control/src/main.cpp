@@ -1,5 +1,4 @@
-#include "main.h"
-#include "parameters.h"
+#include "main.hpp"
 
 int main()
 {
@@ -9,10 +8,21 @@ int main()
 	MX_ADC1_Init();
 	MX_ADC2_Init();
 
+	// Set up LED
+	GPIO_InitTypeDef ledPinInit = {.Pin = LED_PIN, .Mode = GPIO_MODE_OUTPUT_PP};
+	HAL_GPIO_Init(LED_GPIO_PORT, &ledPinInit);
+	HAL_GPIO_WritePin(LED_GPIO_PORT, LED_PIN, GPIO_PIN_SET);
+
+	while(1)
+	{
+	}
+
 	return 0;
 }
 
-void SysTick_Handler(void)
+// Note: when compiling STM32HAL with CPP, weakly linked callbacks like this
+// need to be prefixed with `extern "C"`	
+extern "C" void SysTick_Handler(void)
 {
 	HAL_IncTick();
 }
@@ -59,7 +69,7 @@ void SystemClock_Config(void)
 	}
 }
 
-
+// Enable clocks for all GPIOs
 static void MX_GPIO_Init(void)
 {
 	__HAL_RCC_GPIOC_CLK_ENABLE();
@@ -70,6 +80,9 @@ static void MX_GPIO_Init(void)
 
 static void MX_ADC1_Init(void)
 {
+	if (__HAL_RCC_ADC12_IS_CLK_DISABLED())
+		__HAL_RCC_ADC12_CLK_ENABLE();
+
 	ADC_MultiModeTypeDef multimode = {0};
 
 	hadc1.Instance 						= ADC1;
@@ -105,6 +118,9 @@ static void MX_ADC1_Init(void)
 
 static void MX_ADC2_Init(void)
 {
+	if (__HAL_RCC_ADC12_IS_CLK_DISABLED())
+		__HAL_RCC_ADC12_CLK_ENABLE();
+
 	hadc2.Instance 						= ADC2;
 	hadc2.Init.ClockPrescaler 			= ADC_CLOCK_SYNC_PCLK_DIV4;
 	hadc2.Init.Resolution 				= ADC_RESOLUTION_12B;
@@ -128,14 +144,13 @@ static void MX_ADC2_Init(void)
 	}
 }
 
-
+// Disables interrupts and flashes LED at 1hz
 void Error_Handler(void)
 {
-	/* USER CODE BEGIN Error_Handler_Debug */
-	/* User can add his own implementation to report the HAL error return state */
 	__disable_irq();
 	while (1)
 	{
+		HAL_Delay(500);
+		HAL_GPIO_TogglePin(LED_GPIO_PORT, LED_PIN);
 	}
-	/* USER CODE END Error_Handler_Debug */
 }

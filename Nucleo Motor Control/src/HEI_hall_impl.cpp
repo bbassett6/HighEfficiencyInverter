@@ -1,13 +1,8 @@
-#include "positionInterface.h"
-#include "types.h"
+#include "HEI_hall_impl.hpp"
 
-#define HALL_A GPIO_PIN_0   // adjust these
-#define HALL_B GPIO_PIN_1
-#define HALL_C GPIO_PIN_2
-
-namespace Position
+namespace HEIHallSense
 {
-    class Interface
+    class Instance : Position::Interface
     {
         void setOffset(float offset, ADC* ADC) 
         {
@@ -16,23 +11,22 @@ namespace Position
 
         bool getPosition(float* position, ADC* ADC)
         {
-            float pi = 3.14159265;
-            GPIO_PinState hallAValue = HAL_GPIO_ReadPin(GPIOA, HALL_A_PIN);
-            GPIO_PinState hallBValue = HAL_GPIO_ReadPin(GPIOA, HALL_B_PIN);
-            GPIO_PinState hallCValue = HAL_GPIO_ReadPin(GPIOA, HALL_C_PIN);
+            GPIO_PinState hallAValue = HAL_GPIO_ReadPin(PinDefs[Hall_A].port, PinDefs[Hall_A].init.Pin);
+            GPIO_PinState hallBValue = HAL_GPIO_ReadPin(PinDefs[Hall_B].port, PinDefs[Hall_B].init.Pin);
+            GPIO_PinState hallCValue = HAL_GPIO_ReadPin(PinDefs[Hall_C].port, PinDefs[Hall_C].init.Pin);
 
             if (hallAValue == 1 && hallBValue == 0 && hallCValue == 0) {
                 *position = 0.0f; // 0 radians
             } else if (hallAValue == 0 && hallBValue == 1 && hallCValue == 0) {
-                *position = (2.0f * pi) / 3; // 120 degrees
+                *position = (2.0f * PI) / 3; // 120 degrees
             } else if (hallAValue == 0 && hallBValue == 0 && hallCValue == 1) {
-                *position = (4.0f * pi) / 3; // 240 degrees
+                *position = (4.0f * PI) / 3; // 240 degrees
             } else if (hallAValue == 1 && hallBValue == 1 && hallCValue == 0) {
-                *position = pi; // 180 degrees
+                *position = PI; // 180 degrees
             } else if (hallAValue == 1 && hallBValue == 0 && hallCValue == 1) {
-                *position = (pi / 3); // 60 degrees
+                *position = (PI / 3); // 60 degrees
             } else if (hallAValue == 0 && hallBValue == 1 && hallCValue == 1) {
-                *position = (5.0f * pi) / 3; // 300 degrees
+                *position = (5.0f * PI) / 3; // 300 degrees
             }
         }
 

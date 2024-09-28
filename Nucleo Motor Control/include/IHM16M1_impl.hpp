@@ -3,7 +3,7 @@
 
 #include "stm32g4xx_hal.h"
 #include "peripherals.h"
-#include "types.h"
+#include "types.hpp"
 
 namespace IHM16M1
 {

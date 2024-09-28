@@ -1,7 +1,7 @@
 #ifndef __INVERTER_INTERFACE
 #define __INVERTER_INTERFACE
 
-#include "types.h"
+#include "types.hpp"
 
 /*
 

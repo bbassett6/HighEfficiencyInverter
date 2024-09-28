@@ -1,6 +1,6 @@
-#include "inverterInterface.h"
-#include "IHM16M1_impl.h"
-#include "types.h"
+#include "inverterInterface.hpp"
+#include "IHM16M1_impl.hpp"
+#include "types.hpp"
 
 namespace IHM16M1
 {
@@ -60,9 +60,9 @@ namespace IHM16M1
         
         bool getPhaseCurrents(Triple<float>* currents)
         {
-            currents->U = (ADC->CH0-1.65)/0.75/0.03;
-            currents->V = (ADC->CH1-1.65)/0.75/0.03;
-            currents->W = (ADC->CH2-1.65)/0.75/0.03;
+            // currents->U = (ADC->CH0-1.65)/0.75/0.03;
+            // currents->V = (ADC->CH1-1.65)/0.75/0.03;
+            // currents->W = (ADC->CH2-1.65)/0.75/0.03;
             // 30mV/A hall effect
             // 0.75V/V diff amp gain + 1.65 dc offset on output
         }
@@ -72,9 +72,9 @@ namespace IHM16M1
 
         }
         
-        bool getBusVoltage(float* voltage, )
+        bool getBusVoltage(float* voltage)
         {
-            voltage = (ADC->CH3-1.65)/0.75*101;
+            // voltage = (ADC->CH3-1.65)/0.75*101;
             // HV = (voutp-m)*101
             // adc gives (voutp-m)0.075+1.65
         }

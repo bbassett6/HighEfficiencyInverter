@@ -1,6 +1,9 @@
 {
     "files.associations": {
         "*.jbeam": "jsonc",
-        "stm32g4xx_hal.h": "c"
+        "stm32g4xx_hal.h": "c",
+        "ihm16m1_impl.h": "c",
+        "peripherals.h": "c",
+        "ihm16m1_impl.hpp": "c"
     }
 }
