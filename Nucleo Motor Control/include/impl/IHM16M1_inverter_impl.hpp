@@ -35,19 +35,15 @@ namespace IHM16M1Inverter
         [PinNames::En_Fault] =        {.port = GPIOA, .init = {.Pin = GPIO_PIN_11,  .Mode = GPIO_MODE_INPUT,        .Pull = GPIO_NOPULL,    .Speed = GPIO_SPEED_FREQ_LOW,   .Alternate = 0}}
     };
 
-    class Instance : Inverter::Interface
+    class Instance : Inverter::Interface<Implementation::IHM161M1>
     {
-    private:
-        IHM16M1ADC::Instance& _adc;
     public:
-        Instance(IHM16M1ADC::Instance& adc)
-        : _adc(adc)
-        {};
-        bool init();
-        void setSwitchState(Inverter::SpaceVector vector);
-        bool getPhaseCurrents(Triple<float>* currents);
-        bool getPhaseVoltages(Triple<float>* voltages);
-        bool getBusVoltage(float* voltage);
+        Instance() {};
+        static bool init();
+        static void setSwitchState(Inverter::SpaceVector vector);
+        static bool getPhaseCurrents(Triple<float>* currents);
+        static bool getPhaseVoltages(Triple<float>* voltages);
+        static bool getBusVoltage(float* voltage);
     };
 }
 

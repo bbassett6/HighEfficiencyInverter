@@ -25,13 +25,14 @@ namespace Inverter
         NumSpaceVectors
     };
 
+    template <enum Implementation>
     class Interface
     {
-        virtual bool init();
-        virtual void setSwitchState(Inverter::SpaceVector vector);
-        virtual bool getPhaseCurrents(Triple<float>* currents);            // Returns success
-        virtual bool getPhaseVoltages(Triple<float>* voltages);            // Returns success
-        virtual bool getBusVoltage(float* voltage);                 // Returns success
+        static bool init();
+        static void setSwitchState(Inverter::SpaceVector vector);
+        static bool getPhaseCurrents(Triple<float>* currents);      // Returns success
+        static bool getPhaseVoltages(Triple<float>* voltages);      // Returns success
+        static bool getBusVoltage(float* voltage);                  // Returns success
     };
 }
 

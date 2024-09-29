@@ -36,7 +36,7 @@ namespace IHM16M1ADC
         [PinNames::Vbus_Sense] =    {.adc = 2,  .channel = ADC_CHANNEL_14}
     };
 
-    class Instance : STM_ADC::Interface<STM_ADC::Implementation::IHM161M1>
+    class Instance : STM_ADC::Interface<Implementation::IHM161M1>
     {
     private:
         static STM_ADC::Mode _mode;

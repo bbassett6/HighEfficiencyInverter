@@ -2,17 +2,11 @@
 #define __ADC_INTERFACE
 
 #include "stm32g4xx_hal.h"
+#include "types.hpp"
 #include <functional>
 
 namespace STM_ADC
 {
-    enum Implementation
-    {
-        IHM161M1 =          0,
-        HEI =               1,
-        NumImplementations
-    };
-
     enum Mode
     {
         Polling =       0,

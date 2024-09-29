@@ -3,6 +3,13 @@
 
 #include "stm32g4xx_hal.h"
 
+enum Implementation
+{
+    IHM161M1 =          0,
+    HEI =               1,
+    NumImplementations
+};
+
 template <typename T>
 struct Triple
 {

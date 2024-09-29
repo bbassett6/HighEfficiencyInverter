@@ -12,6 +12,9 @@ static TIM_HandleTypeDef htim1;
 
 #if PLATFORM_HEI
 // TODO: Define HEI hardware here as we implement it
+static ADC_HandleTypeDef hadc1;
+static ADC_HandleTypeDef hadc2;
+static TIM_HandleTypeDef htim1;
 #endif
 
 #endif // __PERIPHERALS

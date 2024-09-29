@@ -1,6 +1,8 @@
 #ifndef __POSITION_INTERFACE
 #define __POSITION_INTERFACE
 
+#include "types.hpp"
+
 /*
 
 PositionInterface creates a common interface for rotary position sensors
@@ -13,11 +15,12 @@ E.g. hall at low speed, sensorless at high speed
 
 namespace Position
 {
+    template <enum Implementation>    
     class Interface
     {
-        virtual void setOffset(float offset);       // This offset should be specified such that when the interface reports 0 angle, the rotor is electrically aligned with the alpha axis
-        virtual bool getPosition(float* position);
-        virtual bool getSpeed(float* speed);
+        static void setOffset(float offset);       // This offset should be specified such that when the interface reports 0 angle, the rotor is electrically aligned with the alpha axis
+        static bool getPosition(float* position);
+        static bool getSpeed(float* speed);
     };
 }
 
