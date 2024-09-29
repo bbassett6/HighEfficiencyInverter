@@ -6,10 +6,11 @@
 #include "peripherals.h"
 #include "types.hpp"
 #include "interface/inverter_interface.hpp"
+#include "impl/IHM16M1_ADC_impl.hpp"
 
 #if PLATFORM_P_NUCLEO_IHM03
 
-namespace IHM16M1
+namespace IHM16M1Inverter
 {
     enum PinNames
     {
@@ -19,11 +20,7 @@ namespace IHM16M1
         In_U =          3,
         In_V =          4,
         In_W =          5,
-        I_Sense_U =     6,
-        I_Sense_V =     7,
-        I_Sense_W =     8,
-        Vbus_Sense =    9,
-        En_Fault =      10,
+        En_Fault =      6,
         NumPins
     };
 
@@ -35,19 +32,22 @@ namespace IHM16M1
         [PinNames::In_U] =            {.port = GPIOA, .init = {.Pin = GPIO_PIN_8,   .Mode = GPIO_MODE_OUTPUT_PP,    .Pull = GPIO_NOPULL,    .Speed = GPIO_SPEED_FREQ_LOW,   .Alternate = 0}},
         [PinNames::In_V] =            {.port = GPIOA, .init = {.Pin = GPIO_PIN_9,   .Mode = GPIO_MODE_OUTPUT_PP,    .Pull = GPIO_NOPULL,    .Speed = GPIO_SPEED_FREQ_LOW,   .Alternate = 0}},
         [PinNames::In_W] =            {.port = GPIOA, .init = {.Pin = GPIO_PIN_10,  .Mode = GPIO_MODE_OUTPUT_PP,    .Pull = GPIO_NOPULL,    .Speed = GPIO_SPEED_FREQ_LOW,   .Alternate = 0}},
-        [PinNames::I_Sense_U] =       {.port = GPIOA, .init = {.Pin = GPIO_PIN_1,   .Mode = GPIO_MODE_ANALOG,       .Pull = GPIO_NOPULL,    .Speed = GPIO_SPEED_FREQ_LOW,   .Alternate = 0}},
-        [PinNames::I_Sense_V] =       {.port = GPIOB, .init = {.Pin = GPIO_PIN_11,  .Mode = GPIO_MODE_ANALOG,       .Pull = GPIO_NOPULL,    .Speed = GPIO_SPEED_FREQ_LOW,   .Alternate = 0}},
-        [PinNames::I_Sense_W] =       {.port = GPIOA, .init = {.Pin = GPIO_PIN_7,   .Mode = GPIO_MODE_ANALOG,       .Pull = GPIO_NOPULL,    .Speed = GPIO_SPEED_FREQ_LOW,   .Alternate = 0}},
-        [PinNames::Vbus_Sense] =      {.port = GPIOA, .init = {.Pin = GPIO_PIN_0,   .Mode = GPIO_MODE_ANALOG,       .Pull = GPIO_NOPULL,    .Speed = GPIO_SPEED_FREQ_LOW,   .Alternate = 0}},
         [PinNames::En_Fault] =        {.port = GPIOA, .init = {.Pin = GPIO_PIN_11,  .Mode = GPIO_MODE_INPUT,        .Pull = GPIO_NOPULL,    .Speed = GPIO_SPEED_FREQ_LOW,   .Alternate = 0}}
     };
 
-    const AdcDef AdcDefs[4] =
+    class Instance : Inverter::Interface
     {
-        {.hAdc = &hadc1, .channel = ADC_CHANNEL_1},
-        {.hAdc = &hadc1, .channel = ADC_CHANNEL_2},
-        {.hAdc = &hadc2, .channel = ADC_CHANNEL_4},
-        {.hAdc = &hadc2, .channel = ADC_CHANNEL_14}
+    private:
+        IHM16M1ADC::Instance& _adc;
+    public:
+        Instance(IHM16M1ADC::Instance& adc)
+        : _adc(adc)
+        {};
+        bool init();
+        void setSwitchState(Inverter::SpaceVector vector);
+        bool getPhaseCurrents(Triple<float>* currents);
+        bool getPhaseVoltages(Triple<float>* voltages);
+        bool getBusVoltage(float* voltage);
     };
 }
 

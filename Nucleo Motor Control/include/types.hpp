@@ -19,7 +19,7 @@ struct PinDef
 
 struct AdcDef
 {
-    ADC_HandleTypeDef* hAdc;
+    uint32_t adc;
     uint32_t channel;
 };
 

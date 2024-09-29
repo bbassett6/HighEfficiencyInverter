@@ -2,9 +2,17 @@
 #define __ADC_INTERFACE
 
 #include "stm32g4xx_hal.h"
+#include <functional>
 
-namespace ADC
+namespace STM_ADC
 {
+    enum Implementation
+    {
+        IHM161M1 =          0,
+        HEI =               1,
+        NumImplementations
+    };
+
     enum Mode
     {
         Polling =       0,
@@ -14,20 +22,23 @@ namespace ADC
 
     class Conversion
     {
+        int adc;
+        int channel;
         int value;
         long timestamp;
         bool valid;
     };
 
+    template <enum Implementation>
     class Interface
     {
-        virtual bool init();
-        virtual void setMode(Mode mode);
-        virtual void setRate(int rate);                                 // set number of automatic samples per second
-        virtual void setCallback();                                     // configure a callback automatic sampling completes
-        virtual bool poll(int adc, int channel, Conversion* result);    // triggers a blocking conversion and returns the result
-        virtual bool pollAll(int adc);                                  // triggers blocking conversions on all configured channels
-        virtual bool get(int adc, int channel, Conversion* result);     // gets the latest conversion from a specified channel
+        static bool init();
+        static void setMode(Mode mode);
+        static void setRate(int rate);                                 // set number of automatic samples per second
+        static void setCallback(std::function<void(int)> callback);    // configure a callback when automatic sampling completes
+        static bool poll(int adc, int channel, Conversion* result);    // triggers a blocking conversion and returns the result
+        static bool pollAll(int adc);                                  // triggers blocking conversions on all configured channels
+        static bool get(int adc, int channel, Conversion* result);     // gets the latest conversion from a specified channel
     };
 }
 
