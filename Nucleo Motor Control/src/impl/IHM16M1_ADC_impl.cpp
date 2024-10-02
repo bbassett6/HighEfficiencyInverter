@@ -2,12 +2,12 @@
 
 #if PLATFORM_P_NUCLEO_IHM03
 
-namespace IHM16M1ADC
+namespace STM_ADC
 {
-    bool Instance::init()
+    bool init()
     {
         // Set GPIO modes
-        for (PinDef pin : PinDefs)
+        for (PinDef pin : IHM16M1ADC::PinDefs)
         {
             HAL_GPIO_Init(pin.port, &pin.init);
         }
@@ -71,7 +71,7 @@ namespace IHM16M1ADC
 
         // Configure ADCs
         ADC_ChannelConfTypeDef sConfig = {0};
-        for (AdcDef adcDef : AdcDefs)
+        for (AdcDef adcDef : IHM16M1ADC::AdcDefs)
         {
             sConfig.Channel 		= adcDef.channel;
             sConfig.Rank 			= ADC_REGULAR_RANK_1;
@@ -86,39 +86,39 @@ namespace IHM16M1ADC
             }
         }
 
-        _mode = STM_ADC::Mode::Polling;
-        _currentChannel = static_cast<IHM16M1ADC::PinNames>(0);
+        IHM16M1ADC::_mode = STM_ADC::Mode::Polling;
+        IHM16M1ADC::_currentChannel = static_cast<IHM16M1ADC::PinNames>(0);
         
         // Initialization completed successfully
         return true;
     }
 
-    void Instance::setMode(STM_ADC::Mode mode)
-    {
-
-    }
-
-    void Instance::setRate(int rate)
-    {
-
-    }
-
-    void Instance::setCallback(std::function<void(int)> callback)
+    void setMode(STM_ADC::Mode mode)
     {
         
     }
 
-    bool Instance::poll(int adc, int channel, STM_ADC::Conversion* result)
+    void setRate(float rate)
     {
 
     }
 
-    bool Instance::pollAll(int adc)
+    void setCallback(std::function<void(int)> callback)
+    {
+        
+    }
+
+    bool poll(int adc, int channel, STM_ADC::Conversion* result)
     {
 
     }
 
-    bool Instance::get(int adc, int channel, STM_ADC::Conversion* result)
+    bool pollAll(int adc)
+    {
+
+    }
+
+    bool get(int adc, int channel, STM_ADC::Conversion* result)
     {
 
     }
@@ -137,7 +137,7 @@ extern "C" void ADC2_IRQHandler()
 
 extern "C" void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 {
-    IHM16M1ADC::Instance::_adcConversionCallback();
+    IHM16M1ADC::_adcConversionCallback();
 }
 
 #endif // PLATFORM_P_NUCLEO_IHM03

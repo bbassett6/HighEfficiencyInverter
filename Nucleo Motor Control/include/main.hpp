@@ -3,6 +3,11 @@
 
 #include "stm32g4xx_hal.h"
 #include "peripherals.h"
+#include "parameters.h"
+
+#include "interface/adc_interface.hpp"
+#include "interface/inverter_interface.hpp"
+#include "interface/timer_interface.hpp"
 
 #define LED_PIN                                GPIO_PIN_5
 #define LED_GPIO_PORT                          GPIOA
@@ -10,7 +15,6 @@
 
 static void MX_GPIO_Init(void);
 void SystemClock_Config(void);
-static void MX_TIM1_Init(void);
 void Error_Handler(void);
 
 #endif // __MAIN_H

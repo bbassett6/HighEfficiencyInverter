@@ -36,21 +36,10 @@ namespace IHM16M1ADC
         [PinNames::Vbus_Sense] =    {.adc = 2,  .channel = ADC_CHANNEL_14}
     };
 
-    class Instance : STM_ADC::Interface<Implementation::IHM161M1>
-    {
-    private:
-        static STM_ADC::Mode _mode;
-        static PinNames _currentChannel;    // Used to keep track of which channel is currently being sampled
-    public:
-        static bool init();
-        static void setMode(STM_ADC::Mode mode);
-        static void setRate(int rate);                                          // set number of automatic samples per second
-        static void setCallback(std::function<void(int)> callback);             // configure a callback when automatic sampling completes
-        static bool poll(int adc, int channel, STM_ADC::Conversion* result);    // triggers a blocking conversion and returns the result
-        static bool pollAll(int adc);                                           // triggers blocking conversions on all configured channels
-        static bool get(int adc, int channel, STM_ADC::Conversion* result);     // gets the latest conversion from a specified channel
-        static void _adcConversionCallback();                                   // automatically called when conversion finishes. Advances polling state
-    };
+    STM_ADC::Mode _mode;
+    PinNames _currentChannel;        // Used to keep track of which channel is currently being sampled
+    float _rate;                     // Sampling rate in hertz
+    void _adcConversionCallback();   // automatically called when conversion finishes. Advances polling state
 }
 
 #endif // PLATFORM_P_NUCLEO_IHM03

@@ -6,7 +6,7 @@
 #include "peripherals.h"
 #include "types.hpp"
 #include "interface/inverter_interface.hpp"
-#include "impl/IHM16M1_ADC_impl.hpp"
+#include "interface/adc_interface.hpp"
 
 #if PLATFORM_P_NUCLEO_IHM03
 
@@ -33,17 +33,6 @@ namespace IHM16M1Inverter
         [PinNames::In_V] =            {.port = GPIOA, .init = {.Pin = GPIO_PIN_9,   .Mode = GPIO_MODE_OUTPUT_PP,    .Pull = GPIO_NOPULL,    .Speed = GPIO_SPEED_FREQ_LOW,   .Alternate = 0}},
         [PinNames::In_W] =            {.port = GPIOA, .init = {.Pin = GPIO_PIN_10,  .Mode = GPIO_MODE_OUTPUT_PP,    .Pull = GPIO_NOPULL,    .Speed = GPIO_SPEED_FREQ_LOW,   .Alternate = 0}},
         [PinNames::En_Fault] =        {.port = GPIOA, .init = {.Pin = GPIO_PIN_11,  .Mode = GPIO_MODE_INPUT,        .Pull = GPIO_NOPULL,    .Speed = GPIO_SPEED_FREQ_LOW,   .Alternate = 0}}
-    };
-
-    class Instance : Inverter::Interface<Implementation::IHM161M1>
-    {
-    public:
-        Instance() {};
-        static bool init();
-        static void setSwitchState(Inverter::SpaceVector vector);
-        static bool getPhaseCurrents(Triple<float>* currents);
-        static bool getPhaseVoltages(Triple<float>* voltages);
-        static bool getBusVoltage(float* voltage);
     };
 }
 

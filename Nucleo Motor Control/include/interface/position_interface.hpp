@@ -15,13 +15,9 @@ E.g. hall at low speed, sensorless at high speed
 
 namespace Position
 {
-    template <enum Implementation>    
-    class Interface
-    {
-        static void setOffset(float offset);       // This offset should be specified such that when the interface reports 0 angle, the rotor is electrically aligned with the alpha axis
-        static bool getPosition(float* position);
-        static bool getSpeed(float* speed);
-    };
+    void setOffset(float offset);       // This offset should be specified such that when the interface reports 0 angle, the rotor is electrically aligned with the alpha axis
+    bool getPosition(float* position);
+    bool getSpeed(float* speed);
 }
 
 #endif // __POSITION_INTERFACE

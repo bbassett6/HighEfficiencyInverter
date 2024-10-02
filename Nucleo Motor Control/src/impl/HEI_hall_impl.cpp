@@ -2,19 +2,19 @@
 
 #if PLATFORM_HEI
 
-namespace HEIHallSense
+namespace Position
 {
-    void Instance::setOffset(float offset) 
+    void HEIHallSense::setOffset(float offset) 
     {
         
     }
 
     // TODO: use flipAngle from `constants.hpp` in case we want to reverse the detected angle
-    bool Instance::getPosition(float* position)
+    bool HEIHallSense::getPosition(float* position)
     {
-        GPIO_PinState hallAValue = HAL_GPIO_ReadPin(PinDefs[Hall_A].port, PinDefs[Hall_A].init.Pin);
-        GPIO_PinState hallBValue = HAL_GPIO_ReadPin(PinDefs[Hall_B].port, PinDefs[Hall_B].init.Pin);
-        GPIO_PinState hallCValue = HAL_GPIO_ReadPin(PinDefs[Hall_C].port, PinDefs[Hall_C].init.Pin);
+        GPIO_PinState hallAValue = HAL_GPIO_ReadPin(HEIHallSense::PinDefs[Hall_A].port, HEIHallSense::PinDefs[Hall_A].init.Pin);
+        GPIO_PinState hallBValue = HAL_GPIO_ReadPin(HEIHallSense::PinDefs[Hall_B].port, HEIHallSense::PinDefs[Hall_B].init.Pin);
+        GPIO_PinState hallCValue = HAL_GPIO_ReadPin(HEIHallSense::PinDefs[Hall_C].port, HEIHallSense::PinDefs[Hall_C].init.Pin);
 
         if (hallAValue == 1 && hallBValue == 0 && hallCValue == 0) {
             *position = 0.0f; // 0 radians
@@ -33,7 +33,7 @@ namespace HEIHallSense
         return true; // TODO: if we can detect failure of a hall sensor, this should return false
     }
 
-    bool Instance::getSpeed(float* speed) 
+    bool HEIHallSense::getSpeed(float* speed) 
     {
         
     }

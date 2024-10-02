@@ -23,17 +23,13 @@ namespace STM_ADC
         bool valid;
     };
 
-    template <enum Implementation>
-    class Interface
-    {
-        static bool init();
-        static void setMode(Mode mode);
-        static void setRate(int rate);                                 // set number of automatic samples per second
-        static void setCallback(std::function<void(int)> callback);    // configure a callback when automatic sampling completes
-        static bool poll(int adc, int channel, Conversion* result);    // triggers a blocking conversion and returns the result
-        static bool pollAll(int adc);                                  // triggers blocking conversions on all configured channels
-        static bool get(int adc, int channel, Conversion* result);     // gets the latest conversion from a specified channel
-    };
+    bool init();
+    void setMode(Mode mode);
+    void setRate(float rate);                                 // set number of automatic samples per second
+    void setCallback(std::function<void(int)> callback);    // configure a callback when automatic sampling completes
+    bool poll(int adc, int channel, Conversion* result);    // triggers a blocking conversion and returns the result
+    bool pollAll(int adc);                                  // triggers blocking conversions on all configured channels
+    bool get(int adc, int channel, Conversion* result);     // gets the latest conversion from a specified channel
 }
 
 #endif // __ADC_INTERFACE
