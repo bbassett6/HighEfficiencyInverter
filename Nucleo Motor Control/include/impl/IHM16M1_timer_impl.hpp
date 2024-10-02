@@ -11,7 +11,8 @@
 
 namespace IHM16M1TIMER
 {
-    
+    // TIM1
+    std::function<void()> _tim1Callback;
 }
 
 #endif // PLATFORM_P_NUCLEO_IHM03

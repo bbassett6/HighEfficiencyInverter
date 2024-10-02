@@ -23,4 +23,10 @@ const float maxSwitchingCycle   = 0.99;
 // Position Detection Parameters
 const bool flipAngle            = false;
 
+// CPU Parameters
+#if PLATFORM_P_NUCLEO_IHM03
+const float cpuMHz              = 170.0f;
+#else
+#endif
+
 #endif // __PARAMETERS

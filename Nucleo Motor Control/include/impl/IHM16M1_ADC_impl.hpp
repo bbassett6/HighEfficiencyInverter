@@ -36,10 +36,11 @@ namespace IHM16M1ADC
         [PinNames::Vbus_Sense] =    {.adc = 2,  .channel = ADC_CHANNEL_14}
     };
 
-    STM_ADC::Mode _mode;
-    PinNames _currentChannel;        // Used to keep track of which channel is currently being sampled
-    float _rate;                     // Sampling rate in hertz
-    void _adcConversionCallback();   // automatically called when conversion finishes. Advances polling state
+    STM_ADC::Mode _mode =           STM_ADC::Mode::Polling;
+    PinNames _currentChannel =      static_cast<PinNames>(0);   // Used to keep track of which channel is currently being sampled
+    float _rate =                   20000;                      // Sampling rate in hertz
+    
+    void _adcConversionCallback();                              // automatically called when conversion finishes. Advances polling state
 }
 
 #endif // PLATFORM_P_NUCLEO_IHM03

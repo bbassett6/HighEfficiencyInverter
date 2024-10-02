@@ -45,19 +45,49 @@ namespace STM_TIMER
 
     void registerCallback(int timer, std::function<void()> callback)
     {
-
+        if (timer == 1)
+        {
+            IHM16M1TIMER::_tim1Callback = callback;
+        }
     }
 
     void setPeriod(int timer, float period)
     {
+        if (timer == 1)
+        {
+            int timerCycles = period * cpuMHz * 1000000;
+            int prescaler = 0;
+            
+            if (timerCycles > UINT16_MAX) {
+                // Set prescaler to the maximum value that keeps arr within bounds
+                prescaler = timerCycles / (UINT16_MAX + 1);
+                timerCycles = timerCycles / (prescaler + 1);
+            }
 
+            __HAL_TIM_SET_AUTORELOAD(&htim1, timerCycles);
+            __HAL_TIM_SET_PRESCALER(&htim1, prescaler);
+        }
     }
 
     void setFrequency(int timer, float frequency)
     {
-
+        if (timer == 1)
+        {
+            setPeriod(1, 1.0f / frequency);
+        }
     }
 
+}
+
+extern "C" void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef* htim)
+{
+    if (htim == &htim1)
+    {
+        if (IHM16M1TIMER::_tim1Callback)
+        {
+            IHM16M1TIMER::_tim1Callback();
+        }
+    }
 }
 
 #endif // PLATFORM_P_NUCLEO_IHM03
