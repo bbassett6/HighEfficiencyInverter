@@ -13,9 +13,21 @@ namespace Inverter
         }
 
         // Enable Phases
-        HAL_GPIO_WritePin(IHM16M1Inverter::PinDefs[IHM16M1Inverter::PinNames::En_U].port, IHM16M1Inverter::PinDefs[IHM16M1Inverter::PinNames::En_U].init.Pin, GPIO_PIN_SET);
-        HAL_GPIO_WritePin(IHM16M1Inverter::PinDefs[IHM16M1Inverter::PinNames::En_V].port, IHM16M1Inverter::PinDefs[IHM16M1Inverter::PinNames::En_V].init.Pin, GPIO_PIN_SET);
-        HAL_GPIO_WritePin(IHM16M1Inverter::PinDefs[IHM16M1Inverter::PinNames::En_W].port, IHM16M1Inverter::PinDefs[IHM16M1Inverter::PinNames::En_W].init.Pin, GPIO_PIN_SET);
+        HAL_GPIO_WritePin(
+            IHM16M1Inverter::PinDefs[IHM16M1Inverter::PinNames::En_U].port,
+            IHM16M1Inverter::PinDefs[IHM16M1Inverter::PinNames::En_U].init.Pin,
+            GPIO_PIN_SET
+        );
+        HAL_GPIO_WritePin(
+            IHM16M1Inverter::PinDefs[IHM16M1Inverter::PinNames::En_V].port,
+            IHM16M1Inverter::PinDefs[IHM16M1Inverter::PinNames::En_V].init.Pin,
+            GPIO_PIN_SET
+        );
+        HAL_GPIO_WritePin(
+            IHM16M1Inverter::PinDefs[IHM16M1Inverter::PinNames::En_W].port,
+            IHM16M1Inverter::PinDefs[IHM16M1Inverter::PinNames::En_W].init.Pin,
+            GPIO_PIN_SET
+        );
 
         return true;
     }
@@ -33,9 +45,21 @@ namespace Inverter
             [Inverter::SpaceVector::V6] = {.U = 1, .V = 0, .W = 1},
             [Inverter::SpaceVector::V7] = {.U = 1, .V = 1, .W = 1}
         };
-        HAL_GPIO_WritePin(IHM16M1Inverter::PinDefs[IHM16M1Inverter::PinNames::In_U].port, IHM16M1Inverter::PinDefs[IHM16M1Inverter::PinNames::In_U].init.Pin, (GPIO_PinState)stateMap[vector].U);
-        HAL_GPIO_WritePin(IHM16M1Inverter::PinDefs[IHM16M1Inverter::PinNames::In_V].port, IHM16M1Inverter::PinDefs[IHM16M1Inverter::PinNames::In_V].init.Pin, (GPIO_PinState)stateMap[vector].V);
-        HAL_GPIO_WritePin(IHM16M1Inverter::PinDefs[IHM16M1Inverter::PinNames::In_W].port, IHM16M1Inverter::PinDefs[IHM16M1Inverter::PinNames::In_W].init.Pin, (GPIO_PinState)stateMap[vector].W);
+        HAL_GPIO_WritePin(
+            IHM16M1Inverter::PinDefs[IHM16M1Inverter::PinNames::In_U].port,
+            IHM16M1Inverter::PinDefs[IHM16M1Inverter::PinNames::In_U].init.Pin,
+            (GPIO_PinState)stateMap[vector].U
+        );
+        HAL_GPIO_WritePin(
+            IHM16M1Inverter::PinDefs[IHM16M1Inverter::PinNames::In_V].port,
+            IHM16M1Inverter::PinDefs[IHM16M1Inverter::PinNames::In_V].init.Pin,
+            (GPIO_PinState)stateMap[vector].V
+        );
+        HAL_GPIO_WritePin(
+            IHM16M1Inverter::PinDefs[IHM16M1Inverter::PinNames::In_W].port,
+            IHM16M1Inverter::PinDefs[IHM16M1Inverter::PinNames::In_W].init.Pin,
+            (GPIO_PinState)stateMap[vector].W
+        );
     }
     
     bool getPhaseCurrents(Triple<float>* currents)
