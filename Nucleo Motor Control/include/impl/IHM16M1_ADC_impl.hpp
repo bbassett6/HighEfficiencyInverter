@@ -3,11 +3,14 @@
 
 #include "stm32g4xx_hal.h"
 #include "parameters.h"
-#include "peripherals.h"
 #include "types.hpp"
 #include "interface/adc_interface.hpp"
 
 #if PLATFORM_P_NUCLEO_IHM03
+
+ADC_HandleTypeDef hadc1;
+ADC_HandleTypeDef hadc2;
+
 
 namespace IHM16M1ADC
 {

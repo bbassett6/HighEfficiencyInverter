@@ -2,7 +2,6 @@
 #define __MAIN_H
 
 #include "stm32g4xx_hal.h"
-#include "peripherals.h"
 #include "parameters.h"
 
 #include "interface/adc_interface.hpp"

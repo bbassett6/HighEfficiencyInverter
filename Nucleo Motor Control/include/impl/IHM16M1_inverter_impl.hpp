@@ -3,7 +3,6 @@
 
 #include "stm32g4xx_hal.h"
 #include "parameters.h"
-#include "peripherals.h"
 #include "types.hpp"
 #include "interface/inverter_interface.hpp"
 #include "interface/adc_interface.hpp"
