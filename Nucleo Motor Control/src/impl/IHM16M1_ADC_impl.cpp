@@ -88,6 +88,9 @@ namespace STM_ADC
 
         IHM16M1ADC::_mode = STM_ADC::Mode::Polling;
         IHM16M1ADC::_currentChannel = static_cast<IHM16M1ADC::PinNames>(0);
+
+        // Enable interrupts
+        HAL_NVIC_EnableIRQ(ADC1_2_IRQn);
         
         // Initialization completed successfully
         return true;
@@ -95,7 +98,12 @@ namespace STM_ADC
 
     void setMode(STM_ADC::Mode mode)
     {
+        IHM16M1ADC::_mode = mode;
         
+        // If the new mode is continuous conversion mode, kickstart the state machine
+        HAL_ADC_Start_IT([] -> ADC_HandleTypeDef* {
+            return &hadc1;
+        });
     }
 
     void setRate(float rate)
@@ -122,6 +130,12 @@ namespace STM_ADC
     {
 
     }
+}
+
+// Handles the ADC state machine
+void IHM16M1ADC::_adcConversionCallback()
+{
+
 }
 
 // Configure interrupt handlers for ADC1 and ADC2

@@ -1,8 +1,7 @@
 #ifndef __PERIPHERALS
 #define __PERIPHERALS
 
-#include "stm32g4xx_hal.h"
-#include "parameters.h"
+#include "common.hpp"
 
 // TODO: Delete this file if it turns out to be unnecessary
 

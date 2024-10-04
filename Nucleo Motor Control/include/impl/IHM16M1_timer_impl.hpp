@@ -1,10 +1,8 @@
 #ifndef __IHM16M1_TIMER_IMPL
 #define __IHM16M1_TIMER_IMPL
 
-#include "stm32g4xx_hal.h"
-#include "parameters.h"
-#include "types.hpp"
 #include "interface/timer_interface.hpp"
+#include "types.hpp"
 
 #if PLATFORM_P_NUCLEO_IHM03
 

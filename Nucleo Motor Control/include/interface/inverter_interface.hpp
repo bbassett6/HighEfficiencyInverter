@@ -1,6 +1,7 @@
 #ifndef __INVERTER_INTERFACE
 #define __INVERTER_INTERFACE
 
+#include "common.hpp"
 #include "types.hpp"
 
 /*

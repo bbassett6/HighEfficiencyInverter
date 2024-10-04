@@ -4,8 +4,15 @@
 #include <stdbool.h>
 
 // Platform Parameters
-#define PLATFORM_HEI            0
-#define PLATFORM_P_NUCLEO_IHM03 1
+#define PLATFORM_HEI            1
+#define PLATFORM_P_NUCLEO_IHM03 0
+
+// Platform Includes
+#if PLATFORM_P_NUCLEO_IHM03
+#include "stm32g4xx.h"
+#elif PLATFORM_HEI
+#include "stm32f3xx.h"
+#endif
 
 // Motor Parameters
 const float phaseResistance     = 0.0575;

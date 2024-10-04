@@ -1,7 +1,7 @@
 #ifndef __TYPES
 #define __TYPES
 
-#include "stm32g4xx_hal.h"
+#include "common.hpp"
 
 enum Implementation
 {

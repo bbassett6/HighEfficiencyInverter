@@ -1,8 +1,7 @@
 #ifndef __TIMER_INTERFACE
 #define __TIMER_INTERFACE
 
-#include "stm32g4xx_hal.h"
-#include "types.hpp"
+#include "common.hpp"
 #include <functional>
 
 namespace STM_TIMER

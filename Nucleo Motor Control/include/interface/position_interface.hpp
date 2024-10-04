@@ -1,6 +1,7 @@
 #ifndef __POSITION_INTERFACE
 #define __POSITION_INTERFACE
 
+#include "common.hpp"
 #include "types.hpp"
 
 /*

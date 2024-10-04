@@ -1,10 +1,10 @@
 #ifndef __HEI_HALL_SENSE
 #define __HEI_HALL_SENSE
 
-#include "interface/position_interface.hpp"
+#include "common.hpp"
 #include "types.hpp"
 #include "constants.hpp"
-#include "parameters.h"
+#include "interface/position_interface.hpp"
 
 #if PLATFORM_HEI
 

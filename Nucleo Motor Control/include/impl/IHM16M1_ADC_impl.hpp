@@ -1,10 +1,8 @@
 #ifndef __IHM16M1_ADC_IMPL
 #define __IHM16M1_ADC_IMPL
 
-#include "stm32g4xx_hal.h"
-#include "parameters.h"
-#include "types.hpp"
 #include "interface/adc_interface.hpp"
+#include "types.hpp"
 
 #if PLATFORM_P_NUCLEO_IHM03
 
@@ -39,6 +37,18 @@ namespace IHM16M1ADC
         [PinNames::Vbus_Sense] =    {.adc = 2,  .channel = ADC_CHANNEL_14}
     };
 
+    enum State
+    {
+        Idle =                  0,
+        PollSingleBlocking =    1,
+        PollAllBlocking =       2,
+        PollSingleIT =          3,
+        PollAllIT =             4,
+        Continuous =            5,
+        NumActions
+    };
+
+    State _currentAction =          State::Idle;
     STM_ADC::Mode _mode =           STM_ADC::Mode::Polling;
     PinNames _currentChannel =      static_cast<PinNames>(0);   // Used to keep track of which channel is currently being sampled
     float _rate =                   20000;                      // Sampling rate in hertz
