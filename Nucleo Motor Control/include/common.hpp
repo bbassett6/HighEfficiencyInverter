@@ -33,7 +33,8 @@ const bool flipAngle            = false;
 // CPU Parameters
 #if PLATFORM_P_NUCLEO_IHM03
 const float cpuMHz              = 170.0f;
-#else
+#elif PLATFORM_HEI
+const float cpuMHz              = 64.0f;
 #endif
 
 #endif // __PARAMETERS

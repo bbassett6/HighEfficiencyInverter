@@ -26,6 +26,14 @@ namespace Inverter
         NumSpaceVectors
     };
 
+    enum BridgeState
+    {
+        HiZ =   0,
+        Low =   1,
+        High =  2,
+        NumStates
+    };
+
     bool init();
     void setSwitchState(Inverter::SpaceVector vector);
     bool getPhaseCurrents(Triple<float>* currents);      // Returns success

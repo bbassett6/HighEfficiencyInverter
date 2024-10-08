@@ -101,9 +101,7 @@ namespace STM_ADC
         IHM16M1ADC::_mode = mode;
         
         // If the new mode is continuous conversion mode, kickstart the state machine
-        HAL_ADC_Start_IT([] -> ADC_HandleTypeDef* {
-            return &hadc1;
-        });
+        
     }
 
     void setRate(float rate)
