@@ -13,19 +13,6 @@ It is abstract and may be implemented differently for different hardware
 
 namespace Inverter
 {
-    enum SpaceVector
-    {
-        V0 = 0,
-        V1 = 1,
-        V2 = 2,
-        V3 = 3,
-        V4 = 4,
-        V5 = 5,
-        V6 = 6,
-        V7 = 7,
-        NumSpaceVectors
-    };
-
     enum BridgeState
     {
         HiZ =   0,
@@ -35,7 +22,7 @@ namespace Inverter
     };
 
     bool init();
-    void setSwitchState(Inverter::SpaceVector vector);
+    void setSwitchState(Triple<BridgeState> states);
     bool getPhaseCurrents(Triple<float>* currents);      // Returns success
     bool getPhaseVoltages(Triple<float>* voltages);      // Returns success
     bool getBusVoltage(float* voltage);                  // Returns success

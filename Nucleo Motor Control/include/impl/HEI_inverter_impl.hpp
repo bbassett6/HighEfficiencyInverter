@@ -29,6 +29,13 @@ namespace HEIInverter
         [PinNames::C_HS] =            {.port = GPIOB, .init = {.Pin = GPIO_PIN_15,  .Mode = GPIO_MODE_OUTPUT_PP,    .Pull = GPIO_NOPULL,    .Speed = GPIO_SPEED_FREQ_LOW,   .Alternate = 0}},
         [PinNames::C_LS] =            {.port = GPIOB, .init = {.Pin = GPIO_PIN_14,  .Mode = GPIO_MODE_OUTPUT_PP,    .Pull = GPIO_NOPULL,    .Speed = GPIO_SPEED_FREQ_LOW,   .Alternate = 0}}
     };
+
+    Triple<Inverter::BridgeState> _bridgeStates =
+    {
+        .A = Inverter::BridgeState::HiZ,
+        .B = Inverter::BridgeState::HiZ,
+        .C = Inverter::BridgeState::HiZ,
+    };
 }
 
 #endif // PLATFORM_HEI

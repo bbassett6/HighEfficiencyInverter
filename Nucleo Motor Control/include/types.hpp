@@ -13,9 +13,16 @@ enum Implementation
 template <typename T>
 struct Triple
 {
-    T U;
-    T V;
-    T W;
+    T A;
+    T B;
+    T C;
+};
+
+template <typename T>
+struct Vec2
+{
+    T A;
+    T B;
 };
 
 struct PinDef

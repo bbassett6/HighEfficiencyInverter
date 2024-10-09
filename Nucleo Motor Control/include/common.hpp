@@ -22,8 +22,8 @@ const float rotorOffset         = 0.0;      // Added to raw electrical angle. An
 const bool flipMotor            = false;
 
 // Switching Parameters
-const int switchingFrequency    = 20000;
-const int deadtimeMicros        = 1;
+const int switchingPeriodNanos  = 50000;    // 20kHz
+const int deadtimeNanos         = 100;
 const float minSwitchingCycle   = 0.01;
 const float maxSwitchingCycle   = 0.99;
 

@@ -71,9 +71,9 @@ namespace STM_TIMER
         }
     }
 
-    void setPeriod(int timer, float period)
+    void setPeriod(int timer, unsigned long nanos)
     {
-        unsigned long timerCycles = period * cpuMHz * 1000000;
+        unsigned long timerCycles = nanos * 1000 * cpuMHz;
         int prescaler = 0;
 
         if (timer == 2)
