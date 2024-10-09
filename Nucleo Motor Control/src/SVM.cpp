@@ -47,7 +47,10 @@ namespace SVM
 
     void init()
     {
-        // TODO: bootstrap state machine. Set timer callback
+        advanceStateMachine();
+        #if PLATFORM_HEI
+        STM_TIMER::registerCallback(2, advanceStateMachine);
+        #endif // PLATFORM_HEI
     }
     
     void advanceStateMachine()
