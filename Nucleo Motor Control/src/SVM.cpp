@@ -84,7 +84,10 @@ namespace SVM
         // Set inverter switch state
         Inverter::setSwitchState(_stateSequence[_state]);
 
-        // TODO: set the period of the timer using the current state's calculated duration
+        // set the period of the timer
+        #if PLATFORM_HEI
+        STM_TIMER::setPeriod(2, _stateDurationsNanos[_state]);
+        #endif // PLATFORM_HEI
     }
 
     void updateStateDurations()
