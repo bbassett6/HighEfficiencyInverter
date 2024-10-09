@@ -11,13 +11,7 @@ TIM_HandleTypeDef htim3;
 
 namespace HEITIMER
 {
-    // TIM2
-    // Used by SVM timing
-    std::function<void()> _tim2Callback;
-
-    // TIM3
-    // Used by ADC auto sampler
-    std::function<void()> _tim3Callback;
+    
 }
 
 #endif // PLATFORM_HEI

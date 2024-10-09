@@ -15,7 +15,7 @@ int main()
 	if
 	(
 		   !STM_TIMER::init()
-		|| !STM_ADC::init()
+		// || !STM_ADC::init()
 		|| !Inverter::init()
 	)
 	{

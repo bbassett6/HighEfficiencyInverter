@@ -5,24 +5,25 @@
 #include "types.hpp"
 #include "constants.hpp"
 #include "vecmath.hpp"
+#include "interface/inverter_interface.hpp"
 
 namespace SVM
 {
     // Maps space vectors to nominal switch states
-    Triple<bool> SVSwitchMap[8] = 
+    const Triple<Inverter::BridgeState> SVSwitchMap[8] = 
     {
-        [0] = {.A = 0, .B= 0, .C = 0},
-        [1] = {.A = 1, .B= 0, .C = 0},
-        [2] = {.A = 1, .B= 1, .C = 0},
-        [3] = {.A = 0, .B= 1, .C = 0},
-        [4] = {.A = 0, .B= 1, .C = 1},
-        [5] = {.A = 0, .B= 0, .C = 1},
-        [6] = {.A = 1, .B= 0, .C = 1},
-        [7] = {.A = 1, .B= 1, .C = 1}
+        [0] = {.A = Inverter::BridgeState::Low,     .B= Inverter::BridgeState::Low,     .C = Inverter::BridgeState::Low},
+        [1] = {.A = Inverter::BridgeState::High,    .B= Inverter::BridgeState::Low,     .C = Inverter::BridgeState::Low},
+        [2] = {.A = Inverter::BridgeState::High,    .B= Inverter::BridgeState::High,    .C = Inverter::BridgeState::Low},
+        [3] = {.A = Inverter::BridgeState::Low,     .B= Inverter::BridgeState::High,    .C = Inverter::BridgeState::Low},
+        [4] = {.A = Inverter::BridgeState::Low,     .B= Inverter::BridgeState::High,    .C = Inverter::BridgeState::High},
+        [5] = {.A = Inverter::BridgeState::Low,     .B= Inverter::BridgeState::Low,     .C = Inverter::BridgeState::High},
+        [6] = {.A = Inverter::BridgeState::High,    .B= Inverter::BridgeState::Low,     .C = Inverter::BridgeState::High},
+        [7] = {.A = Inverter::BridgeState::High,    .B= Inverter::BridgeState::High,    .C = Inverter::BridgeState::High}
     };
 
     // Maps sectors to space vector pairs
-    Vec2<int> SVSectorMap[6] =
+    const Vec2<int> SVSectorMap[6] =
     {
         [0] = {.A = 1, .B = 2},
         [1] = {.A = 2, .B = 3},
@@ -49,33 +50,10 @@ namespace SVM
         NumStates
     };
 
-    unsigned long _stateDurationsNanos[PhyState::NumStates] =
-    {
-        [PhyState::Null0] =   0,
-        [PhyState::DT1] =     deadtimeNanos,
-        [PhyState::SW2] =     0,
-        [PhyState::DT3] =     deadtimeNanos,
-        [PhyState::SW4] =     0,
-        [PhyState::DT5] =     deadtimeNanos,
-        [PhyState::Null6] =   0,
-        [PhyState::DT7] =     deadtimeNanos,
-        [PhyState::SW8] =     0,
-        [PhyState::DT9] =     deadtimeNanos,
-        [PhyState::SW10] =    0,
-        [PhyState::DT11] =    deadtimeNanos
-    };
-
-    PhyState _state =   PhyState::Null0;                // SVM physical state machine
-    PhyState _nextState = _state;
-    int _CWVector =     1;                              // the clockwise-most vector for the current sector
-    int _CCWVector =    2;                              // the counter-clockwise-most vector for the current sector
-    Vec2<float> _vecTarget = {.A=0, .B=0};              // voltage vector the SVM state machine will produce
-    bool _pendingVecTarget = false;                     // whether a new vecTarget has been requested
-    Vec2<float> _newVecTarget = {.A=0, .B=0};           // the requested vecTarget
-    bool _initialized = false;                          // whether _stateDurationsNanos has been calculated
-
+    void init();                                        // bootstraps the state machine
     void advanceStateMachine();                         // advances the state machine
     void updateStateDurations();                        // calculates new state durations based on _vecTarget
+    void updateStateSequence();                         // calculates new FET switching sequence
     void setVecTarget(Triple<float> newVecTarget);      // set the SVM voltage vector
 }
 

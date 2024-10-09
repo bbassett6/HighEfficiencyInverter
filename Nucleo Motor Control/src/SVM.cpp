@@ -4,12 +4,59 @@
 
 namespace SVM
 {
+    unsigned long _stateDurationsNanos[PhyState::NumStates] =
+    {
+        [PhyState::Null0] =   0,
+        [PhyState::DT1] =     deadtimeNanos,
+        [PhyState::SW2] =     0,
+        [PhyState::DT3] =     deadtimeNanos,
+        [PhyState::SW4] =     0,
+        [PhyState::DT5] =     deadtimeNanos,
+        [PhyState::Null6] =   0,
+        [PhyState::DT7] =     deadtimeNanos,
+        [PhyState::SW8] =     0,
+        [PhyState::DT9] =     deadtimeNanos,
+        [PhyState::SW10] =    0,
+        [PhyState::DT11] =    deadtimeNanos
+    };
+
+    Triple<Inverter::BridgeState> _stateSequence[PhyState::NumStates] =
+    {
+        [PhyState::Null0] =   {.A = Inverter::BridgeState::HiZ, .B = Inverter::BridgeState::HiZ, .C = Inverter::BridgeState::HiZ},
+        [PhyState::DT1] =     {.A = Inverter::BridgeState::HiZ, .B = Inverter::BridgeState::HiZ, .C = Inverter::BridgeState::HiZ},
+        [PhyState::SW2] =     {.A = Inverter::BridgeState::HiZ, .B = Inverter::BridgeState::HiZ, .C = Inverter::BridgeState::HiZ},
+        [PhyState::DT3] =     {.A = Inverter::BridgeState::HiZ, .B = Inverter::BridgeState::HiZ, .C = Inverter::BridgeState::HiZ},
+        [PhyState::SW4] =     {.A = Inverter::BridgeState::HiZ, .B = Inverter::BridgeState::HiZ, .C = Inverter::BridgeState::HiZ},
+        [PhyState::DT5] =     {.A = Inverter::BridgeState::HiZ, .B = Inverter::BridgeState::HiZ, .C = Inverter::BridgeState::HiZ},
+        [PhyState::Null6] =   {.A = Inverter::BridgeState::HiZ, .B = Inverter::BridgeState::HiZ, .C = Inverter::BridgeState::HiZ},
+        [PhyState::DT7] =     {.A = Inverter::BridgeState::HiZ, .B = Inverter::BridgeState::HiZ, .C = Inverter::BridgeState::HiZ},
+        [PhyState::SW8] =     {.A = Inverter::BridgeState::HiZ, .B = Inverter::BridgeState::HiZ, .C = Inverter::BridgeState::HiZ},
+        [PhyState::DT9] =     {.A = Inverter::BridgeState::HiZ, .B = Inverter::BridgeState::HiZ, .C = Inverter::BridgeState::HiZ},
+        [PhyState::SW10] =    {.A = Inverter::BridgeState::HiZ, .B = Inverter::BridgeState::HiZ, .C = Inverter::BridgeState::HiZ},
+        [PhyState::DT11] =    {.A = Inverter::BridgeState::HiZ, .B = Inverter::BridgeState::HiZ, .C = Inverter::BridgeState::HiZ}
+    };
+
+    PhyState _state =   PhyState::Null0;                // SVM physical state machine
+    PhyState _nextState = _state;
+    int _CWVector =     1;                              // the clockwise-most vector for the current sector
+    int _CCWVector =    2;                              // the counter-clockwise-most vector for the current sector
+    Vec2<float> _vecTarget = {.A=0, .B=0};              // voltage vector the SVM state machine will produce
+    bool _pendingVecTarget = false;                     // whether a new vecTarget has been requested
+    Vec2<float> _newVecTarget = {.A=0, .B=0};           // the requested vecTarget
+    bool _initialized = false;                          // whether _stateDurationsNanos has been calculated
+
+    void init()
+    {
+        // TODO: bootstrap state machine. Set timer callback
+    }
+    
     void advanceStateMachine()
     {
-        // check if state durations have been calculated
+        // check if calculations needed to switch have been performed
         if (!_initialized)
         {
             updateStateDurations();
+            updateStateSequence();
             _initialized = true;
         }
         // if they have, advance the state
@@ -25,10 +72,14 @@ namespace SVM
             if (_pendingVecTarget)
             {
                 _vecTarget = _newVecTarget;
-
                 _pendingVecTarget = false;
+                updateStateDurations();
+                updateStateSequence();
             }
         }
+
+        // Set inverter switch state
+        Inverter::setSwitchState(_stateSequence[_state]);
 
         // TODO: set the period of the timer using the current state's calculated duration
     }
@@ -82,6 +133,19 @@ namespace SVM
         // CCW vectors
         _stateDurationsNanos[PhyState::SW4] = CWCycles / 2;
         _stateDurationsNanos[PhyState::SW8] = CWCycles - _stateDurationsNanos[PhyState::SW4];
+    }
+
+    void updateStateSequence()
+    {
+        // determine switching sequence such that one bridge switches per cycle
+        // start by inserting the known switch states
+        _stateSequence[PhyState::SW2] =     SVSwitchMap[_CWVector];
+        _stateSequence[PhyState::SW10] =    SVSwitchMap[_CWVector];
+        _stateSequence[PhyState::SW4] =     SVSwitchMap[_CCWVector];
+        _stateSequence[PhyState::SW8] =     SVSwitchMap[_CCWVector];
+
+        // first determine which null state is closest to SW2 & SW10
+        
     }
 
     void setVecTarget(Vec2<float> newVecTarget)

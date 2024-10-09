@@ -4,6 +4,14 @@
 
 namespace STM_TIMER
 {
+    // TIM2
+    // Used by SVM timing
+    std::function<void()> _tim2Callback;
+
+    // TIM3
+    // Used by ADC auto sampler
+    std::function<void()> _tim3Callback;
+
     bool init()
     {
         // Timer 2 init
@@ -63,11 +71,11 @@ namespace STM_TIMER
     {
         if (timer == 2)
         {
-            HEITIMER::_tim2Callback = callback;
+            _tim2Callback = callback;
         }
         if (timer == 3)
         {
-            HEITIMER::_tim3Callback = callback;
+            _tim3Callback = callback;
         }
     }
 
@@ -115,14 +123,14 @@ extern "C" void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef* htim)
 {
     if (htim == &htim2)
     {
-        if (HEITIMER::_tim2Callback)
-            HEITIMER::_tim2Callback();
+        if (STM_TIMER::_tim2Callback)
+            STM_TIMER::_tim2Callback();
     }
 
     if (htim == &htim3)
     {
-        if (HEITIMER::_tim3Callback)
-            HEITIMER::_tim3Callback();
+        if (STM_TIMER::_tim3Callback)
+            STM_TIMER::_tim3Callback();
     }
 }
 

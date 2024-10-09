@@ -4,6 +4,13 @@
 
 namespace Inverter
 {
+    Triple<Inverter::BridgeState> _bridgeStates =
+    {
+        .A = Inverter::BridgeState::HiZ,
+        .B = Inverter::BridgeState::HiZ,
+        .C = Inverter::BridgeState::HiZ,
+    };
+
     bool init()
     {
         // Set GPIO modes for gate drive, current/voltage sense
@@ -50,7 +57,7 @@ namespace Inverter
     
     void setSwitchState(Triple<BridgeState> states)
     {
-        HEIInverter::_bridgeStates = states;
+        _bridgeStates = states;
 
         for (int i = 0; i < HEIInverter::NumPins; i++)
         {
