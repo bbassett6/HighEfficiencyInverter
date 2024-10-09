@@ -55,7 +55,7 @@ namespace Inverter
         return true;
     }
     
-    void setSwitchState(Triple<BridgeState> states)
+    void setBridgeState(Triple<BridgeState> states)
     {
         _bridgeStates = states;
 
@@ -89,6 +89,11 @@ namespace Inverter
                 pinState
             );
         }
+    }
+
+    const Triple<BridgeState>& getBridgeState(void)
+    {
+        return _bridgeStates;
     }
     
     bool getPhaseCurrents(Triple<float>* currents)

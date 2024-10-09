@@ -21,8 +21,9 @@ namespace Inverter
         NumStates
     };
 
-    bool init();
-    void setSwitchState(Triple<BridgeState> states);
+    bool init(void);
+    void setBridgeState(Triple<BridgeState> states);
+    const Triple<BridgeState>& getBridgeState(void);
     bool getPhaseCurrents(Triple<float>* currents);      // Returns success
     bool getPhaseVoltages(Triple<float>* voltages);      // Returns success
     bool getBusVoltage(float* voltage);                  // Returns success

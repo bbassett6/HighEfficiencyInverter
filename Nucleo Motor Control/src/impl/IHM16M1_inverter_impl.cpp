@@ -32,7 +32,7 @@ namespace Inverter
         return true;
     }
     
-    void setSwitchState(Inverter::SpaceVector vector)
+    void setBridgeState(Inverter::SpaceVector vector)
     {
         Triple<bool> stateMap[Inverter::SpaceVector::NumSpaceVectors] = 
         {

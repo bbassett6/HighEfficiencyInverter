@@ -69,6 +69,9 @@ namespace SVM
             _nextState = static_cast<PhyState>((_state + 1) % PhyState::NumStates);
         }
 
+        // Set inverter switch state
+        Inverter::setBridgeState(_stateSequence[_state]);
+
         // if in a null state, allow vecTarget to be updated
         if (_state == PhyState::Null0 || _state == PhyState::Null6)
         {
@@ -78,11 +81,23 @@ namespace SVM
                 _pendingVecTarget = false;
                 updateStateDurations();
                 updateStateSequence();
+
+                // the state sequeunce has now changed. If the next state would
+                // result in 2 bridges switching, set _nextState such that only 1
+                // bridge switches
+                if (
+                    !((Inverter::getBridgeState().A == _stateSequence[(_state + 1) % PhyState::NumStates].A) ^ 
+                      (Inverter::getBridgeState().B == _stateSequence[(_state + 1) % PhyState::NumStates].B) ^ 
+                      (Inverter::getBridgeState().C == _stateSequence[(_state + 1) % PhyState::NumStates].C))
+                )
+                {
+                    if (_state == PhyState::Null0)
+                        _nextState = static_cast<PhyState>((PhyState::Null6 + 1) % PhyState::NumStates);
+                    else
+                        _nextState = static_cast<PhyState>((PhyState::Null0 + 1) % PhyState::NumStates);
+                }
             }
         }
-
-        // Set inverter switch state
-        Inverter::setSwitchState(_stateSequence[_state]);
 
         // set the period of the timer
         #if PLATFORM_HEI
@@ -90,6 +105,8 @@ namespace SVM
         #endif // PLATFORM_HEI
     }
 
+    // TODO: add dead time compensation. use current sense to determine direction of current through bridges
+    // this will inform which body diode is active and thus the error caused by the HiZ state
     void updateStateDurations()
     {
         unsigned long timeBudget = switchingPeriodNanos - (deadtimeNanos * 6); // there are 6 dead periods
