@@ -90,3 +90,4 @@ fp-info-cache
 *.zip
 # exception to the rule
 !/HEI_Power_Stage/Power_Stage/Power_Stage/Power_Stage-backups/.gitkeep 
+Nucleo Motor Control/.vscode/settings.json
