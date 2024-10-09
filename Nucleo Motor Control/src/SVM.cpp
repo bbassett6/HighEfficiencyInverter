@@ -144,8 +144,55 @@ namespace SVM
         _stateSequence[PhyState::SW4] =     SVSwitchMap[_CCWVector];
         _stateSequence[PhyState::SW8] =     SVSwitchMap[_CCWVector];
 
-        // first determine which null state is closest to SW2 & SW10
-        
+        Triple<Inverter::BridgeState> nearestNullToCW;
+        Triple<Inverter::BridgeState> nearestNullToCCW;
+
+        // first determine which null state is closest to SW2 & SW10 (CW)
+        // do this by summing the number of "high" bridges
+        // if it's 1, V0 is closest
+        // if it's 2, V7 is closest
+        // summing can be done by XOR'ing all bridge states, e.g.,
+        // 1 ^ 1 ^ 0 = 0
+        // 1 ^ 0 ^ 0 = 1
+        // this works because CW and CCW vectors will NOT be null states
+        if (
+            (_stateSequence[PhyState::SW2].A == Inverter::BridgeState::High) ^
+            (_stateSequence[PhyState::SW2].B == Inverter::BridgeState::High) ^
+            (_stateSequence[PhyState::SW2].C == Inverter::BridgeState::High)
+        )
+        {
+            // odd # of high switches (1 high switch)
+            nearestNullToCW = SVSwitchMap[0];
+            nearestNullToCCW = SVSwitchMap[7];
+        }
+        else
+        {
+            // even # of high switches (2 high switches)
+            nearestNullToCW = SVSwitchMap[7];
+            nearestNullToCCW = SVSwitchMap[0];
+        }
+
+        // assign null states in the state sequence
+        _stateSequence[PhyState::Null0] = nearestNullToCW;
+        _stateSequence[PhyState::Null6] = nearestNullToCCW;
+
+        // now calculate dead states
+        // do this by XOR'ing non-DT states and setting the different bridge to HiZ
+        for (int i = 0; i < PhyState::NumStates; i++)
+        {
+            if (i == PhyState::DT1 || i == PhyState::DT3 || i == PhyState::DT5 || i == PhyState::DT7 || i == PhyState::DT9 || i == PhyState::DT11)
+            {
+                int prevStateIdx = (i - 1) % PhyState::NumStates;
+                int nextStateIdx = (i + 1) % PhyState::NumStates;
+                Triple<Inverter::BridgeState> dtState =
+                {
+                    .A = (_stateSequence[prevStateIdx].A == _stateSequence[nextStateIdx].A) ? _stateSequence[prevStateIdx].A : Inverter::BridgeState::HiZ,
+                    .B = (_stateSequence[prevStateIdx].B == _stateSequence[nextStateIdx].B) ? _stateSequence[prevStateIdx].B : Inverter::BridgeState::HiZ,
+                    .C = (_stateSequence[prevStateIdx].C == _stateSequence[nextStateIdx].C) ? _stateSequence[prevStateIdx].C : Inverter::BridgeState::HiZ
+                };
+                _stateSequence[i] = dtState;
+            }
+        }
     }
 
     void setVecTarget(Vec2<float> newVecTarget)
