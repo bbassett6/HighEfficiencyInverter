@@ -25,6 +25,7 @@ namespace Inverter
     void setBridgeState(Triple<BridgeState> states);
     const Triple<BridgeState>& getBridgeState(void);
     bool getPhaseCurrents(Triple<float>* currents);      // Returns success
+    bool clarkeTransform(Vec2<float>* clarkeCurrents)    
     bool getPhaseVoltages(Triple<float>* voltages);      // Returns success
     bool getBusVoltage(float* voltage);                  // Returns success
 }
