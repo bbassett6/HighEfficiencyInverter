@@ -26530,7 +26530,7 @@
 		)
 		(fp_arc
 			(start 0.723717 -1.445997)
-			(mid 0.776899 -1.423851)
+			(mid 0.776896 -1.423848)
 			(end 0.799457 -1.370839)
 			(stroke
 				(width 0.1)
@@ -32954,7 +32954,7 @@
 		(descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C25"
-			(at 0 1.6764 360)
+			(at 0 1.6764 0)
 			(layer "F.SilkS")
 			(uuid "67982057-1f2a-4da2-a67f-7849b825bde1")
 			(effects
@@ -32965,7 +32965,7 @@
 			)
 		)
 		(property "Value" "10uF"
-			(at 0 1.43 360)
+			(at 0 1.43 0)
 			(layer "F.Fab")
 			(uuid "3fccf3bd-7e16-4673-86c9-d8787106b8fb")
 			(effects
@@ -33120,7 +33120,7 @@
 			(uuid "5587685a-5889-4a45-bb1c-b5a1ff81d8f8")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "789a9153-008e-4fc0-8665-e5dbbc6ae49f")
 			(effects
@@ -44769,15 +44769,15 @@
 			(pintype "passive")
 			(uuid "3553ed04-3a05-4823-a0cf-86332e39e926")
 		)
-		(model "${KICAD8_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_2x07_P2.54mm_Vertical_SMD.wrl"
+		(model "${KIPRJMOD}/Parts/3D/TSM-107-01-T-DH-P-TR.step"
 			(offset
-				(xyz 0 0 0)
+				(xyz -7 0 1.5)
 			)
 			(scale
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz 0 0 0)
+				(xyz 90 180 -90)
 			)
 		)
 	)
@@ -56760,7 +56760,7 @@
 		(polygon
 			(pts
 				(xy 154.432 88.392) (xy 154.432 103.378) (xy 170.942 103.378) (xy 177.038 109.474) (xy 185.42 100.076)
-				(xy 207.01 100.076) (xy 207.01 88.392) (xy 174.752 88.392) (xy 174.752 88.392)
+				(xy 207.01 100.076) (xy 207.01 88.392) (xy 174.752 88.392)
 			)
 		)
 		(filled_polygon
