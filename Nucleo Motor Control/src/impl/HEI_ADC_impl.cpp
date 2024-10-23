@@ -144,7 +144,6 @@ namespace STM_ADC
     }
 }
 
-
 // Configure interrupt handlers for ADC1 and ADC2
 extern "C" void ADC1_IRQHandler()
 {
