@@ -2,6 +2,9 @@
 
 #if PLATFORM_HEI
 
+TIM_HandleTypeDef htim2;
+TIM_HandleTypeDef htim3;
+
 namespace STM_TIMER
 {
     // TIM2

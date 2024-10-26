@@ -4,12 +4,18 @@
 
 namespace Position
 {
+    float _offset = 0.0f;
+
     void setOffset(float offset) 
     {
-        
+        // clamp to 2PI radians
+        while (offset < 0.0f)
+            offset += 2 * PI;
+        while (offset >= 2 * PI)
+            offset -= 2 * PI;
+        _offset = offset;
     }
 
-    // TODO: use flipAngle from `constants.hpp` in case we want to reverse the detected angle
     bool getPosition(float* position)
     {
         GPIO_PinState hallAValue = HAL_GPIO_ReadPin(
@@ -25,21 +31,25 @@ namespace Position
             HEIHallSense::PinDefs[HEIHallSense::PinNames::Hall_C].init.Pin
         );
 
-        if (hallAValue == 1 && hallBValue == 0 && hallCValue == 0) {
-            *position = 0.0f; // 0 radians
-        } else if (hallAValue == 0 && hallBValue == 1 && hallCValue == 0) {
-            *position = (2.0f * PI) / 3; // 120 degrees
-        } else if (hallAValue == 0 && hallBValue == 0 && hallCValue == 1) {
-            *position = (4.0f * PI) / 3; // 240 degrees
-        } else if (hallAValue == 1 && hallBValue == 1 && hallCValue == 0) {
-            *position = PI; // 180 degrees
-        } else if (hallAValue == 1 && hallBValue == 0 && hallCValue == 1) {
-            *position = (PI / 3); // 60 degrees
-        } else if (hallAValue == 0 && hallBValue == 1 && hallCValue == 1) {
-            *position = (5.0f * PI) / 3; // 300 degrees
-        }
+        float pos = HEIHallSense::AngleMap[hallAValue | (hallBValue << 1) | (hallCValue << 2)];
 
-        return true; // TODO: if we can detect failure of a hall sensor, this should return false
+        // If all hall sensors are the same value, return invalid angle
+        if (pos == -1.0f)
+            return false;
+
+        // invert angle if flipAngle is set
+        if (flipAngle)
+            pos = 2 * PI - pos;
+
+        pos += _offset;
+
+        // clamp angle to 2PI
+        if (pos > 2 * PI)
+            pos -= 2 * PI;
+
+        *position = pos;
+
+        return true;
     }
 
     bool getSpeed(float* speed) 

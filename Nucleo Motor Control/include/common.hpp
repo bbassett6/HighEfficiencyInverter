@@ -23,7 +23,7 @@ const bool flipMotor            = false;
 
 // Switching Parameters
 const int switchingPeriodNanos  = 50000;    // 20kHz
-const int deadtimeNanos         = 100;
+const int deadtimeNanos         = 10;       // based on observed characteristics
 const float minSwitchingCycle   = 0.01;
 const float maxSwitchingCycle   = 0.99;
 

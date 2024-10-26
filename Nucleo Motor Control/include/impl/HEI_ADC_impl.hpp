@@ -2,13 +2,10 @@
 #define __HEI_ADC_IMPL
 
 #include "interface/adc_interface.hpp"
+#include "interface/timer_interface.hpp"
 #include "types.hpp"
 
 #if PLATFORM_HEI
-
-ADC_HandleTypeDef hadc1;
-ADC_HandleTypeDef hadc2;
-
 
 namespace HEIADC
 {
@@ -48,24 +45,6 @@ namespace HEIADC
         [PinNames::Therm_Sense_2] = {.adc = 2,  .channel = ADC_CHANNEL_4},
         [PinNames::Therm_Sense_3] = {.adc = 2,  .channel = ADC_CHANNEL_12},
     };
-
-    enum State
-    {
-        Idle =                  0,
-        PollSingleBlocking =    1,
-        PollAllBlocking =       2,
-        PollSingleIT =          3,
-        PollAllIT =             4,
-        Continuous =            5,
-        NumActions
-    };
-
-    State _currentAction =          State::Idle;
-    STM_ADC::Mode _mode =           STM_ADC::Mode::Polling;
-    PinNames _currentChannel =      static_cast<PinNames>(0);   // Used to keep track of which channel is currently being sampled
-    float _rate =                   20000;                      // Sampling rate in hertz
-    
-    void _adcConversionCallback();                              // automatically called when conversion finishes. Advances polling state
 }
 
 #endif // PLATFORM_HEI
