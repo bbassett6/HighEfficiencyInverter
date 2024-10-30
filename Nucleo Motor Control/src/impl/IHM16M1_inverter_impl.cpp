@@ -34,7 +34,7 @@ namespace Inverter
     
     void setBridgeState(Inverter::SpaceVector vector)
     {
-        Triple<bool> stateMap[Inverter::SpaceVector::NumSpaceVectors] = 
+        Vec3<bool> stateMap[Inverter::SpaceVector::NumSpaceVectors] = 
         {
             [Inverter::SpaceVector::V0] = {.U = 0, .V = 0, .W = 0},
             [Inverter::SpaceVector::V1] = {.U = 1, .V = 0, .W = 0},
@@ -62,7 +62,7 @@ namespace Inverter
         );
     }
     
-    bool getPhaseCurrents(Triple<float>* currents)
+    bool getPhaseCurrents(Vec3<float>* currents)
     {
         // currents->U = (ADC->CH0-1.65)/0.75/0.03;
         // currents->V = (ADC->CH1-1.65)/0.75/0.03;
@@ -71,7 +71,7 @@ namespace Inverter
         // 0.75V/V diff amp gain + 1.65 dc offset on output
     }
     
-    bool getPhaseVoltages(Triple<float>* voltages)
+    bool getPhaseVoltages(Vec3<float>* voltages)
     {
 
     }

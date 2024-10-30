@@ -4,223 +4,97 @@
 
 namespace SVM
 {
-    unsigned long _stateDurationsNanos[PhyState::NumStates] =
-    {
-        [PhyState::Null0] =   0,
-        [PhyState::DT1] =     deadtimeNanos,
-        [PhyState::SW2] =     0,
-        [PhyState::DT3] =     deadtimeNanos,
-        [PhyState::SW4] =     0,
-        [PhyState::DT5] =     deadtimeNanos,
-        [PhyState::Null6] =   0,
-        [PhyState::DT7] =     deadtimeNanos,
-        [PhyState::SW8] =     0,
-        [PhyState::DT9] =     deadtimeNanos,
-        [PhyState::SW10] =    0,
-        [PhyState::DT11] =    deadtimeNanos
-    };
-
-    Triple<Inverter::BridgeState> _stateSequence[PhyState::NumStates] =
-    {
-        [PhyState::Null0] =   {.A = Inverter::BridgeState::HiZ, .B = Inverter::BridgeState::HiZ, .C = Inverter::BridgeState::HiZ},
-        [PhyState::DT1] =     {.A = Inverter::BridgeState::HiZ, .B = Inverter::BridgeState::HiZ, .C = Inverter::BridgeState::HiZ},
-        [PhyState::SW2] =     {.A = Inverter::BridgeState::HiZ, .B = Inverter::BridgeState::HiZ, .C = Inverter::BridgeState::HiZ},
-        [PhyState::DT3] =     {.A = Inverter::BridgeState::HiZ, .B = Inverter::BridgeState::HiZ, .C = Inverter::BridgeState::HiZ},
-        [PhyState::SW4] =     {.A = Inverter::BridgeState::HiZ, .B = Inverter::BridgeState::HiZ, .C = Inverter::BridgeState::HiZ},
-        [PhyState::DT5] =     {.A = Inverter::BridgeState::HiZ, .B = Inverter::BridgeState::HiZ, .C = Inverter::BridgeState::HiZ},
-        [PhyState::Null6] =   {.A = Inverter::BridgeState::HiZ, .B = Inverter::BridgeState::HiZ, .C = Inverter::BridgeState::HiZ},
-        [PhyState::DT7] =     {.A = Inverter::BridgeState::HiZ, .B = Inverter::BridgeState::HiZ, .C = Inverter::BridgeState::HiZ},
-        [PhyState::SW8] =     {.A = Inverter::BridgeState::HiZ, .B = Inverter::BridgeState::HiZ, .C = Inverter::BridgeState::HiZ},
-        [PhyState::DT9] =     {.A = Inverter::BridgeState::HiZ, .B = Inverter::BridgeState::HiZ, .C = Inverter::BridgeState::HiZ},
-        [PhyState::SW10] =    {.A = Inverter::BridgeState::HiZ, .B = Inverter::BridgeState::HiZ, .C = Inverter::BridgeState::HiZ},
-        [PhyState::DT11] =    {.A = Inverter::BridgeState::HiZ, .B = Inverter::BridgeState::HiZ, .C = Inverter::BridgeState::HiZ}
-    };
-
-    PhyState _state =   PhyState::Null0;                // SVM physical state machine
-    PhyState _nextState = _state;
-    int _CWVector =     1;                              // the clockwise-most vector for the current sector
-    int _CCWVector =    2;                              // the counter-clockwise-most vector for the current sector
-    Vec2<float> _vecTarget = {.A=0, .B=0};              // voltage vector the SVM state machine will produce
-    bool _pendingVecTarget = false;                     // whether a new vecTarget has been requested
-    Vec2<float> _newVecTarget = {.A=0, .B=0};           // the requested vecTarget
-    bool _initialized = false;                          // whether _stateDurationsNanos has been calculated
-
     void init()
     {
-        advanceStateMachine();
-        #if PLATFORM_HEI
-        STM_TIMER::registerCallback(2, advanceStateMachine);
-        #endif // PLATFORM_HEI
-    }
-    
-    void advanceStateMachine()
-    {
-        // check if calculations needed to switch have been performed
-        if (!_initialized)
-        {
-            updateStateDurations();
-            updateStateSequence();
-            _initialized = true;
-        }
-        // if they have, advance the state
-        else
-        {
-            _state = _nextState;
-            _nextState = static_cast<PhyState>((_state + 1) % PhyState::NumStates);
-        }
-
-        // Set inverter switch state
-        Inverter::setBridgeState(_stateSequence[_state]);
-
-        // if in a null state, allow vecTarget to be updated
-        if (_state == PhyState::Null0 || _state == PhyState::Null6)
-        {
-            if (_pendingVecTarget)
-            {
-                _vecTarget = _newVecTarget;
-                _pendingVecTarget = false;
-                updateStateDurations();
-                updateStateSequence();
-
-                // the state sequeunce has now changed. If the next state would
-                // result in 2 bridges switching, set _nextState such that only 1
-                // bridge switches
-                if (
-                    !((Inverter::getBridgeState().A == _stateSequence[(_state + 1) % PhyState::NumStates].A) ^ 
-                      (Inverter::getBridgeState().B == _stateSequence[(_state + 1) % PhyState::NumStates].B) ^ 
-                      (Inverter::getBridgeState().C == _stateSequence[(_state + 1) % PhyState::NumStates].C))
-                )
-                {
-                    if (_state == PhyState::Null0)
-                        _nextState = static_cast<PhyState>((PhyState::Null6 + 1) % PhyState::NumStates);
-                    else
-                        _nextState = static_cast<PhyState>((PhyState::Null0 + 1) % PhyState::NumStates);
-                }
-            }
-        }
-
-        // set the period of the timer
-        #if PLATFORM_HEI
-        STM_TIMER::setPeriod(2, _stateDurationsNanos[_state]);
-        #endif // PLATFORM_HEI
+        
     }
 
     // TODO: add dead time compensation. use current sense to determine direction of current through bridges
     // this will inform which body diode is active and thus the error caused by the HiZ state
-    void updateStateDurations()
+    void setVecTarget(Vec2<float> newVecTarget)
     {
-        unsigned long timeBudget = switchingPeriodNanos - (deadtimeNanos * 6); // there are 6 dead periods
+        Vec3<float> phaseDuties;
+        float duty;
         float largestDotProduct = 0.0;
         int sector = 0;
 
         // figure out the sector
         // take dot products with all 6 space vectors, find the largest 2
-        float dotProducts[6] =
+        float dotProducts[8] =
         {
-            [0] = dotProduct(_vecTarget, VEC_1),
-            [1] = dotProduct(_vecTarget, VEC_2),
-            [2] = dotProduct(_vecTarget, VEC_3),
-            [3] = dotProduct(_vecTarget, VEC_4),
-            [4] = dotProduct(_vecTarget, VEC_5),
-            [5] = dotProduct(_vecTarget, VEC_6)
+            [0] = 0,
+            [1] = dotProduct(newVecTarget, VEC_1),
+            [2] = dotProduct(newVecTarget, VEC_2),
+            [3] = dotProduct(newVecTarget, VEC_3),
+            [4] = dotProduct(newVecTarget, VEC_4),
+            [5] = dotProduct(newVecTarget, VEC_5),
+            [6] = dotProduct(newVecTarget, VEC_6),
+            [7] = 0
         };
 
         // find the sector with the largest dot product sum
-        for (int i = 0; i < 6; i++)
+        for (int i = 1; i < 7; i++)
         {
             float dotSum = dotProducts[i] + dotProducts[(i + 1) % 6];
             if (dotSum > largestDotProduct)
             {
                 largestDotProduct = dotSum;
-                sector = i;
+                sector = i - 1;
             }
         }
 
-        // use sector map to assign sector vectors
-        _CWVector = SVSectorMap[sector].A;
-        _CCWVector = SVSectorMap[sector].B;
+        // [N_0 / 2][SW_A / 2][SW_B / 2][N_7][SW_B / 2][SW_A / 2][N_0 / 2]
+        // [N / 4][SW_A / 2][SW_B / 2][N / 2][SW_B / 2][SW_A / 2][N / 4]
+        // N = 1.0 - SW_A - SW_B
 
-        // use computed dot products to determine switching time
-        unsigned long CWCycles = (timeBudget / 2) * dotProducts[sector];
-        unsigned long CCWCycles = (timeBudget / 2) * dotProducts[(sector + 1) % 6];
-
-        timeBudget -= CWCycles + CCWCycles;
-
-        // assign computed state durations
-        // null vectors
-        _stateDurationsNanos[PhyState::Null0] = timeBudget / 2;
-        _stateDurationsNanos[PhyState::Null6] = timeBudget - _stateDurationsNanos[PhyState::Null0];
-        // CW vectors
-        _stateDurationsNanos[PhyState::SW2] = CWCycles / 2;
-        _stateDurationsNanos[PhyState::SW10] = CWCycles - _stateDurationsNanos[PhyState::SW2];
-        // CCW vectors
-        _stateDurationsNanos[PhyState::SW4] = CWCycles / 2;
-        _stateDurationsNanos[PhyState::SW8] = CWCycles - _stateDurationsNanos[PhyState::SW4];
-    }
-
-    void updateStateSequence()
-    {
-        // determine switching sequence such that one bridge switches per cycle
-        // start by inserting the known switch states
-        _stateSequence[PhyState::SW2] =     SVSwitchMap[_CWVector];
-        _stateSequence[PhyState::SW10] =    SVSwitchMap[_CWVector];
-        _stateSequence[PhyState::SW4] =     SVSwitchMap[_CCWVector];
-        _stateSequence[PhyState::SW8] =     SVSwitchMap[_CCWVector];
-
-        Triple<Inverter::BridgeState> nearestNullToCW;
-        Triple<Inverter::BridgeState> nearestNullToCCW;
-
-        // first determine which null state is closest to SW2 & SW10 (CW)
-        // do this by summing the number of "high" bridges
-        // if it's 1, V0 is closest
-        // if it's 2, V7 is closest
-        // summing can be done by XOR'ing all bridge states, e.g.,
-        // 1 ^ 1 ^ 0 = 0
-        // 1 ^ 0 ^ 0 = 1
-        // this works because CW and CCW vectors will NOT be null states
-        if (
-            (_stateSequence[PhyState::SW2].A == Inverter::BridgeState::High) ^
-            (_stateSequence[PhyState::SW2].B == Inverter::BridgeState::High) ^
-            (_stateSequence[PhyState::SW2].C == Inverter::BridgeState::High)
-        )
+        // Calculate duty cycle of the phase with the first rising edge
+        // Then find that phase
+        // [N / 4][SW_A / 2][SW_B / 2][N / 2][SW_B / 2][SW_A / 2][N / 4]
+        //        |---------------------------------------------|
+        // SW_A + SW_B + N/2
+        // SW_A + SW_B + (1.0 - SW_A - SW_B) / 2
+        // (SW_A + SW_B) / 2 + 0.5
+        duty = 0.5f + ((dotProducts[SVSectorMap[sector].u.A] + dotProducts[SVSectorMap[sector].u.B]) / 2);
+        for (int i = 0; i < Phase::NumPhases; i++)
         {
-            // odd # of high switches (1 high switch)
-            nearestNullToCW = SVSwitchMap[0];
-            nearestNullToCCW = SVSwitchMap[7];
-        }
-        else
-        {
-            // even # of high switches (2 high switches)
-            nearestNullToCW = SVSwitchMap[7];
-            nearestNullToCCW = SVSwitchMap[0];
-        }
-
-        // assign null states in the state sequence
-        _stateSequence[PhyState::Null0] = nearestNullToCW;
-        _stateSequence[PhyState::Null6] = nearestNullToCCW;
-
-        // now calculate dead states
-        // do this by XOR'ing non-DT states and setting the different bridge to HiZ
-        for (int i = 0; i < PhyState::NumStates; i++)
-        {
-            if (i == PhyState::DT1 || i == PhyState::DT3 || i == PhyState::DT5 || i == PhyState::DT7 || i == PhyState::DT9 || i == PhyState::DT11)
+            if (SVSwitchMap[SVSectorMap[sector].u.A].a[i] == 1)
             {
-                int prevStateIdx = (i - 1) % PhyState::NumStates;
-                int nextStateIdx = (i + 1) % PhyState::NumStates;
-                Triple<Inverter::BridgeState> dtState =
-                {
-                    .A = (_stateSequence[prevStateIdx].A == _stateSequence[nextStateIdx].A) ? _stateSequence[prevStateIdx].A : Inverter::BridgeState::HiZ,
-                    .B = (_stateSequence[prevStateIdx].B == _stateSequence[nextStateIdx].B) ? _stateSequence[prevStateIdx].B : Inverter::BridgeState::HiZ,
-                    .C = (_stateSequence[prevStateIdx].C == _stateSequence[nextStateIdx].C) ? _stateSequence[prevStateIdx].C : Inverter::BridgeState::HiZ
-                };
-                _stateSequence[i] = dtState;
+                phaseDuties.a[i] = duty;
             }
         }
-    }
+        
+        // Calculate duty cycle of the phase with the second rising edge
+        // Then find that phase
+        // [N / 4][SW_A / 2][SW_B / 2][N / 2][SW_B / 2][SW_A / 2][N / 4]
+        //                  |-------------------------|
+        // SW_B + N/2
+        // SW_B + (1.0 - SW_A - SW_B) / 2
+        // 0.5 + (SW_B - SW_A) / 2
+        duty = 0.5f + ((dotProducts[SVSectorMap[sector].u.A] - dotProducts[SVSectorMap[sector].u.B]) / 2);
+        for (int i = 0; i < Phase::NumPhases; i++)
+        {
+            if ((SVSwitchMap[SVSectorMap[sector].u.A].a[i] ^ SVSwitchMap[SVSectorMap[sector].u.B].a[i]) == 1)
+            {
+                phaseDuties.a[i] = duty;
+            }
+        }
 
-    void setVecTarget(Vec2<float> newVecTarget)
-    {
-        _newVecTarget = newVecTarget;
-        _pendingVecTarget = true;
+        // Calculate the duty cycle of the phase with the third rising edge
+        // Then find that phase
+        // [N / 4][SW_A / 2][SW_B / 2][N / 2][SW_B / 2][SW_A / 2][N / 4]
+        //                            |-----|
+        // N/2
+        // (1.0 - SW_A - SW_B) / 2
+        // 0.5 - (SW_A + SW_B)
+        duty = 0.5f - ((dotProducts[SVSectorMap[sector].u.A] + dotProducts[SVSectorMap[sector].u.B]) / 2);
+        for (int i = 0; i < Phase::NumPhases; i++)
+        {
+            if ((SVSwitchMap[SVSectorMap[sector].u.A].a[i] | SVSwitchMap[SVSectorMap[sector].u.B].a[i]) == 0)
+            {
+                phaseDuties.a[i] = duty;
+            }
+        }
+
+        SymmetricPWM::setPhaseDuties(phaseDuties);
     }
 }

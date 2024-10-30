@@ -16,14 +16,24 @@ int main()
 	(
 		   !STM_TIMER::init()
 		// || !STM_ADC::init()
-		|| !Inverter::init()
+		// || !Inverter::init()
+		   || !SymmetricPWM::init()
 	)
 	{
 		Error_Handler();
 	}
+	else
+	{
+		SVM::setVecTarget((Vec2<float>){.a = {0, 0}});
+	}
+	float angle = 0.0f;
 
 	while(1)
 	{
+		HAL_Delay(5);
+		HAL_GPIO_TogglePin(LED_GPIO_PORT, LED_PIN);
+		angle += 2 * PI / 1000;
+		SVM::setVecTarget((Vec2<float>){.a = {cosf(angle) * 0.1, sinf(angle) * 0.1}});
 	}
 
 	return 0;

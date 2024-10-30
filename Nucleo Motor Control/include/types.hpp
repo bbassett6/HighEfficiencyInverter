@@ -10,19 +10,35 @@ enum Implementation
     NumImplementations
 };
 
-template <typename T>
-struct Triple
+enum Phase
 {
-    T A;
-    T B;
-    T C;
+    A = 0,
+    B = 1,
+    C = 2,
+    NumPhases = 3
 };
 
 template <typename T>
-struct Vec2
+union Vec3
 {
-    T A;
-    T B;
+    struct u_s
+    {
+        T A;
+        T B;
+        T C;
+    } u;
+    T a[3];
+};
+
+template <typename T>
+union Vec2
+{
+    struct u_s
+    {
+        T A;
+        T B;
+    } u;
+    T a[2];
 };
 
 struct PinDef

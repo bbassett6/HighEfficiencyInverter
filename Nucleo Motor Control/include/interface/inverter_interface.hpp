@@ -13,20 +13,9 @@ It is abstract and may be implemented differently for different hardware
 
 namespace Inverter
 {
-    enum BridgeState
-    {
-        HiZ =   0,
-        Low =   1,
-        High =  2,
-        NumStates
-    };
-
     bool init(void);
-    void setBridgeState(Triple<BridgeState> states);
-    const Triple<BridgeState>& getBridgeState(void);
-    bool getPhaseCurrents(Triple<float>* currents);      // Returns success
-    bool clarkeTransform(Vec2<float>* clarkeCurrents)    
-    bool getPhaseVoltages(Triple<float>* voltages);      // Returns success
+    bool getPhaseCurrents(Vec3<float>* currents);      // Returns success
+    bool getPhaseVoltages(Vec3<float>* voltages);      // Returns success
     bool getBusVoltage(float* voltage);                  // Returns success
 }
 
