@@ -23,12 +23,12 @@ namespace SVM
         float dotProducts[8] =
         {
             [0] = 0,
-            [1] = dotProduct(newVecTarget, VEC_1),
-            [2] = dotProduct(newVecTarget, VEC_2),
-            [3] = dotProduct(newVecTarget, VEC_3),
-            [4] = dotProduct(newVecTarget, VEC_4),
-            [5] = dotProduct(newVecTarget, VEC_5),
-            [6] = dotProduct(newVecTarget, VEC_6),
+            [1] = dotProduct(&newVecTarget, &VEC_1),
+            [2] = dotProduct(&newVecTarget, &VEC_2),
+            [3] = dotProduct(&newVecTarget, &VEC_3),
+            [4] = dotProduct(&newVecTarget, &VEC_4),
+            [5] = dotProduct(&newVecTarget, &VEC_5),
+            [6] = dotProduct(&newVecTarget, &VEC_6),
             [7] = 0
         };
 
