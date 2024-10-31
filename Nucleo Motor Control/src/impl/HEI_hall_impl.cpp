@@ -38,7 +38,7 @@ namespace Position
             return false;
 
         // invert angle if flipAngle is set
-        if (flipAngle)
+        if (RotorSenseParameters::flipAngle)
             pos = 2 * PI - pos;
 
         pos += _offset;

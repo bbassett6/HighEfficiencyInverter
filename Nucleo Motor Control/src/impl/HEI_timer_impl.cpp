@@ -95,7 +95,7 @@ namespace STM_TIMER
 
     void setPeriod(int timer, unsigned long nanos)
     {
-        unsigned long timerCycles = nanos * cpuMHz / 1000;
+        unsigned long timerCycles = nanos * PlatformParameters::cpuMHz / 1000;
         unsigned int prescaler = 0;
 
         if (timer == 2)

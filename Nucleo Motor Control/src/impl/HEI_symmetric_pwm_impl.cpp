@@ -6,7 +6,7 @@ HRTIM_HandleTypeDef hhrtim1;
 
 namespace SymmetricPWM
 {
-    unsigned int _masterTimerPeriodCycles = cpuMHz * 2 * switchingPeriodNanos / 1000;   // master timer is derived from cpu clock PLL'd 2x
+    unsigned int _masterTimerPeriodCycles = PlatformParameters::cpuMHz * 2 * PWMParameters::switchingPeriodNanos / 1000;   // master timer is derived from cpu clock PLL'd 2x
     Vec3<float> _phaseDuties = {.a = {0.5, 0.5, 0.5}};
 
     HRTIM_TimeBaseCfgTypeDef _commonTimeBaseCfg = {0};
@@ -108,11 +108,11 @@ namespace SymmetricPWM
 
         // Config deadtime
         pDeadTimeCfg.Prescaler          = HRTIM_TIMDEADTIME_PRESCALERRATIO_MUL8;    // <-- Enables deadtime resolution 8x the cpu clock
-        pDeadTimeCfg.RisingValue        = 6;                                        // <-- Corresponds to ~10ns deadtime
+        pDeadTimeCfg.RisingValue        = PWMParameters::deadtimeCyclesRising;      // <-- Corresponds to ~10ns deadtime
         pDeadTimeCfg.RisingSign         = HRTIM_TIMDEADTIME_RISINGSIGN_POSITIVE;
         pDeadTimeCfg.RisingLock         = HRTIM_TIMDEADTIME_RISINGLOCK_WRITE;
         pDeadTimeCfg.RisingSignLock     = HRTIM_TIMDEADTIME_RISINGSIGNLOCK_WRITE;
-        pDeadTimeCfg.FallingValue       = 6;
+        pDeadTimeCfg.FallingValue       = PWMParameters::deadtimeCyclesFalling;
         pDeadTimeCfg.FallingSign        = HRTIM_TIMDEADTIME_FALLINGSIGN_POSITIVE;
         pDeadTimeCfg.FallingLock        = HRTIM_TIMDEADTIME_FALLINGLOCK_WRITE;
         pDeadTimeCfg.FallingSignLock    = HRTIM_TIMDEADTIME_FALLINGSIGNLOCK_WRITE;
@@ -203,7 +203,7 @@ namespace SymmetricPWM
 
     void setPeriodNanos(unsigned int periodNanos)
     {
-        _masterTimerPeriodCycles = cpuMHz * 2 * periodNanos / 1000;
+        _masterTimerPeriodCycles = PlatformParameters::cpuMHz * 2 * periodNanos / 1000;
         _commonTimeBaseCfg.Period = _masterTimerPeriodCycles;
 
         HAL_HRTIM_TimeBaseConfig(&hhrtim1, HRTIM_TIMERINDEX_MASTER, &_commonTimeBaseCfg);

@@ -3,13 +3,6 @@
 
 #include "common.hpp"
 
-enum Implementation
-{
-    IHM161M1 =          0,
-    HEI =               1,
-    NumImplementations
-};
-
 enum Phase
 {
     A = 0,
