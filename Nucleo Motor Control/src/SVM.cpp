@@ -20,15 +20,16 @@ namespace SVM
 
         // figure out the sector
         // take dot products with all 6 space vectors, find the largest 2
+        // multiply products by 1/(cos(pi/6)+cos(-pi/6)) so they sum to a max of 1
         float dotProducts[8] =
         {
             [0] = 0,
-            [1] = dotProduct(&newVecTarget, &VEC_1),
-            [2] = dotProduct(&newVecTarget, &VEC_2),
-            [3] = dotProduct(&newVecTarget, &VEC_3),
-            [4] = dotProduct(&newVecTarget, &VEC_4),
-            [5] = dotProduct(&newVecTarget, &VEC_5),
-            [6] = dotProduct(&newVecTarget, &VEC_6),
+            [1] = dotProduct(&newVecTarget, &VEC_1) * 0.57735,
+            [2] = dotProduct(&newVecTarget, &VEC_2) * 0.57735,
+            [3] = dotProduct(&newVecTarget, &VEC_3) * 0.57735,
+            [4] = dotProduct(&newVecTarget, &VEC_4) * 0.57735,
+            [5] = dotProduct(&newVecTarget, &VEC_5) * 0.57735,
+            [6] = dotProduct(&newVecTarget, &VEC_6) * 0.57735,
             [7] = 0
         };
 

@@ -198,9 +198,6 @@ namespace SymmetricPWM
             | HRTIM_TIMERID_TIMER_D
         );
 
-        // HRTIM1->sTimerxRegs[HRTIM_TIMERINDEX_TIMER_A].SETx1R = HRTIM_SET1R_SST;
-        // HRTIM1->sTimerxRegs[HRTIM_TIMERINDEX_TIMER_A].SETx2R = HRTIM_SET1R_SST;
-
         return true;
     }
 
