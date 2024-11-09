@@ -17,8 +17,9 @@ namespace STM_ADC
     };
 
     bool init();
-    void setRate(float rate);                               // set number of automatic samples per second
-    void setCallback(std::function<void(int, int)> callback);    // configure a callback when automatic sampling cycle completes
+    void setRate(float rate); // set number of automatic samples per second
+    // callback consists of pointer to results + length of results
+    void setCallback(std::function<void(uint32_t*, int)> callback); // configure a callback when automatic sampling cycle completes
 }
 
 #endif // __ADC_INTERFACE

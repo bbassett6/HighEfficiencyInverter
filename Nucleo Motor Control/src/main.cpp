@@ -15,9 +15,8 @@ int main()
 	if
 	(
 		   !STM_TIMER::init()
-		// || !STM_ADC::init()
-		// || !Inverter::init()
-		   || !SymmetricPWM::init()
+		|| !STM_ADC::init()
+		|| !SymmetricPWM::init()
 	)
 	{
 		Error_Handler();
@@ -27,13 +26,21 @@ int main()
 		SVM::setVecTarget((Vec2<float>){.a = {0, 0}});
 	}
 	float angle = 0.0f;
+	float speed = 0.0f;
 
 	while(1)
 	{
-		HAL_Delay(5);
+		HAL_Delay(1);
 		HAL_GPIO_TogglePin(LED_GPIO_PORT, LED_PIN);
-		angle += 2 * PI / 1000;
-		SVM::setVecTarget((Vec2<float>){.a = {cosf(angle) * 0.1, sinf(angle) * 0.1}});
+
+		speed += 0.00003;
+		if (speed > 2 * PI / 10)
+			speed = 2 * PI / 10;
+
+		angle += speed;
+		// float tempAngle = sinf(angle) * PI / 6 + (5 * PI / 3) + (PI / 6);
+		float power = 0.30f;
+		SVM::setVecTarget((Vec2<float>){.a = {cosf(angle) * power, sinf(angle) * power}});
 	}
 
 	return 0;

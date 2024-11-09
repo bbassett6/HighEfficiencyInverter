@@ -1,5 +1,5 @@
-#include "impl/HEI_timer_impl.hpp"
-#include "SVM.hpp"
+#include "interface/timer_interface.hpp"
+#include "types.hpp"
 
 #if PLATFORM_HEI
 
@@ -95,18 +95,18 @@ namespace STM_TIMER
 
     void setPeriod(int timer, unsigned long nanos)
     {
-        unsigned long timerCycles = nanos * PlatformParameters::cpuMHz / 1000;
+        unsigned long timerCycles = nanos * PlatformParameters::cpuMHz / 1000.0f;
         unsigned int prescaler = 0;
 
         if (timer == 2)
         {
-            while (timerCycles > (unsigned long)UINT16_MAX)
+            while (timerCycles > UINT16_MAX)
             {
                 timerCycles /= 2;
                 prescaler = (prescaler + 1) * 2 - 1;
             }
 
-            __HAL_TIM_SET_AUTORELOAD(&htim2, 20000);
+            __HAL_TIM_SET_AUTORELOAD(&htim2, (int)timerCycles);
             __HAL_TIM_SET_PRESCALER(&htim2, 0);
         }
 
@@ -125,9 +125,9 @@ namespace STM_TIMER
 
     void setFrequency(int timer, float frequency)
     {
-        if (timer == 2 || timer == 2)
+        if (timer == 2 || timer == 3)
         {
-            setPeriod(timer, 1.0f / frequency);
+            setPeriod(timer, 1000000000.0f / frequency);
         }
     }
 

@@ -26,8 +26,9 @@ namespace MotorParameters
 namespace PWMParameters
 {
     const int switchingPeriodNanos  = 50000;    // 20kHz
-    const int deadtimeCyclesRising  = 6;        // based on observed characteristics
-    const int deadtimeCyclesFalling = 6;
+    const int deadtimeCyclesRising  = 40;       // based on observed characteristics
+    const int deadtimeCyclesFalling = 40;
+    const bool zsmBClampEnabled     = false;
 }
 
 namespace RotorSenseParameters

@@ -1,9 +1,45 @@
 #include "SVM.hpp"
-#include "interface/inverter_interface.hpp"
-#include "interface/timer_interface.hpp"
 
 namespace SVM
-{
+{   
+    // Maps space vectors to nominal switch states
+    static const Vec3<bool> SVSwitchMap[8] = 
+    {
+        [0] = {.u = {.A = 0,    .B= 0,    .C = 0}},
+        [1] = {.u = {.A = 1,    .B= 0,    .C = 0}},
+        [2] = {.u = {.A = 1,    .B= 1,    .C = 0}},
+        [3] = {.u = {.A = 0,    .B= 1,    .C = 0}},
+        [4] = {.u = {.A = 0,    .B= 1,    .C = 1}},
+        [5] = {.u = {.A = 0,    .B= 0,    .C = 1}},
+        [6] = {.u = {.A = 1,    .B= 0,    .C = 1}},
+        [7] = {.u = {.A = 1,    .B= 1,    .C = 1}}
+    };
+
+    // Map space vectors to their Vec2 definitions
+    static const Vec2<float>* VectorMap[8] =
+    {
+        [0] = NULL,
+        [1] = &VEC_1,
+        [2] = &VEC_2,
+        [3] = &VEC_3,
+        [4] = &VEC_4,
+        [5] = &VEC_5,
+        [6] = &VEC_6,
+        [7] = NULL
+    };
+
+    // Maps sectors to space vector pairs
+    // Sorted so .A's Hamming distance is closest to V0
+    static const Vec2<int> SVSectorMap[6] =
+    {
+        [0] = {.u = {.A = 1, .B = 2}},
+        [1] = {.u = {.A = 3, .B = 2}},
+        [2] = {.u = {.A = 3, .B = 4}},
+        [3] = {.u = {.A = 5, .B = 4}},
+        [4] = {.u = {.A = 5, .B = 6}},
+        [5] = {.u = {.A = 1, .B = 6}}
+    };
+
     void init()
     {
         
@@ -15,34 +51,25 @@ namespace SVM
     {
         Vec3<float> phaseDuties;
         float duty;
-        float largestDotProduct = 0.0;
         int sector = 0;
 
-        // figure out the sector
-        // take dot products with all 6 space vectors, find the largest 2
-        // multiply products by 1/(cos(pi/6)+cos(-pi/6)) so they sum to a max of 1
-        float dotProducts[8] =
-        {
-            [0] = 0,
-            [1] = dotProduct(&newVecTarget, &VEC_1) * 0.57735,
-            [2] = dotProduct(&newVecTarget, &VEC_2) * 0.57735,
-            [3] = dotProduct(&newVecTarget, &VEC_3) * 0.57735,
-            [4] = dotProduct(&newVecTarget, &VEC_4) * 0.57735,
-            [5] = dotProduct(&newVecTarget, &VEC_5) * 0.57735,
-            [6] = dotProduct(&newVecTarget, &VEC_6) * 0.57735,
-            [7] = 0
-        };
+        float angle = atan2f(newVecTarget.u.B, newVecTarget.u.A);
+        if (angle < 0)
+            angle += 2 * PI;
 
-        // find the sector with the largest dot product sum
-        for (int i = 1; i < 7; i++)
-        {
-            float dotSum = dotProducts[i] + dotProducts[(i + 1) % 6];
-            if (dotSum > largestDotProduct)
-            {
-                largestDotProduct = dotSum;
-                sector = i - 1;
-            }
-        }
+        sector = (int)(angle / (PI / 3));
+
+        float Ax = VectorMap[SVSectorMap[sector].u.A]->u.A;
+        float Ay = VectorMap[SVSectorMap[sector].u.A]->u.B;
+        float Bx = VectorMap[SVSectorMap[sector].u.B]->u.A;
+        float By = VectorMap[SVSectorMap[sector].u.B]->u.B;
+        float Tx = newVecTarget.u.A;
+        float Ty = newVecTarget.u.B;
+
+        float determinant = 1.0f / (VectorMap[SVSectorMap[sector].u.A]->u.A * VectorMap[SVSectorMap[sector].u.B]->u.B - VectorMap[SVSectorMap[sector].u.B]->u.A * VectorMap[SVSectorMap[sector].u.A]->u.B);
+
+        float stateDurationA = ((By * Tx) + (-Bx * Ty)) * determinant * 0.57735f;
+        float stateDurationB =  ((-Ay * Tx) + (Ax * Ty)) * determinant * 0.57735f;
 
         // [N_0 / 2][SW_A / 2][SW_B / 2][N_7][SW_B / 2][SW_A / 2][N_0 / 2]
         // [N / 4][SW_A / 2][SW_B / 2][N / 2][SW_B / 2][SW_A / 2][N / 4]
@@ -55,7 +82,7 @@ namespace SVM
         // SW_A + SW_B + N/2
         // SW_A + SW_B + (1.0 - SW_A - SW_B) / 2
         // (SW_A + SW_B) / 2 + 0.5
-        duty = 0.5f + ((dotProducts[SVSectorMap[sector].u.A] + dotProducts[SVSectorMap[sector].u.B]) / 2);
+        duty = 0.5f + ((stateDurationA + stateDurationB) / 2);
         for (int i = 0; i < Phase::NumPhases; i++)
         {
             if (SVSwitchMap[SVSectorMap[sector].u.A].a[i] == 1)
@@ -71,7 +98,7 @@ namespace SVM
         // SW_B + N/2
         // SW_B + (1.0 - SW_A - SW_B) / 2
         // 0.5 + (SW_B - SW_A) / 2
-        duty = 0.5f + ((dotProducts[SVSectorMap[sector].u.A] - dotProducts[SVSectorMap[sector].u.B]) / 2);
+        duty = 0.5f + ((stateDurationB - stateDurationA) / 2);
         for (int i = 0; i < Phase::NumPhases; i++)
         {
             if ((SVSwitchMap[SVSectorMap[sector].u.A].a[i] ^ SVSwitchMap[SVSectorMap[sector].u.B].a[i]) == 1)
@@ -86,13 +113,28 @@ namespace SVM
         //                            |-----|
         // N/2
         // (1.0 - SW_A - SW_B) / 2
-        // 0.5 - (SW_A + SW_B)
-        duty = 0.5f - ((dotProducts[SVSectorMap[sector].u.A] + dotProducts[SVSectorMap[sector].u.B]) / 2);
+        // 0.5 - (SW_A + SW_B) / 2
+        duty = 0.5f - ((stateDurationA + stateDurationB) / 2);
         for (int i = 0; i < Phase::NumPhases; i++)
         {
             if ((SVSwitchMap[SVSectorMap[sector].u.A].a[i] | SVSwitchMap[SVSectorMap[sector].u.B].a[i]) == 0)
             {
                 phaseDuties.a[i] = duty;
+            }
+        }
+
+        // Apply ZSM bottom clamp if enabled
+        if (PWMParameters::zsmBClampEnabled)
+        {
+            float zsmBottomClampOffset = 1.0f;
+            for (int i = 0; i < Phase::NumPhases; i++)
+            {
+                if (phaseDuties.a[i] < zsmBottomClampOffset)
+                    zsmBottomClampOffset = phaseDuties.a[i];
+            }
+            for (int i = 0; i < Phase::NumPhases; i++)
+            {
+                phaseDuties.a[i] -= zsmBottomClampOffset;
             }
         }
 

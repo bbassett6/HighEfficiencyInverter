@@ -1,9 +1,42 @@
-#include "impl/HEI_hall_impl.hpp"
+#include "common.hpp"
+#include "types.hpp"
+#include "constants.hpp"
+#include "interface/position_interface.hpp"
 
 #if PLATFORM_HEI
 
 namespace Position
 {
+    enum PinNames
+    {
+        Hall_A =    0,
+        Hall_B =    1,
+        Hall_C =    2,
+        NumPins
+    };
+
+    const static PinDef PinDefs[PinNames::NumPins] = 
+    {
+        [PinNames::Hall_A] =    {.port = GPIOA, .init = {.Pin = GPIO_PIN_0,  .Mode = GPIO_MODE_INPUT,  .Pull = GPIO_NOPULL,    .Speed = GPIO_SPEED_FREQ_LOW,   .Alternate = 0}},
+        [PinNames::Hall_B] =    {.port = GPIOA, .init = {.Pin = GPIO_PIN_1,  .Mode = GPIO_MODE_INPUT,  .Pull = GPIO_NOPULL,    .Speed = GPIO_SPEED_FREQ_LOW,   .Alternate = 0}},
+        [PinNames::Hall_C] =    {.port = GPIOA, .init = {.Pin = GPIO_PIN_10,  .Mode = GPIO_MODE_INPUT,  .Pull = GPIO_NOPULL,    .Speed = GPIO_SPEED_FREQ_LOW,   .Alternate = 0}}
+    };
+
+    // Bit 0 is Hall A value
+    // Bit 1 is Hall B value
+    // Bit 2 us Hall C value
+    const static float AngleMap[8] =
+    {
+        [0b000] = -1.0f,
+        [0b001] = 0.0f,
+        [0b010] = 4 *  PI / 6,
+        [0b011] = 2 *  PI / 6,
+        [0b100] = 8 *  PI / 6,
+        [0b101] = 10 * PI / 6,
+        [0b110] = 6 *  PI / 6,
+        [0b111] = -1.0f,
+    };
+
     float _offset = 0.0f;
 
     void setOffset(float offset) 
@@ -19,19 +52,19 @@ namespace Position
     bool getPosition(float* position)
     {
         GPIO_PinState hallAValue = HAL_GPIO_ReadPin(
-            HEIHallSense::PinDefs[HEIHallSense::PinNames::Hall_A].port, 
-            HEIHallSense::PinDefs[HEIHallSense::PinNames::Hall_A].init.Pin
+            PinDefs[PinNames::Hall_A].port, 
+            PinDefs[PinNames::Hall_A].init.Pin
         );
         GPIO_PinState hallBValue = HAL_GPIO_ReadPin(
-            HEIHallSense::PinDefs[HEIHallSense::PinNames::Hall_B].port, 
-            HEIHallSense::PinDefs[HEIHallSense::PinNames::Hall_B].init.Pin
+            PinDefs[PinNames::Hall_B].port, 
+            PinDefs[PinNames::Hall_B].init.Pin
         );
         GPIO_PinState hallCValue = HAL_GPIO_ReadPin(
-            HEIHallSense::PinDefs[HEIHallSense::PinNames::Hall_C].port, 
-            HEIHallSense::PinDefs[HEIHallSense::PinNames::Hall_C].init.Pin
+            PinDefs[PinNames::Hall_C].port, 
+            PinDefs[PinNames::Hall_C].init.Pin
         );
 
-        float pos = HEIHallSense::AngleMap[hallAValue | (hallBValue << 1) | (hallCValue << 2)];
+        float pos = AngleMap[hallAValue | (hallBValue << 1) | (hallCValue << 2)];
 
         // If all hall sensors are the same value, return invalid angle
         if (pos == -1.0f)

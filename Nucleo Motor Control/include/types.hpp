@@ -40,18 +40,4 @@ struct PinDef
     GPIO_InitTypeDef init;
 };
 
-struct AdcDef
-{
-    uint32_t adc;
-    uint32_t channel;
-};
-
-struct ADC
-{
-    float CH0;
-    float CH1;
-    float CH2;
-    float CH3;
-};
-
 #endif // __TYPES
