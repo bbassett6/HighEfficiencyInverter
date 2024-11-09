@@ -2,7 +2,8 @@
 
 void samplingCallback(uint32_t* result, int length)
 {
-	UART::transmit((unsigned char*)result, sizeof(uint32_t) / sizeof(char) * length);
+	//int idx = 0;
+	UART::transmit((unsigned char*)result /* + 4*idx*/, sizeof(uint32_t) / sizeof(char) * length);
 }
 
 int main()

@@ -43,8 +43,8 @@ namespace STM_ADC
         [PinNames::I_Sense_A] =     {ADC_CHANNEL_1,  ADC_REGULAR_RANK_1, &hadc1},
         [PinNames::I_Sense_B] =     {ADC_CHANNEL_2,  ADC_REGULAR_RANK_2, &hadc1},
         [PinNames::I_Sense_C] =     {ADC_CHANNEL_3,  ADC_REGULAR_RANK_3, &hadc1},
-        [PinNames::Vbus_Sense] =    {ADC_CHANNEL_2,  ADC_REGULAR_RANK_2, &hadc2},
         [PinNames::Ibus_Sense] =    {ADC_CHANNEL_1,  ADC_REGULAR_RANK_1, &hadc2},
+        [PinNames::Vbus_Sense] =    {ADC_CHANNEL_2,  ADC_REGULAR_RANK_2, &hadc2},
         [PinNames::Therm_Sense_1] = {ADC_CHANNEL_3,  ADC_REGULAR_RANK_3, &hadc2},
         [PinNames::Therm_Sense_2] = {ADC_CHANNEL_4,  ADC_REGULAR_RANK_4, &hadc2},
         [PinNames::Therm_Sense_3] = {ADC_CHANNEL_12, ADC_REGULAR_RANK_5, &hadc2},
@@ -182,6 +182,13 @@ namespace STM_ADC
             {
                 return false;
             }
+        }
+
+        if (!(HAL_ADCEx_Calibration_Start(&hadc1, ADC_SINGLE_ENDED) == HAL_OK)) {
+            return false;
+        }
+        if (!(HAL_ADCEx_Calibration_Start(&hadc2, ADC_SINGLE_ENDED) == HAL_OK)) {
+            return false;
         }
 
         // // Enable interrupts
