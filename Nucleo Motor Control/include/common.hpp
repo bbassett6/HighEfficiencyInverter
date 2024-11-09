@@ -44,5 +44,14 @@ namespace PlatformParameters
     const float cpuMHz              = 64.0f;
     #endif
 }
+namespace UARTParameters
+{
+    const int baudrate = 115200;
+}
+
+namespace SamplingParameters
+{
+    const float samplingRate = 100.0f;
+}
 
 #endif // __PARAMETERS

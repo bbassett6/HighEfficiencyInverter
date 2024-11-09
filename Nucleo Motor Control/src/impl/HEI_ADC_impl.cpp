@@ -190,7 +190,7 @@ namespace STM_ADC
         _initialized = true;
 
         STM_TIMER::registerCallback(3, _poke);
-        setRate(20000.0f);
+        setRate(SamplingParameters::samplingRate);
         
         // Initialization completed successfully
         return true;

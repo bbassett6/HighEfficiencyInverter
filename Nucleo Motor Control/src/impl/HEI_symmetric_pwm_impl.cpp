@@ -32,7 +32,7 @@ namespace SymmetricPWM
         __HAL_RCC_HRTIM1_CONFIG(RCC_HRTIM1CLK_PLLCLK);                              // Use the PLLx2 for 128Mhz resolution
         __HRTIM1_CLK_ENABLE();
         HRTIM1->sCommonRegs.DLLCR = HRTIM_CALIBRATIONRATE_14| HRTIM_DLLCR_CALEN;    // DLL calibration: periodic calibration enabled, period set to 14μs
-        while(HRTIM1->sCommonRegs.ISR & HRTIM_IT_DLLRDY == RESET);                  // Wait for DLL calibration to finish
+        while((HRTIM1->sCommonRegs.ISR & HRTIM_IT_DLLRDY) == RESET);                  // Wait for DLL calibration to finish
         if (HAL_HRTIM_Init(&hhrtim1) != HAL_OK)
         {
             return false;

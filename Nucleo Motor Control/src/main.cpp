@@ -1,5 +1,10 @@
 #include "main.hpp"
 
+void samplingCallback(uint32_t* result, int length)
+{
+	UART::transmit((unsigned char*)result, sizeof(uint32_t) / sizeof(char) * length);
+}
+
 int main()
 {
 	HAL_Init();
@@ -17,12 +22,14 @@ int main()
 		   !STM_TIMER::init()
 		|| !STM_ADC::init()
 		|| !SymmetricPWM::init()
+		|| !UART::init()
 	)
 	{
 		Error_Handler();
 	}
 	else
 	{
+		STM_ADC::setCallback(samplingCallback);
 		SVM::setVecTarget((Vec2<float>){.a = {0, 0}});
 	}
 	float angle = 0.0f;

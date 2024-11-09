@@ -6,6 +6,7 @@
 #include "interface/adc_interface.hpp"
 #include "interface/timer_interface.hpp"
 #include "interface/symmetric_pwm_interface.hpp"
+#include "interface/uart_interface.hpp"
 #include "SVM.hpp"
 #include <math.h>
 
