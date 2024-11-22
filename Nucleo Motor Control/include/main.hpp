@@ -8,6 +8,7 @@
 #include "interface/symmetric_pwm_interface.hpp"
 #include "interface/uart_interface.hpp"
 #include "SVM.hpp"
+#include "offset_learning.hpp"
 #include <math.h>
 
 #endif // __MAIN_H

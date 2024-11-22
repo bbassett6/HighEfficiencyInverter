@@ -17,9 +17,9 @@ namespace Position
 
     const static PinDef PinDefs[PinNames::NumPins] = 
     {
-        [PinNames::Hall_A] =    {.port = GPIOA, .init = {.Pin = GPIO_PIN_0,  .Mode = GPIO_MODE_INPUT,  .Pull = GPIO_NOPULL,    .Speed = GPIO_SPEED_FREQ_LOW,   .Alternate = 0}},
-        [PinNames::Hall_B] =    {.port = GPIOA, .init = {.Pin = GPIO_PIN_1,  .Mode = GPIO_MODE_INPUT,  .Pull = GPIO_NOPULL,    .Speed = GPIO_SPEED_FREQ_LOW,   .Alternate = 0}},
-        [PinNames::Hall_C] =    {.port = GPIOA, .init = {.Pin = GPIO_PIN_10,  .Mode = GPIO_MODE_INPUT,  .Pull = GPIO_NOPULL,    .Speed = GPIO_SPEED_FREQ_LOW,   .Alternate = 0}}
+        [PinNames::Hall_A] =    {.port = GPIOB, .init = {.Pin = GPIO_PIN_0,  .Mode = GPIO_MODE_INPUT,  .Pull = GPIO_NOPULL,    .Speed = GPIO_SPEED_FREQ_LOW,   .Alternate = 0}},
+        [PinNames::Hall_B] =    {.port = GPIOB, .init = {.Pin = GPIO_PIN_1,  .Mode = GPIO_MODE_INPUT,  .Pull = GPIO_NOPULL,    .Speed = GPIO_SPEED_FREQ_LOW,   .Alternate = 0}},
+        [PinNames::Hall_C] =    {.port = GPIOB, .init = {.Pin = GPIO_PIN_10,  .Mode = GPIO_MODE_INPUT,  .Pull = GPIO_NOPULL,    .Speed = GPIO_SPEED_FREQ_LOW,   .Alternate = 0}}
     };
 
     // Bit 0 is Hall A value
@@ -37,7 +37,23 @@ namespace Position
         [0b111] = -1.0f,
     };
 
-    float _offset = 0.0f;
+    // float _offset = 4.80475187f + (PI / 6.0f);
+    float _offset = (3.0f * PI / 2.0f) + (PI / 6.0f);
+
+    bool init()
+    {
+        GPIO_InitTypeDef GPIO_InitStruct = {0};
+        __HAL_RCC_GPIOB_CLK_ENABLE();
+        __HAL_RCC_GPIOA_CLK_ENABLE();
+
+        for (int i = 0; i < PinNames::NumPins; i++)
+        {
+            GPIO_InitStruct = PinDefs[i].init;
+            HAL_GPIO_Init(PinDefs[i].port, &GPIO_InitStruct);
+        }
+
+        return true;
+    }
 
     void setOffset(float offset) 
     {

@@ -16,42 +16,42 @@
 
 namespace MotorParameters
 {
-    const float phaseResistance     = 0.0575;
-    const float phaseInductance     = 20e-6;
-    const int polePairs             = 40;
-    const float rotorOffset         = 0.0;      // Added to raw electrical angle. Angle of 0 should indicate rotor is aligned with the alpha axis.
-    const bool flipMotor            = false;
+    extern const float phaseResistance;
+    extern const float phaseInductance;
+    extern const int polePairs;
+    extern const float rotorOffset;
+    extern const bool flipMotor;
 }
 
 namespace PWMParameters
 {
-    const int switchingPeriodNanos  = 50000;    // 20kHz
-    const int deadtimeCyclesRising  = 40;       // based on observed characteristics
-    const int deadtimeCyclesFalling = 40;
-    const bool zsmBClampEnabled     = false;
+    extern const int switchingPeriodNanos;
+    extern const int deadtimeCyclesRising;
+    extern const int deadtimeCyclesFalling;
+    extern const bool zsmBClampEnabled;
 }
 
 namespace RotorSenseParameters
 {
-    const bool flipAngle            = false;
+    extern bool flipAngle;
 }
 
 namespace PlatformParameters
 {
     #if PLATFORM_P_NUCLEO_IHM03
-    const float cpuMHz              = 170.0f;
+    extern const float cpuMHz;
     #elif PLATFORM_HEI
-    const float cpuMHz              = 64.0f;
+    extern const float cpuMHz;
     #endif
 }
 namespace UARTParameters
 {
-    const int baudrate = 115200;
+    extern const int baudrate;
 }
 
 namespace SamplingParameters
 {
-    const float samplingRate = 100.0f;
+    extern const float samplingRate;
 }
 
 #endif // __PARAMETERS

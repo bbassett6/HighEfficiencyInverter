@@ -1,9 +1,12 @@
 #include "main.hpp"
 
+int throttleRaw;
+
 void samplingCallback(uint32_t* result, int length)
 {
 	//int idx = 0;
-	UART::transmit((unsigned char*)result /* + 4*idx*/, sizeof(uint32_t) / sizeof(char) * length);
+	// UART::transmit((unsigned char*)result /* + 4*idx*/, sizeof(uint32_t) / sizeof(char) * length);
+	throttleRaw = result[7];
 }
 
 int main()
@@ -24,6 +27,7 @@ int main()
 		|| !STM_ADC::init()
 		|| !SymmetricPWM::init()
 		|| !UART::init()
+		|| !Position::init()
 	)
 	{
 		Error_Handler();
@@ -33,22 +37,29 @@ int main()
 		STM_ADC::setCallback(samplingCallback);
 		SVM::setVecTarget((Vec2<float>){.a = {0, 0}});
 	}
+
 	float angle = 0.0f;
-	float speed = 0.0f;
+
+	// run offset learning
+	// bool learningSuccess = OffsetLearning::learnOffset();
 
 	while(1)
 	{
-		HAL_Delay(1);
+		// HAL_Delay(1);
 		HAL_GPIO_TogglePin(LED_GPIO_PORT, LED_PIN);
 
-		speed += 0.00003;
-		if (speed > 2 * PI / 10)
-			speed = 2 * PI / 10;
+		Position::getPosition(&angle);
+		angle += (PI / 2);
 
-		angle += speed;
-		// float tempAngle = sinf(angle) * PI / 6 + (5 * PI / 3) + (PI / 6);
-		float power = 0.30f;
+		float power = ((throttleRaw / 4096.0f) - 0.5f) * 2.0f;
 		SVM::setVecTarget((Vec2<float>){.a = {cosf(angle) * power, sinf(angle) * power}});
+	}
+
+	// failed to learn
+	while(1)
+	{
+		HAL_Delay(1000);
+		HAL_GPIO_TogglePin(LED_GPIO_PORT, LED_PIN);
 	}
 
 	return 0;
