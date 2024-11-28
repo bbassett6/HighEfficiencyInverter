@@ -2,6 +2,9 @@
 #include "types.hpp"
 #include "constants.hpp"
 #include "interface/position_interface.hpp"
+#include "interface/timer_interface.hpp"
+#include "platform_setup.hpp"
+#include "interface/uart_interface.hpp"
 
 #if PLATFORM_HEI
 
@@ -37,8 +40,17 @@ namespace Position
         [0b111] = -1.0f,
     };
 
-    // float _offset = 4.80475187f + (PI / 6.0f);
-    float _offset = (3.0f * PI / 2.0f) + (PI / 6.0f);
+    const float _timerFrequency = 2.0f;
+    const float _predictionDiffThreshold = 2.0f * PI / 360.0f * 15.0f; // 5 degrees
+
+    float _offset = 5.77257204f - (PI / 6.0f);
+    // float _offset = (3.0f * PI / 2.0f) + (PI / 6.0f);
+
+    // speed observation & position interpolation
+    float _predictedAngle = 0.0f;
+    float _observedSpeed = 0.0f;
+    float _lastQuantizedAngle = -1.0f;
+    volatile bool _speedObserverValid = false;
 
     bool init()
     {
@@ -51,6 +63,9 @@ namespace Position
             GPIO_InitStruct = PinDefs[i].init;
             HAL_GPIO_Init(PinDefs[i].port, &GPIO_InitStruct);
         }
+        
+        // 2 Hz
+        STM_TIMER::setFrequency(2, 2.0f);
 
         return true;
     }
@@ -96,7 +111,66 @@ namespace Position
         if (pos > 2 * PI)
             pos -= 2 * PI;
 
-        *position = pos;
+        // Speed observer
+        // Calculate predicted position
+        // If quantized position has changed since last call to getPosition
+        //      Set position to quantizedPosition
+        //      Estimate speed based on timer value
+        //      Reset timer
+        //      If predicted position is reasonably close to the actual position
+        //          Enable position interpolation
+        // Else
+        //     If predicted position exceeds some threshold, disable position interpolation
+        float tim = STM_TIMER::hrTickGet();
+        float predictionDiff = tim * _observedSpeed;
+        _predictedAngle = _lastQuantizedAngle + predictionDiff;
+        if (_predictedAngle >= 2.0f * PI)
+            _predictedAngle -= 2.0f * PI;
+        if (_predictedAngle < 0)
+            _predictedAngle += 2.0f * PI;
+        
+        if (pos != _lastQuantizedAngle) 
+        {
+            if (_observedSpeed > 0.000000836f)
+                _speedObserverValid = true;
+
+            float quantDiff = pos - _lastQuantizedAngle;
+            if (_observedSpeed > 0 && quantDiff < 0)
+                quantDiff += 2.0f * PI;
+            if (_observedSpeed < 0 && quantDiff > 0)
+                quantDiff -= 2.0f * PI;
+
+            if (tim > 50 && std::abs(quantDiff / tim) < 100.0f)
+            {
+                _lastQuantizedAngle = pos;
+                _observedSpeed = (_observedSpeed * 0.5f) + (quantDiff / tim * 0.5f);
+                STM_TIMER::hrTickReset();
+            }
+
+            float valid = _speedObserverValid ? 5.0f : 0.0f;
+            // UART::transmit((unsigned char*)&_lastQuantizedAngle, 4);
+            // UART::transmit((unsigned char*)&_observedSpeed, 4);
+            // UART::transmit((unsigned char*)&valid, 4);
+        }
+        else
+        {
+            if (_observedSpeed > 0.0f && predictionDiff > (PI / 3.0f) + _predictionDiffThreshold)
+                _speedObserverValid = false;
+            if (_observedSpeed < 0.0f && predictionDiff < (-PI / 3.0f) - _predictionDiffThreshold)
+                _speedObserverValid = false;
+        }
+
+        if (_speedObserverValid)
+            *position = _predictedAngle;
+        else
+            *position = pos;
+
+        // *position = pos;
+
+        if (_speedObserverValid)
+            HAL_GPIO_WritePin(LED2_GPIO_PORT, LED2_PIN, GPIO_PIN_SET);
+        else
+            HAL_GPIO_WritePin(LED2_GPIO_PORT, LED2_PIN, GPIO_PIN_RESET);
 
         return true;
     }

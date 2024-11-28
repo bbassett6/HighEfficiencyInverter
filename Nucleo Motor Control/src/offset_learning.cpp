@@ -78,7 +78,10 @@ namespace OffsetLearning
         }
 
         // succeeded
-        Position::setOffset(avg + (PI / 6.0f));
+        if (RotorSenseParameters::flipAngle)
+            Position::setOffset(avg - (PI / 6.0f));
+        else
+            Position::setOffset(avg + (PI / 6.0f));
 
         return true;
     }

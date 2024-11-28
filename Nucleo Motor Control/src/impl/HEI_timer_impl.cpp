@@ -9,8 +9,12 @@ TIM_HandleTypeDef htim3;
 namespace STM_TIMER
 {
     // TIM2
-    // Used by SVM timing
+    // Used by speed observer (hrTick)
     std::function<void()> _tim2Callback;
+
+    uint16_t tim2period = 0;
+    volatile unsigned long accumulatedTimer = 0;
+    unsigned long tim2base = 0;
 
     // TIM3
     // Used by ADC auto sampler
@@ -106,6 +110,8 @@ namespace STM_TIMER
                 prescaler = (prescaler + 1) * 2 - 1;
             }
 
+            tim2period = timerCycles;
+
             __HAL_TIM_SET_AUTORELOAD(&htim2, (int)timerCycles);
             __HAL_TIM_SET_PRESCALER(&htim2, 0);
         }
@@ -131,6 +137,15 @@ namespace STM_TIMER
         }
     }
 
+    void hrTickReset()
+    {
+        tim2base = accumulatedTimer + __HAL_TIM_GET_COUNTER(&htim2);
+    }
+
+    unsigned long hrTickGet()
+    {
+        return accumulatedTimer + __HAL_TIM_GET_COUNTER(&htim2) - tim2base;
+    }
 }
 
 extern "C" void TIM2_IRQHandler(void)
@@ -147,6 +162,7 @@ extern "C" void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef* htim)
 {
     if (htim == &htim2)
     {
+        STM_TIMER::accumulatedTimer += STM_TIMER::tim2period;
         if (STM_TIMER::_tim2Callback)
             STM_TIMER::_tim2Callback();
     }

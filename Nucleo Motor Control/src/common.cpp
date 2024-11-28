@@ -19,7 +19,7 @@ namespace PWMParameters
 
 namespace RotorSenseParameters
 {
-    bool flipAngle            = false;
+    bool flipAngle            = true;
 }
 
 namespace PlatformParameters

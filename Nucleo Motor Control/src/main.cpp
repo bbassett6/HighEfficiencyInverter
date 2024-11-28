@@ -15,10 +15,10 @@ int main()
 	SystemClock_Config();
 	GPIO_Init();
 
-	// Set up LED
-	GPIO_InitTypeDef ledPinInit = {.Pin = LED_PIN, .Mode = GPIO_MODE_OUTPUT_PP};
-	HAL_GPIO_Init(LED_GPIO_PORT, &ledPinInit);
-	HAL_GPIO_WritePin(LED_GPIO_PORT, LED_PIN, GPIO_PIN_SET);
+	// Set up LEDs
+	GPIO_InitTypeDef ledPinInit = {.Pin = LED1_PIN | LED2_PIN | LED3_PIN, .Mode = GPIO_MODE_OUTPUT_PP};
+	HAL_GPIO_Init(LED1_GPIO_PORT, &ledPinInit);
+	HAL_GPIO_WritePin(LED1_GPIO_PORT, LED1_PIN, GPIO_PIN_SET);
 
 	// Set up peripherals
 	if
@@ -46,20 +46,21 @@ int main()
 	while(1)
 	{
 		// HAL_Delay(1);
-		HAL_GPIO_TogglePin(LED_GPIO_PORT, LED_PIN);
+		HAL_GPIO_TogglePin(LED1_GPIO_PORT, LED1_PIN);
 
 		Position::getPosition(&angle);
 		angle += (PI / 2);
-
-		float power = ((throttleRaw / 4096.0f) - 0.5f) * 2.0f;
+		
+		// 1568 - min
+		// 2336 - max
+		float power = (throttleRaw - 1568.0f) / (2336.0f - 1586.0f);
 		SVM::setVecTarget((Vec2<float>){.a = {cosf(angle) * power, sinf(angle) * power}});
 	}
 
 	// failed to learn
 	while(1)
 	{
-		HAL_Delay(1000);
-		HAL_GPIO_TogglePin(LED_GPIO_PORT, LED_PIN);
+		Error_Handler();
 	}
 
 	return 0;

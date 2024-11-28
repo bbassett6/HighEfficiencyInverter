@@ -64,7 +64,8 @@ namespace UART
 
     void transmit(unsigned char* buffer, int size)
     {
-        HAL_UART_Transmit_DMA(&huart1, buffer, size);
+        // HAL_UART_Transmit_DMA(&huart1, buffer, size);
+        HAL_UART_Transmit(&huart1, buffer, size, 10);
     }
 
     // TODO: implement later. will be complicated

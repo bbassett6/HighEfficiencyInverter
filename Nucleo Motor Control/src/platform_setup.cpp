@@ -128,7 +128,7 @@ void Error_Handler(void)
 	while (1)
 	{
 		HAL_Delay(500);
-		HAL_GPIO_TogglePin(LED_GPIO_PORT, LED_PIN);
+		HAL_GPIO_TogglePin(LED1_GPIO_PORT, LED1_PIN);
 	}
 }
 #endif

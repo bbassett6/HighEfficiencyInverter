@@ -10,6 +10,8 @@ namespace STM_TIMER
     void registerCallback(int timer, std::function<void()> callback);
     void setPeriod(int timer, unsigned long nanos);
     void setFrequency(int timer, float frequency);
+    void hrTickReset();
+    unsigned long hrTickGet();
 }
 
 #endif // __TIMER_INTERFACE
